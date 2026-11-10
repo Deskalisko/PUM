@@ -1,0 +1,587 @@
+\chapter{Przykłady elementów pracy dyplomowej}
+\label{cha:elementyPracy}
+
+% ------------------------------------------------------------------------
+\section{Struktura (układ) pracy dyplomowej}
+
+Praca dyplomowa powinna mieć uporządkowaną strukturę, zapewniającą logiczny i przejrzysty sposób prezentacji opracowywanych zagadnień. Poszczególne elementy dokumentu należy przygotować zgodnie z obowiązującymi wytycznymi dotyczącymi opracowywania prac dyplomowych na Uniwersytecie Rzeszowskim.
+
+Podstawowa struktura pracy dyplomowej obejmuje:
+
+\begin{itemize}
+
+    \item \textbf{Stronę tytułową} -- przygotowaną zgodnie z obowiązującym wzorem stanowiącym załącznik nr 1 do odpowiednich wytycznych.
+
+    \item \textbf{Streszczenie pracy} -- zawierające zwięzłą charakterystykę tematyki, celu, zastosowanych metod oraz najważniejszych rezultatów pracy. Należy również zamieścić tytuł pracy w języku polskim i angielskim.
+
+    \item \textbf{Spis treści} -- przedstawiający strukturę dokumentu z uwzględnieniem rozdziałów, podrozdziałów oraz odpowiadających im numerów stron.
+
+    \item \textbf{Wstęp} -- zawierający wprowadzenie do tematyki, uzasadnienie wyboru zagadnienia, cel i zakres pracy, a także sformułowanie problemu badawczego oraz, jeżeli charakter pracy tego wymaga, hipotez badawczych.
+
+    \item \textbf{Część zasadniczą} --  obejmującą rozdziały i podrozdziały, w których przedstawiono podstawy teoretyczne, analizę problemu, zastosowane metody, opis opracowanego rozwiązania oraz wyniki przeprowadzonych badań lub testów. Szczegółowy układ tej części zależy od tematyki i charakteru pracy.
+
+    \item \textbf{Zakończenie (wnioski końcowe)} -- zawierające podsumowanie wykonanych prac, ocenę stopnia realizacji założonych celów, najważniejsze rezultaty oraz ewentualne kierunki dalszego rozwoju rozwiązania.
+
+    \item \textbf{Bibliografię} -- obejmującą wykaz źródeł wykorzystanych podczas przygotowywania pracy dyplomowej.
+
+    \item \textbf{Wykazy elementów graficznych} -- obejmujące, w zależności od zawartości pracy, spisy rysunków, tabel, wykresów i fotografii.
+    
+    \item \textbf{Oświadczenie studenta o samodzielnym przygotowaniu pracy dyplomowej} -- sporządzone zgodnie z obowiązującymi przepisami dotyczącymi procedury antyplagiatowej na Uniwersytecie Rzeszowskim.
+
+\end{itemize}
+
+W zależności od tematyki oraz wymagań dotyczących przygotowywanej pracy dyplomowej dokument może zawierać również dodatkowe elementy, takie jak załączniki, wykaz skrótów, listingi kodu źródłowego czy dokumentację techniczną opracowanego rozwiązania.
+
+% ------------------------------------------------------------------------
+\section{Listy punktowane i numerowane}
+
+System \LaTeX{} umożliwia tworzenie różnych rodzajów list, które ułatwiają uporządkowane przedstawianie informacji. Do najczęściej wykorzystywanych należą listy punktowane oraz listy numerowane.
+
+\noindent
+\textbf{Listy punktowane} tworzone są za pomocą środowiska \texttt{itemize}. Poszczególne elementy listy wprowadza się poleceniem \verb|\item|. Przykład listy punktowanej:
+
+\begin{itemize}
+    \item Analiza problemu i określenie wymagań;
+    \item Projektowanie rozwiązania;
+    \item Implementacja i testowanie systemu.
+\end{itemize}
+
+\noindent
+\textbf{Listy numerowane} tworzone są za pomocą środowiska \texttt{enumerate}. Numeracja kolejnych elementów jest generowana automatycznie. Przykład listy numerowanej:
+
+\begin{enumerate}
+    \item Określenie celu i zakresu pracy;
+    \item Opracowanie projektu rozwiązania;
+    \item Implementacja zaprojektowanego systemu;
+    \item Przeprowadzenie testów;
+    \item Analiza i ocena uzyskanych wyników.
+\end{enumerate}
+
+Listy mogą być również zagnieżdżane, co pozwala na tworzenie wielopoziomowych zestawień. Należy jednak unikać nadmiernego rozbudowywania ich struktury, ponieważ może to negatywnie wpływać na czytelność dokumentu.
+
+% ------------------------------------------------------------------------
+\section{Formatowanie liczb}
+
+Podczas przygotowywania dokumentów naukowych i technicznych istotne jest zachowanie jednolitego sposobu zapisu wartości liczbowych.
+
+W systemie \LaTeX{} do formatowania liczb można wykorzystać pakiet \texttt{siunitx}, który umożliwia automatyczne formatowanie wartości liczbowych zgodnie z przyjętymi ustawieniami.
+
+Przykładowy zapis liczby:
+
+\begin{center}
+    \num{1234567890.0987654321}
+\end{center}
+
+Polecenie \verb|\num{}| umożliwia m.in. odpowiednie grupowanie cyfr oraz stosowanie separatora dziesiętnego zgodnego
+z konfiguracją pakietu. Aby korzystać z tej funkcjonalności, należy do preambuły dokumentu dodać polecenie:
+
+\begin{verbatim}
+\usepackage{siunitx}
+\end{verbatim}
+
+Pakiet \texttt{siunitx} pozwala również na formatowanie jednostek miar, co jest szczególnie przydatne podczas przedstawiania wyników badań, pomiarów i obliczeń.  Zaleca się stosowanie jednolitego sposobu zapisu wartości liczbowych i jednostek w całym dokumencie.
+
+
+% ------------------------------------------------------------------------
+\section{Rysunki, tabele, schematy i wykresy}
+
+Rysunki, tabele, schematy i wykresy stanowią istotny element pracy dyplomowej, umożliwiający przejrzyste przedstawienie analizowanych zagadnień, opracowanych rozwiązań oraz wyników badań.
+
+Wszystkie elementy graficzne i tabele umieszczone w pracy powinny być odpowiednio opisane, ponumerowane oraz przywołane w tekście głównym za pomocą odwołań, np. rysunek~\ref{fig1} lub tabela~\ref{tab1}.
+
+Przed zamieszczeniem rysunku lub tabeli należy wprowadzić czytelnika w przedstawiane zagadnienie oraz zamieścić
+odwołanie do odpowiedniego elementu. Następnie należy umieścić rysunek lub tabelę wraz z podpisem.
+
+Podczas przygotowywania materiałów graficznych należy przestrzegać następujących zasad:
+
+\begin{itemize}
+
+    \item \textbf{Format plików} -- zaleca się stosowanie grafiki wektorowej, szczególnie w przypadku schematów, diagramów, wykresów i modeli. Preferowanym formatem jest PDF. Dopuszczalne są również formaty PNG i JPG, szczególnie w przypadku fotografii oraz zrzutów ekranu. Format EPS można stosować, jeżeli jest wymagany przez sposób kompilacji lub szczegółowe wytyczne.
+
+    \item \textbf{Nazewnictwo plików} -- pliki graficzne należy nazywać w sposób uporządkowany, stosując jednolitą konwencję, np. \texttt{fig\_0001}, \texttt{fig\_0002}, \texttt{fig\_0003} itd.
+
+    \item \textbf{Jakość i czytelność} -- wszystkie elementy graficzne powinny być czytelne po umieszczeniu w dokumencie. Należy zadbać o odpowiednią wielkość czcionek, grubość linii, kontrast oraz jakość przedstawianych informacji. W przypadku grafiki rastrowej zaleca się stosowanie rozdzielczości co najmniej 300 dpi w docelowym rozmiarze wydruku. W przypadku schematów i diagramów preferowana jest grafika wektorowa, która zachowuje jakość niezależnie od skalowania.
+
+    \item \textbf{Numeracja i podpisy} -- każdy rysunek i każda tabela muszą posiadać numer oraz jednoznaczny podpis określający ich zawartość. Numeracja powinna być generowana automatycznie przez system \LaTeX{}.
+
+    \item \textbf{Źródła} -- dla wszystkich rysunków, tabel i wykresów należy wskazać źródło ich pochodzenia.
+    W przypadku materiałów przygotowanych samodzielnie można zastosować oznaczenie \textit{Źródło: opracowanie własne}. Jeżeli materiał powstał na podstawie innych publikacji, należy zamieścić odpowiednie odwołanie bibliograficzne.
+
+    \item \textbf{Materiały źródłowe} -- należy zachować pliki źródłowe wykorzystane do przygotowania elementów graficznych, np. edytowalne diagramy, schematy, skrypty generujące wykresy oraz zestawy danych wykorzystane do ich opracowania. Sposób udostępnienia tych materiałów w ramach dokumentacji pracy należy uzgodnić z promotorem.
+
+\end{itemize}
+
+\noindent
+\textbf{Rozmieszczanie rysunków i tabel}
+
+System \LaTeX{} automatycznie zarządza rozmieszczaniem elementów graficznych i tabel w dokumencie. Z tego względu ich położenie w wygenerowanym pliku PDF może nieznacznie różnić się od miejsca, w którym zostały zdefiniowane w kodzie źródłowym. W przypadku problemów z rozmieszczeniem elementów należy w pierwszej kolejności dostosować parametry pozycjonowania środowisk \texttt{figure} i \texttt{table}, np. \texttt{[htbp]}.
+
+W uzasadnionych przypadkach można wykorzystać polecenie \verb|\clearpage|, które kończy bieżącą stronę i wymusza umieszczenie oczekujących elementów pływających przed rozpoczęciem kolejnej strony. Nie zaleca się jednak nadmiernego stosowania ręcznych podziałów stron, ponieważ może to negatywnie wpływać na układ dokumentu.
+
+\medskip
+\noindent
+\textbf{Narzędzia do przygotowywania schematów i diagramów}
+
+Do przygotowywania schematów, diagramów i modeli wykorzystywanych w pracy dyplomowej można zastosować m.in.:
+
+\begin{itemize}
+
+    \item \textbf{diagrams.net (draw.io)} -- bezpłatne narzędzie dostępne w wersji przeglądarkowej oraz desktopowej,
+    umożliwiające tworzenie diagramów UML, schematów blokowych, diagramów ERD, schematów architektury systemów     oraz innych modeli graficznych. Strona internetowa: \url{https://app.diagrams.net/}
+
+    \item \textbf{Microsoft Visio} -- narzędzie do przygotowywania profesjonalnych diagramów, schematów procesów, modeli systemów oraz dokumentacji technicznej. Strona internetowa:
+    \url{https://www.microsoft.com/pl-pl/microsoft-365/visio/flowchart-software}
+
+\end{itemize}
+
+Dopuszczalne jest również korzystanie z innych narzędzi umożliwiających przygotowanie czytelnych elementów graficznych i ich eksport do formatów obsługiwanych przez wykorzystywane środowisko \LaTeX{}.
+
+
+% ------------------------------------------------------------------------
+\subsection{Rysunki}
+
+Rysunki umożliwiają graficzne przedstawienie struktury systemu, zależności pomiędzy jego elementami oraz opracowanych modeli i rozwiązań projektowych.
+
+Przykładem zastosowania rysunków w pracy dyplomowej jest diagram związków encji (ERD, ang. \textit{Entity Relationship Diagram}), przedstawiający strukturę relacyjnej bazy danych.
+
+W projektowanym systemie zarządzania stadniną koni przewidziano wykorzystanie relacyjnej bazy danych
+MySQL, odpowiedzialnej za przechowywanie i zarządzanie informacjami dotyczącymi koni, klientów, trenerów oraz rezerwacji. Strukturę bazy danych zaprojektowano w sposób umożliwiający uporządkowane przechowywanie informacji oraz określenie relacji pomiędzy poszczególnymi tabelami. Wśród głównych tabel bazy danych można wyróżnić:
+
+\begin{itemize}
+    \item \texttt{horses} -- informacje o koniach;
+    \item \texttt{clients} -- dane klientów;
+    \item \texttt{trainers} -- informacje o trenerach;
+    \item \texttt{reservations} -- dane dotyczące rezerwacji.
+\end{itemize}
+
+Dodatkowo w projekcie przewidziano tabele pomocnicze, takie jak:
+
+\begin{itemize}
+    \item \texttt{horses\_breed} -- rasy koni;
+    \item \texttt{horses\_color} -- umaszczenie koni;
+    \item \texttt{health\_status} -- stany zdrowia koni;
+    \item \texttt{horse\_type} -- typy koni.
+\end{itemize}
+
+Tabele pomocnicze umożliwiają uporządkowanie danych słownikowych oraz ograniczenie redundancji informacji przechowywanych w bazie danych. Diagram ERD przedstawiający strukturę projektowanej bazy danych oraz relacje pomiędzy jej tabelami zaprezentowano na \figurename~\ref{fig1}.
+
+% \newpage
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.9\linewidth]{figures/fig_0001.eps}\\
+    \caption{Diagram ERD projektowanej aplikacji.\label{fig1}}
+    \zrodlo{Opracowanie własne.}
+\end{figure}
+
+Pakiet \texttt{subcaption} pozwala na umieszczanie w podpisie rysunku odnośników do ,,podilustracji'' (patrz \figurename\ref{fig:subcaption_example})\\
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{0.48\linewidth}
+    \centering
+    \includegraphics[width=.5\linewidth]{figures/ur.jpg}
+    \subcaption{A}
+    \label{subfigure_a}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.48\linewidth}
+    \centering
+    \includegraphics[width=.5\linewidth]{figures/ur.jpg}
+    \subcaption{B}
+    \label{subfigure_b}
+  \end{subfigure}
+
+  \caption{Przykład użycia \texttt{\textbackslash subcaption}:
+  \subref{subfigure_a} litera A,
+  \subref{subfigure_b} litera B.}
+  \label{fig:subcaption_example}
+  \zrodlo{Ilustracje demonstracyjne (a) i (b) - przed oddaniem pracy należy podać ich rzeczywiste źródło.}
+\end{figure}
+
+
+
+\subsection{Edytor grafiki wektorowej Ipe}
+
+\textbf{Ipe} jest edytorem grafiki wektorowej przeznaczonym do tworzenia wysokiej jakości rysunków oraz diagramów zapisanych w formacie PDF. Program został zaprojektowany przede wszystkim z myślą o użytkownikach systemu \LaTeX{}, dzięki czemu doskonale sprawdza się podczas przygotowywania ilustracji do artykułów naukowych, prac dyplomowych, książek oraz prezentacji.
+
+Jedną z najważniejszych cech programu jest możliwość wprowadzania tekstu bezpośrednio w postaci kodu źródłowego \LaTeX{}, co pozwala na łatwe umieszczanie wzorów matematycznych oraz zachowanie spójnego formatowania z dokumentem głównym. Podczas edycji tekst jest wyświetlany w takiej postaci, w jakiej będzie widoczny w końcowym dokumencie.
+
+Edytor zapisuje rysunki bezpośrednio w formacie PDF, zachowując zarówno grafikę wektorową, jak i tekst. W trakcie zapisywania projektu kod \LaTeX{} jest automatycznie kompilowany i osadzany w tworzonym pliku PDF, dzięki czemu uzyskane ilustracje charakteryzują się wysoką jakością oraz pełną zgodnością z dokumentami przygotowanymi w środowisku \LaTeX{}.
+
+Ipe udostępnia rozbudowany system przyciągania (\textit{snapping}), który umożliwia precyzyjne pozycjonowanie elementów graficznych względem siebie. Funkcjonalność ta ułatwia między innymi umieszczanie punktów na przecięciach prostych, konstruowanie okręgów przechodzących przez wskazane punkty czy zachowanie idealnego wyrównania obiektów.
+
+Możliwości programu mogą być rozszerzane za pomocą dodatków określanych jako \textit{ipelets}. Pozwalają one na implementację nowych funkcji dostosowanych do indywidualnych potrzeb użytkownika oraz specyfiki realizowanego projektu.
+
+Edytor Ipe jest aplikacją wieloplatformową i dostępny jest dla systemów Windows, Linux oraz macOS. Program został zaimplementowany w języku C++ z wykorzystaniem języka skryptowego Lua, co zapewnia wysoką wydajność oraz możliwość łatwej rozbudowy.
+
+Najważniejsze cechy programu:
+\begin{itemize}
+    \item tworzenie grafiki wektorowej w formacie PDF,
+    \item pełna integracja z systemem \LaTeX{},
+    \item obsługa wzorów matematycznych i makr \LaTeX{},
+    \item automatyczna kompilacja tekstu podczas zapisu rysunku,
+    \item precyzyjne narzędzia wyrównywania i przyciągania obiektów,
+    \item możliwość rozszerzania funkcjonalności za pomocą dodatków \textit{ipelets},
+    \item obsługa wielu stron dokumentu, umożliwiająca przygotowanie prezentacji PDF,
+    \item dostępność dla systemów Windows, Linux oraz macOS.
+\end{itemize}
+
+\textbf{Oficjalna strona edytora:}
+\begin{itemize}
+    \item The Ipe extensible drawing editor - \url{https://ipe.otfried.org/}
+    \item Ipe-web - \url{https://ipe-web.otfried.org/index.html}
+\end{itemize}
+
+\textbf{Krótkie wprowadzenie do programu:}
+\begin{itemize}
+    \item \url{https://www.youtube.com/watch?v=56NEetL0uik}
+\end{itemize}
+
+\textbf{Literatura dotycząca systemu \LaTeX{}:}
+\begin{itemize}
+    \item M. Szpyrka, \textit{\LaTeX{}. Praktyczny przewodnik}, Helion,
+    \url{https://helion.pl/ksiazki/latex-praktyczny-przewodnik-marcin-szpyrka,latepp.htm}
+\end{itemize}
+
+% ------------------------------------------------------------------------
+\subsection{Tabele}
+
+
+Tabele umożliwiają uporządkowane przedstawienie danych liczbowych, wyników badań oraz zestawień porównawczych. Każda tabela powinna posiadać numer, jednoznaczny tytuł umieszczony nad tabelą oraz informację o źródle danych. W systemie \LaTeX{} dostępne są różne sposoby tworzenia tabel, pozwalające dostosować ich strukturę do prezentowanych informacji. Pierwszy przykład (Tabela ~\ref{tab1}) przedstawia rozbudowaną tabelę utworzoną z wykorzystaniem środowiska \texttt{tabularx}. Zastosowano w niej łączenie komórek w pionie i poziomie za pomocą poleceń \verb|\multirow| oraz \verb|\multicolumn|.
+
+\begin{table}[H]
+    \centering
+    \caption{To jest tytuł tabeli.\label{tab1}}
+    \renewcommand{\tabularxcolumn}[1]{m{#1}}  % Dostosowanie kolumny do zawartości
+    \begin{tabularx}{\linewidth}{CCCCC}
+        \toprule
+        \textbf{Name}              & \textbf{Type}              & \textbf{Activations}        & \multicolumn{2}{c}{\textbf{Learnables}}               \\
+        \midrule
+        \multirow[m]{1}{*}{Name 1} & Type 1                     & 232                         & \multicolumn{2}{c}{--}                                \\
+        \multirow[m]{3}{*}{Name 2} & \multirow[m]{3}{*}{Type 1} & \multirow[m]{3}{*}{512}     & InputWeights                            & 2048x232    \\
+                                   &                            &                             & RecurrentWeights                        & 2048x512    \\
+                                   &                            &                             & Bias                                    & 2048x1      \\
+        \multirow[m]{2}{*}{Name 3} & \multirow[m]{2}{*}{Type 1} & \multirow[m]{2}{*}{8/16/32} & Weights                                 & 8/16/32x512 \\
+                                   &                            &                             & Bias                                    & 8/16/32x32  \\
+        \multirow[m]{1}{*}{Name 4} & Type 1                     & 8/16/32                     & \multicolumn{2}{c}{--}                                \\
+        \multirow[m]{1}{*}{Name 5} & Type 1                     & 8/16/32                     & \multicolumn{2}{c}{--}                                \\
+        \bottomrule
+    \end{tabularx}
+    \zrodlo{Opracowanie własne.}
+\end{table}
+
+
+Drugi przykład (Tabela~\ref{tab2}) przedstawia prostą tabelę utworzoną za pomocą środowiska \texttt{tabular}. Zaprezentowano w nim podstawowe formatowanie kolumn, wyrównywanie danych oraz możliwość wyróżniania wybranych wartości za pomocą kolorów.
+
+\begin{table}[H]
+    \caption{Klasy trajektorii zadań}
+    \label{tab2}
+    \centering
+    \begin{tabular}{ccc}
+        \toprule
+        \textbf{Lp} & \textbf{UAV}  & \textbf{Czas $\left [ s \right ]$} \\ \toprule
+        1           & 36 $\times$ 6 & 8778                               \\
+        2           & 36 $\times$ 6 & 8743                               \\
+        3           & 36 $\times$ 6 & 8765                               \\
+        4           & 36 $\times$ 6 & 8882                               \\
+        5           & 36 $\times$ 6 & 8750                               \\
+        6           & 36 $\times$ 6 & \textcolor{red}{8965}              \\
+        7           & 36 $\times$ 6 & \textcolor{blue}{8727}             \\
+        8           & 36 $\times$ 6 & 8937                               \\
+        9           & 36 $\times$ 6 & 8750                               \\ \bottomrule
+    \end{tabular}
+    \zrodlo{Opracowanie własne.}
+\end{table}
+
+\noindent \textbf{Tabele wielostronicowe} 
+
+W przypadku rozbudowanych zestawień, które nie mieszczą się na jednej stronie, można zastosować środowisko \texttt{longtable}. Umożliwia ono automatyczny podział tabeli pomiędzy kolejne strony dokumentu oraz powtarzanie nagłówków kolumn. Poniższy przykład przedstawia sześciokolumnową tabelę wielostronicową, w której zastosowano indywidualne szerokości kolumn oraz mechanizm automatycznego podziału na strony. Przedstawione dane mają charakter demonstracyjny i powinny zostać zastąpione rzeczywistymi informacjami odpowiadającymi tematyce przygotowywanej pracy dyplomowej.
+
+\begingroup
+
+\footnotesize
+\setlength{\tabcolsep}{4pt}% odstep po bokach komorek
+\setlength{\LTcapwidth}{\linewidth}
+\renewcommand{\arraystretch}{1.12}% nieznacznie wiekszy odstep miedzy wierszami
+
+% Po odjeciu 10\tabcolsep (5 wewnetrznych granic) szerokosci proporcjonalne
+% sumuja sie do 100%%; zadna kolumna nie wypycha tabeli poza margines.
+\begin{longtable}{@{}
+  >{\raggedright\arraybackslash}p{\dimexpr(\linewidth-10\tabcolsep)*11/100\relax}
+  >{\raggedright\arraybackslash}p{\dimexpr(\linewidth-10\tabcolsep)*16/100\relax}
+  >{\raggedright\arraybackslash}p{\dimexpr(\linewidth-10\tabcolsep)*19/100\relax}
+  >{\raggedright\arraybackslash}p{\dimexpr(\linewidth-10\tabcolsep)*17/100\relax}
+  >{\raggedright\arraybackslash}p{\dimexpr(\linewidth-10\tabcolsep)*16/100\relax}
+  >{\raggedright\arraybackslash}p{\dimexpr(\linewidth-10\tabcolsep)*21/100\relax}
+@{}}
+\caption{Positioning of the proposed ALMM-based approach against representative UAV scheduling and routing studies.}
+\label{tbl:related_work}\\
+\toprule
+\textbf{Study} &
+\textbf{Problem setting} &
+\textbf{Operational features} &
+\textbf{Modeling / solution approach} &
+\textbf{Dynamic / state-based} &
+\textbf{Main distinction from this study} \\
+\midrule
+\endfirsthead
+
+\multicolumn{6}{c}{\footnotesize\bfseries \tablename\ \thetable{} -- continued from previous page} \\
+\toprule
+\textbf{Study} &
+\textbf{Problem setting} &
+\textbf{Operational features} &
+\textbf{Modeling / solution approach} &
+\textbf{Dynamic / state-based} &
+\textbf{Main distinction from this study} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{6}{r}{\footnotesize\emph{Continued on next page\ldots}} \\
+\endfoot
+
+\bottomrule
+\zrodloLT{6}{Zestawienie demonstracyjne.}
+\endlastfoot
+
+Study 1 &
+Problem setting Problem setting Problem setting &
+Operational features Operational features Operational features &
+Modeling / solution approach Modeling / solution approach &
+Dynamic / state-based Dynamic / state-based Dynamic / state-based &
+Main distinction from this study Main distinction from this study \\
+
+Study 2 &
+Problem setting Problem setting Problem setting &
+Operational features Operational features Operational features &
+Modeling / solution approach Modeling / solution approach &
+Dynamic / state-based Dynamic / state-based Dynamic / state-based &
+Main distinction from this study Main distinction from this study \\
+
+Study 3 &
+Problem setting Problem setting Problem setting &
+Operational features Operational features Operational features &
+Modeling / solution approach Modeling / solution approach &
+Dynamic / state-based Dynamic / state-based Dynamic / state-based &
+Main distinction from this study Main distinction from this study \\
+
+Study 4 &
+Problem setting Problem setting Problem setting &
+Operational features Operational features Operational features &
+Modeling / solution approach Modeling / solution approach &
+Dynamic / state-based Dynamic / state-based Dynamic / state-based &
+Main distinction from this study Main distinction from this study \\
+
+Study 5 &
+Problem setting Problem setting Problem setting &
+Operational features Operational features Operational features &
+Modeling / solution approach Modeling / solution approach &
+Dynamic / state-based Dynamic / state-based Dynamic / state-based &
+Main distinction from this study Main distinction from this study \\
+
+Study 6 &
+Problem setting Problem setting Problem setting &
+Operational features Operational features Operational features &
+Modeling / solution approach Modeling / solution approach &
+Dynamic / state-based Dynamic / state-based Dynamic / state-based &
+Main distinction from this study Main distinction from this study \\
+
+Study 7 &
+Problem setting Problem setting Problem setting &
+Operational features Operational features Operational features &
+Modeling / solution approach Modeling / solution approach &
+Dynamic / state-based Dynamic / state-based Dynamic / state-based &
+Main distinction from this study Main distinction from this study \\
+
+Study 8 &
+Problem setting Problem setting Problem setting &
+Operational features Operational features Operational features &
+Modeling / solution approach Modeling / solution approach &
+Dynamic / state-based Dynamic / state-based Dynamic / state-based &
+Main distinction from this study Main distinction from this study \\
+
+Study 9 &
+Problem setting Problem setting Problem setting &
+Operational features Operational features Operational features &
+Modeling / solution approach Modeling / solution approach &
+Dynamic / state-based Dynamic / state-based Dynamic / state-based &
+Main distinction from this study Main distinction from this study \\
+
+Study 10 &
+Problem setting Problem setting Problem setting &
+Operational features Operational features Operational features &
+Modeling / solution approach Modeling / solution approach &
+Dynamic / state-based Dynamic / state-based Dynamic / state-based &
+Main distinction from this study Main distinction from this study \\
+\midrule
+
+This study &
+Problem setting Problem setting Problem setting &
+Operational features Operational features Operational features &
+Modeling / solution approach Modeling / solution approach &
+Dynamic / state-based Dynamic / state-based Dynamic / state-based &
+Main distinction from this study Main distinction from this study \\
+
+\end{longtable}
+
+\endgroup
+
+
+
+
+
+% ------------------------------------------------------------------------
+\section{Wzory matematyczne}
+
+Kryterium $Q$ jest separowalne dla procesu $P$, jeżeli dla każdej sekwencji decyzyjnej $\tilde{u} \in U$ można w~rekurencyjny sposób wyznaczyć:
+
+\begin{equation}
+    \label{eq:0001}
+    Q_{0}= const\; \text{w szczegolności gdy}\; Q_{0}=0
+\end{equation}
+
+\begin{equation}
+    \label{eq:0002}
+    Q_{i+1}= f_{Q}\left ( Q_{i},u_{i},s{i}\right ) \; \text{dla} \; i=0,1,\dots, d\left ( \tilde{s}-1 \right )
+\end{equation}
+
+\noindent gdzie: $Q_{i}$ dla $f>0$ opisuje wartość kryterium $Q$ wyznaczonego dla tego stanu w~rozpatrywanej trajektorii $Q_{i}=Q\left ( {\tilde{u}}' \right )$, gdzie ${\tilde{u}}' = \left (u_{0},u_{1},\dots,u_{i-1}  \right )$ jest początkową częścią zbioru ${\tilde{u}}'$. Funkcją $f_{Q}:\Re \times U \times S \rightarrow \Re$ jest częściową funkcją, taką że:
+
+\begin{equation}
+    \label{eq:0003}
+    Dom\;f_{Q}=\left \{ \left ( a,u,s \right ) \it \Re \times U \times S: s \in S^{P},\; u \in U_{p}, \; a \in \Re \right \}
+\end{equation}
+
+Poniżej zamieszczono przykład umieszczenia długich wzorów w pracy. Zbiór stanów niedopuszczalnych:
+
+\begin{equation}
+    \begin{aligned}
+        S_{N} = \left\{ \left( x,t \right): \left( J_{M}\left( x,t \right) \cap J_{out} \neq 0 \wedge F^{r} < t < B^{r+1}, \; 1 \leqslant r \leqslant ILs-1 \right) \right. \\
+        \left. \cup \left( \underset{j \in J_{out} }{\exists} j \notin x^{0} \wedge t > F^{ILs} \right) \cup \left( \underset{j \in J_{baz} }{\exists} j \notin x^{0} \wedge t > T_{max} \right) \right\}
+    \end{aligned}
+    \label{eq:0028}
+\end{equation}
+
+\noindent gdzie $T_{max}$ -- przyjęty czas zakończenia wszystkich zadań w~danym dniu.
+
+Czasem zachodzi potrzeba wytłumaczenia znaczenia symboli użytych w równaniu. Można to zrobić z użyciem zdefiniowanego na potrzeby niniejszej klasy środowiska \texttt{eqwhere}.
+
+\begin{equation}
+    E = mc^2
+\end{equation}
+gdzie
+\begin{eqwhere}[2cm]
+    \item[$m$] masa
+    \item[$c$] prędkość światła w próżni
+\end{eqwhere}
+
+Odległość półpauzy od lewego marginesu należy dobrać pod kątem najdłuższego symbolu (bądź listy symboli) poprzez odpowiednie ustawienie parametru tego środowiska (domyślnie: 2 cm).
+
+\section{Code Listing}
+
+Kod jest zwykle przechowywany w pliku źródłowym, dlatego polecenie, które automatycznie pobiera kod z pliku, staje się bardzo przydatne. W pracy należy umieszczać kody źródłowe które przechowywane będą w katalogu \texttt{src} w oddzielnych plikach z odpowiedniem rozszerzeniem np. \texttt{*.m, *.cpp, *.css, *.py, *.html, *.css} itp. Poniżej przedstawiono przykład jak dodawać kod źródłowy z pliku, więcej informacji można znaleźć w dokumentacji Code listing \LaTeX  \url{https://www.overleaf.com/learn/latex/Code_listing}.
+
+Algorytm Euklidesa służy do wyznaczania największego wspólnego dzielnika dwóch liczb całkowitych. Największy wspólny dzielnik dwóch liczb a i  b, to taka liczba, która dzieli te liczby bez reszty i jest ona możliwie największa. Można go zastosować do skracania ułamków lub wyznaczenia najmniejszej wspólnej wielokrotności NWW. Artykuł opisuje dwie postacie algorytmu: nieoptymalną i optymalną.
+
+\begin{itemize}
+    \item Niezoptymalizowany algorytm Euklidesa -- sposób rozwiązania jest następujący: wybieramy większą z dwóch liczb i zamieniamy ją na różnicę większej i mniejszej. Czynność tą powtarzamy do momentu uzyskania dwóch takich samych wartości. Warto zaznaczyć, że ten algorytm jest bardzo niewydajny. Gdy dobierzemy odpowiednio liczby, to ilość operacji znacznie się zwiększy.
+    \item Zoptymalizowany algorytm Euklidesa -- w przypadku optymalnego rozwiązania NWD postępujemy następująco: załóżmy, że wyznaczamy NWD dwóch liczb naturalnych a i b. W każdym przejściu pętli wykonujemy dwie operacje: $a = b$ oraz $b = a \; mod \; b$. Czynności te powtarzamy do momentu, gdy zmienna $b$ osiągnie wartość zero. Zmienna $a$ będzie przechowywać wtedy największy wspólny dzielnik liczb podanych na wejściu.
+\end{itemize}
+
+Przykłądowa implementacja algorytmu NWD w wersji rekurencyjnej dla powyższych wersji algorytmu przedstawiono na \listingname~\ref{nwdVer1} i ~\ref{nwdVer2}.
+
+\lstinputlisting[language=Python, caption= Niezoptymalizowany algorytm NWD wersja rekurencyjna, label=nwdVer1]{src/nwdRekVer1.py}
+
+
+\lstinputlisting[language=Python, caption= Zoptymalizowany algorytm NWD wersja rekurencyjna, label=nwdVer2]{src/nwdRekVer2.py}
+
+
+\subsection{Style i kolory kodu}
+
+Formatowanie kodu w pakiecie listingowym jest wysoce konfigurowalne. W przypadku gdy chcemy aby kod wstawiany za pomocą listings w \LaTeX był kolorowy, należy skonfigurować styl, który umożliwi kolorowanie składni. Do tego potrzebna jest paczka \texttt{xcolor}, która pozwala na definiowanie kolorów. Poniżej kroki, jak to zrobić:
+
+\begin{itemize}
+    \item W preambule dodaj odpowiednie paczki: \texttt{\textbackslash
+              usepackage{listings},\textbackslash usepackage{xcolor}}.
+    \item Następnie zdefiniuj styl dla kodu źródłowego. Na przykład, dla języka Python może wyglądać nastepująco:
+          \small \begin{verbatim}
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{green},          % Kolor komentarzy
+    keywordstyle=\color{blue},           % Kolor słów kluczowych
+    numberstyle=\tiny\color{gray},       % Kolor i styl numerów linii
+    stringstyle=\color{red},             % Kolor ciągów znaków
+    basicstyle=\ttfamily\footnotesize,   % Podstawowy styl kodu
+    breakatwhitespace=false,             % Automatyczne dzielenie wierszy
+    breaklines=true,                     % Dzielenie długich linii
+    keepspaces=true,                     % Zachowanie spacji
+    numbers=left,                        % Numery linii po lewej
+    numbersep=5pt,                       % Odstęp numerów od kodu
+    showspaces=false,                    % Nie pokazuj spacji
+    showstringspaces=false,              % Nie pokazuj spacji 
+                                         % w ciągach znaków
+    showtabs=false,                      % Nie pokazuj tabulacji
+    tabsize=2                            % Rozmiar tabulacji
+}
+    \end{verbatim}
+
+    \item Aby użyć tego stylu w kodzie, dodaj do lstinputlisting argument style=mystyle. Cała komenda będzie wyglądać tak:
+          \begin{verbatim}
+\lstinputlisting[language=Python, caption=Algorytm NWD, style=mystyle]
+{src/nwdRedVer1.py}
+    \end{verbatim}
+    \item Możesz też dostosować kolory według własnych preferencji, korzystając z paczki xcolor i np. definiując własne kolory:
+          \begin{verbatim}
+    \definecolor{lightgray}{rgb}{0.9,0.9,0.9}
+    \definecolor{blue}{rgb}{0,0,1}
+    \definecolor{green}{rgb}{0,0.6,0}
+    \definecolor{red}{rgb}{0.6,0,0}
+    \definecolor{gray}{rgb}{0.5,0.5,0.5}
+    \end{verbatim}
+\end{itemize}
+
+
+Na \listingname~\ref{nwdVer1a} przedstawiono uzyskany wynik użycia zdefiniowane powyżej stylu.
+
+\lstinputlisting[language=Python, caption= Niezoptymalizowany algorytm NWD wersja rekurencyjna, label=nwdVer1a,  style=mystyle]{src/nwdRekVer1.py}
+
+
+\section{Cytowania literatury}
+
+W LaTeX-u, \texttt{\textbackslash cite} jest używane do cytowania źródeł z bibliografii. Cytowanie w LaTeX-u wymaga użycia systemu bibliograficznego, który może być oparty na pakiecie bibtex lub biblatex. Oto jak można używać \texttt{\textbackslash cite} w różnych kontekstach:
+
+Przygotowanie pliku bibliograficznego - stwórz plik .bib (np. bibliografia.bib) z wpisami bibliograficznymi. Każdy wpis powinien być sformatowany zgodnie z wymaganiami BibTeX. Przykład wpisu:
+\begin{verbatim}
+        @article{smith2020,
+          author = {John Smith},
+          title = {A Great Paper},
+          journal = {Journal of Great Papers},
+          year = {2020},
+          volume = {5},
+          number = {3},
+          pages = {123-456}
+        }
+        \end{verbatim}
+
+W pliku .tex załaduj pakiet natbib (opcjonalnie) i użyj \texttt{\textbackslash cite}:
+
+\begin{verbatim}
+    \documentclass{article}
+    \usepackage[numbers]{natbib} % Można również użyć [authoryear] lub innych opcji
+
+    \begin{document}
+
+    Here is a citation \cite{smith2020}.
+
+    \bibliographystyle{plain} % Wybierz odpowiedni styl bibliografii
+    \bibliography{bibliografia} % Plik bibliograficzny (bez rozszerzenia .bib)
+
+    \end{document}
+
+\end{verbatim}
+
+
+
+W pracy można cytować literaturę pojedyńczo zgodnie z zapisem:~\cite{ARM06}, \cite{WEI2026131611}. Cytowanie kliku źródeł:~\cite{ARM06,COCCHIERI2026131725,app14177462,PeDa04}. Kolejny przykład użycia cytowania~\cite{Dil00,Lam92}. Przykład cytowania źródła internetowego~\cite{example2024} \cite{MendeleyExample}.
+
+% ------------------------------------------------------------------------

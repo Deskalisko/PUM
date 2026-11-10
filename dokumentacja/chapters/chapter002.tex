@@ -1,0 +1,280 @@
+﻿\chapter{Opis biznesowy projektowanego systemu}
+\label{cha:analiza_wymagan}
+
+% ==============================================================================
+\section{Opis świata rzeczywistego}
+\label{sec:opis_swiata_rzeczywistego}
+
+\textbf{Charakterystyka środowiska:}
+\label{subsec:charakterystyka_srodowiska}
+Projektowany system to aplikacja mobilna przeznaczona dla kierowców indywidualnych, właścicieli wielu pojazdów oraz pasjonatów motoryzacji. Środowisko obejmuje codzienne użytkowanie pojazdów spalinowych, hybrydowych oraz elektrycznych. Użytkownik rejestruje zdarzenia eksploatacyjne bezpośrednio na stacji paliw, przy punkcie ładowania lub niezwłocznie po wizycie w~warsztacie samochodowym.
+
+
+\subsection{Opis stanu obecnego}
+\label{subsec:stan_obecny}
+
+W~stanie obecnym proces monitorowania eksploatacji pojazdu przebiega w~sposób manualny i~rozproszony:
+\begin{enumerate}
+    \item Kierowca tankuje pojazd lub opłaca koszty eksploatacyjne (ubezpieczenie, serwis, rata leasingu).
+    \item Informacje o~wydatkach i~przebiegu są pamiętane intuicyjnie albo zapisywane w~papierowych notatkach i~na paragonach.
+    \item Obliczenie średniego spalania wymaga ręcznych przeliczeń kalkulatorem na podstawie zapisanego przebiegu i~ilości paliwa.
+    \item Kierowca samodzielnie pilnuje terminów badań technicznych, polis OC/AC oraz rat leasingowych bez automatycznych przypomnień.
+    \item W~przypadku posiadania kilku pojazdów brak jest jednego miejsca zbiorczego do porównania kosztów ich utrzymania.
+\end{enumerate}
+
+%Taki model prowadzi do utraty kontroli nad realnymi wydatkami, braku wiarygodnych danych dotyczących zużycia paliwa/energii oraz ryzyka przeoczenia kluczowych terminów administracyjno-prawnych.
+W efekcie łatwo stracić kontrolę nad wydatkami na auto, trudno o dokładne dane o spalaniu, a o ważnych przeglądach czy polisach OC przypominamy sobie często w ostatniej chwili.
+
+
+\clearpage
+
+\subsection{Identyfikacja problemów biznesowych}
+\label{subsec:problemy_biznesowe}
+
+Na podstawie analizy stanu obecnego zidentyfikowano kluczowe problemy biznesowe, które zestawiono w~tabeli~\ref{tab:problemy_biznesowe}.
+
+\begin{table}[H]
+    \centering
+    \caption{Zidentyfikowane problemy biznesowe}
+    \label{tab:problemy_biznesowe}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}p{1.4cm}|X|}
+        \hline
+        \rowcolor{tableheader}
+        \textbf{ID} & \multicolumn{1}{c|}{\textbf{Zidentyfikowany problem}} \\
+        \hline
+        \hypertarget{prob:P-01}{P-01} & Brak możliwości szybkiego i~bieżącego wyliczania realnego zużycia paliwa/energii bezpośrednio po tankowaniu. \\
+        \hline
+        \hypertarget{prob:P-02}{P-02} & Trudność w~oszacowaniu miesięcznych kosztów utrzymania pojazdu z~powodu rozproszonych danych o~wydatkach. \\
+        \hline
+        \hypertarget{prob:P-03}{P-03} & Ryzyko przeoczenia ważnych terminów opłat, ubezpieczeń OC/AC oraz okresowych przeglądów technicznych. \\
+        \hline
+        \hypertarget{prob:P-04}{P-04} & Brak możliwości wygodnego zarządzania danymi eksploatacyjnymi dla więcej niż jednego pojazdu w~jednym miejscu. \\
+        \hline
+        \hypertarget{prob:P-05}{P-05} & Utrata możliwości rejestracji danych w~przypadku braku połączenia z~siecią internetową w~trasie. \\
+        \hline
+    \end{tabularx}
+    \zrodlo{Opracowanie własne.}
+\end{table}
+
+
+\subsection{Opis stanu docelowego}
+\label{subsec:stan_docelowy}
+
+Dzięki mobilnej aplikacji kontrolowanie auta stanie się znacznie prostsze:
+\begin{enumerate}
+    \item Użytkownik uruchamia aplikację na smartfonie bezpośrednio po tankowaniu lub poniesieniu wydatku eksploatacyjnego.
+    \item System zapisuje wpis w~bazie danych na urządzeniu, realizując pełną funkcjonalność bez konieczności połączenia z~siecią Internet.
+    \item Aplikacja automatycznie przelicza średnie spalanie (l/100~km lub kWh/100~km) oraz szacuje dostępny zasięg pojazdu.
+    \item System generuje przejrzyste statystyki wydatków oraz prognozuje budżet na kolejny miesiąc w~oparciu o~dane historyczne.
+    \item Aplikacja wysyła powiadomienie przypominające o~zbliżającym się terminie przeglądu technicznego lub terminie płatności polisy ubezpieczeniowej.
+    \item Użytkownik wygodnie przełącza się pomiędzy zdefiniowanymi profilami swoich pojazdów w~jednym, spójnym interfejsie.
+\end{enumerate}
+
+
+\subsection{Identyfikacja interesariuszy}
+\label{subsec:interesariusze}
+
+W~ramach projektowanego systemu zidentyfikowano następujące grupy interesariuszy oraz ich role:
+\begin{itemize}
+    \item \textbf{Użytkownik} -- jedyny użytkownik bezpośredni aplikacji. Wprowadza dane o~tankowaniach i~kosztach, analizuje statystyki zużycia paliwa/energii oraz odbiera przypomnienia o~terminach opłat i~przeglądów.
+    \item \textbf{Autor / Deweloper systemu} -- odpowiada za stworzenie i~rozwój aplikacji. Zależy mu na jej stabilnym działaniu, poprawianiu błędów na podstawie opinii użytkowników oraz dodawaniu nowych funkcji.
+    \item \textbf{Współwłaściciele i~domownicy (Interesariusze pośredni)} -- osoby niekorzystające bezpośrednio z~aplikacji, ale zainteresowane optymalizacją wspólnego budżetu domowego, terminowością polis ubezpieczeniowych oraz przeglądów technicznych.
+\end{itemize}
+
+% ==============================================================================
+\section{Określenie zakresu projektowanego systemu}
+\label{sec:zakres_systemu}
+
+\subsection{Funkcjonalności objęte zakresem projektu}
+\label{subsec:zakres_in}
+
+W~ramach projektu przewidziano realizację następujących funkcjonalności:
+\begin{itemize}
+    \item tworzenie, edycja oraz usuwanie profili pojazdów (marka, model, zdjęcie z~pamięci urządzenia, rodzaj zasilania/paliwa, pojemność zbiornika lub baterii),
+    \item rejestrowanie tankowań (stan licznika, ilość paliwa lub energii, koszt łączny) wraz z~automatycznym obliczaniem średniego spalania,
+    \item rozpoznawanie tekstu (OCR) z~fotografii paragonu z~możliwością weryfikacji i~ręcznej korekty odczytanych pól,
+    \item kalkulator zasięgu pojazdu na podstawie stanu paliwa i~wyliczonego średniego zużycia,
+    \item ewidencja kosztów dodatkowych z~podziałem na kategorie (naprawy, polisy OC/AC, raty leasingowe, badania techniczne),
+    \item planowanie oraz automatyczne generowanie lokalnych powiadomień systemowych o~nadchodzących terminach opłat i~przeglądów,
+    \item generowanie prognozy wydatków na kolejny miesiąc na podstawie agregacji danych historycznych,
+    \item działanie w~trybie offline z~lokalnym przechowywaniem danych na urządzeniu,
+    \item przełączanie widoku pomiędzy zdefiniowanymi pojazdami.
+\end{itemize}
+
+
+\subsection{Funkcjonalności poza zakresem projektu}
+\label{subsec:zakres_out}
+
+W~celu zachowania odpowiedniego poziomu złożoności projektu, poza zakresem systemu pozostają:
+\begin{itemize}
+    \item \textbf{Bezpośrednia komunikacja ze sprzętem pojazdu:} System nie będzie odczytywał parametrów samochodu w~czasie rzeczywistym poprzez interfejsy diagnostyczne (np. adaptery OBD-II lub Bluetooth).
+    \item \textbf{Automatyczne pobieranie danych zewnętrznych:} Aplikacja nie będzie połączona z~zewnętrznymi serwisami internetowymi w~celu automatycznego pobierania cen paliw lub kursów walut.
+    \item \textbf{Zaawansowane usługi geolokalizacyjne:} Aplikacja nie będzie zawierać modułu nawigacji satelitarnej z~wyznaczaniem trasy i~prowadzeniem krok po kroku.
+\end{itemize}
+
+\clearpage
+
+% ==============================================================================
+\section{Wymagania funkcjonalne}
+\label{sec:wymagania_funkcjonalne}
+
+Na podstawie analizy procesów i~zidentyfikowanych problemów sformułowano szczegółowe wymagania funkcjonalne systemu, które przedstawiono w~tabeli~\ref{tab:wymagania_funkcjonalne}.
+
+\begin{table}[H]
+    \centering
+    \caption{Specyfikacja wymagań funkcjonalnych}
+    \label{tab:wymagania_funkcjonalne}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}p{1.4cm}|X|}
+        \hline
+        \rowcolor{tableheader}
+        \textbf{ID} & \multicolumn{1}{c|}{\textbf{Wymaganie funkcjonalne}} \\
+        \hline
+        \hypertarget{wf:WF-01}{WF-01} & System musi umożliwiać użytkownikowi dodanie profilu pojazdu ze wskazaniem marki, modelu, rodzaju paliwa (Benzyna, Diesel, LPG, Prąd), pojemności zbiornika oraz zdjęcia z~pamięci urządzenia. \\
+        \hline
+        \hypertarget{wf:WF-02}{WF-02} & System musi umożliwiać rejestrowanie wpisu tankowania zawierającego datę, stan licznika, ilość zatankowanego paliwa/energii, cenę za litr oraz łączny koszt, zapewniając automatyczne wzajemne przeliczanie powiązanych wartości kwotowych. \\
+        \hline
+        \hypertarget{wf:WF-03}{WF-03} & System musi automatycznie obliczać średnie zużycie paliwa/energii na 100~km pomiędzy pełnymi tankowaniami. \\
+        \hline
+        \hypertarget{wf:WF-04}{WF-04} & System musi umożliwiać wyliczanie przewidywanego zasięgu pojazdu na podstawie wprowadzonego budżetu lub ilości paliwa i~średniego spalania. \\
+        \hline
+        \hypertarget{wf:WF-05}{WF-05} & System musi umożliwiać rejestrowanie wydatków eksploatacyjnych z~podziałem na kategorie (naprawa, ubezpieczenie, leasing, przegląd). \\
+        \hline
+        \hypertarget{wf:WF-06}{WF-06} & System musi umożliwiać planowanie, edycję i~generowanie lokalnych powiadomień o~terminach opłat i~przeglądów, w~tym automatyczne tworzenie domyślnego przypomnienia 7~dni przed terminem oraz definiowanie wielu własnych terminów powiadomień dla jednego zdarzenia. \\
+        \hline
+        \hypertarget{wf:WF-07}{WF-07} & System musi generować prognozę wydatków na nadchodzący miesiąc na podstawie średnich kosztów z~poprzednich miesięcy. \\
+        \hline
+        \hypertarget{wf:WF-08}{WF-08} & System musi umożliwiać przełączanie aktywnego widoku między wieloma zdefiniowanymi pojazdami. \\
+        \hline
+        \hypertarget{wf:WF-09}{WF-09} & System musi umożliwiać przeglądanie i~edycję historii wszystkich wpisów dla wybranego pojazdu. \\
+        \hline
+        \hypertarget{wf:WF-10}{WF-10} & System musi wykonywać wszystkie operacje zapisu i~odczytu danych w~lokalnej bazie na urządzeniu bez wymogu połączenia z~siecią internetową. \\
+        \hline
+        \hypertarget{wf:WF-11}{WF-11} & System musi umożliwiać skanowanie paragonu za pomocą aparatu urządzenia i~automatyczne odczytywanie danych tankowania (OCR) z~możliwością wielokrotnego powtórzenia zdjęcia oraz ręcznej edycji dowolnego błędnie rozpoznanego pola przed zapisem. \\
+        \hline
+    \end{tabularx}
+    \zrodlo{Opracowanie własne.}
+\end{table}
+
+\clearpage
+
+\subsection{Powiązanie wymagań funkcjonalnych z problemami biznesowymi}
+\label{subsec:powiazanie_wf_p}
+
+Każde ze zdefiniowanych wymagań funkcjonalnych stanowi bezpośrednią odpowiedź na zidentyfikowane trudności biznesowe. Zestawienie powiązań przedstawiono w~tabeli~\ref{tab:powiazania_wf_p}.
+
+\begin{table}[H]
+    \centering
+    \caption{Powiązanie wymagań funkcjonalnych z problemami biznesowymi}
+    \label{tab:powiazania_wf_p}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}p{6.5cm}|X|}
+        \hline
+        \rowcolor{tableheader}
+        \textbf{Problem biznesowy} & \multicolumn{1}{c|}{\textbf{Powiązane wymagania funkcjonalne}} \\
+        \hline
+        \hyperlink{prob:P-01}{P-01} -- Brak bieżącego wyliczania spalania & \hyperlink{wf:WF-02}{WF-02}, \hyperlink{wf:WF-03}{WF-03}, \hyperlink{wf:WF-04}{WF-04}, \hyperlink{wf:WF-11}{WF-11} \\
+        \hline
+        \hyperlink{prob:P-02}{P-02} -- Trudność w~oszacowaniu kosztów & \hyperlink{wf:WF-05}{WF-05}, \hyperlink{wf:WF-07}{WF-07}, \hyperlink{wf:WF-09}{WF-09} \\
+        \hline
+        \hyperlink{prob:P-03}{P-03} -- Ryzyko przeoczenia terminów & \hyperlink{wf:WF-06}{WF-06} \\
+        \hline
+        \hyperlink{prob:P-04}{P-04} -- Brak obsługi wielu pojazdów & \hyperlink{wf:WF-01}{WF-01}, \hyperlink{wf:WF-08}{WF-08} \\
+        \hline
+        \hyperlink{prob:P-05}{P-05} -- Utrata możliwości rejestracji danych w~trybie offline & \hyperlink{wf:WF-10}{WF-10} \\
+        \hline
+    \end{tabularx}
+    \zrodlo{Opracowanie własne.}
+\end{table}
+
+
+% ==============================================================================
+\section{Wymagania niefunkcjonalne}
+\label{sec:wymagania_niefunkcjonalne}
+
+Wymagania niefunkcjonalne określają atrybuty jakościowe, parametry wydajnościowe oraz ograniczenia technologiczne stawiane aplikacji mobilnej. W~tabeli~\ref{tab:wymagania_niefunkcjonalne} zaprezentowano zestawienie wymagań wraz ze wskaźnikami umożliwiającymi ich jednoznaczną weryfikację.
+
+\begin{table}[H]
+    \centering
+    \caption{Specyfikacja wymagań niefunkcjonalnych}
+    \label{tab:wymagania_niefunkcjonalne}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}p{1.7cm}|>{\centering\arraybackslash}p{3.0cm}|X|}
+        \hline
+        \rowcolor{tableheader}
+        \textbf{ID} & \textbf{Kategoria} & \multicolumn{1}{c|}{\textbf{Wymaganie niefunkcjonalne}} \\
+        \hline
+        \hypertarget{wnf:WNF-01}{WNF-01} & Wydajność & Przy lokalnej bazie 1000 wpisów wyliczenie spalania i~odświeżenie wykresu musi trwać poniżej 0,5~s, a~lokalne przetworzenie zdjęcia paragonu przez moduł OCR -- poniżej 3~s. \\
+        \hline
+        \hypertarget{wnf:WNF-02}{WNF-02} & Użyteczność & Formularz tankowania musi wymagać minimum 3 kluczowych pól (licznik, ilość paliwa, koszt) i~maksymalnie 10 łącznie, umożliwiając wprowadzenie wymaganych danych w~czasie poniżej 15~s. \\
+        \hline
+        \hypertarget{wnf:WNF-03}{WNF-03} & Niezawodność & System musi realizować pełny zapis, odczyt oraz analitykę w~100\% lokalnie na urządzeniu, bez połączenia z~siecią Internet. \\
+        \hline
+        \hypertarget{wnf:WNF-04}{WNF-04} & Kompatybilność & Aplikacja musi działać na systemie Android od wersji 11.0 (API 30) i~ekranach min. Full HD (1080p), a~do modułu OCR wymagać aparatu o~rozdzielczości min. 8~Mpx z~autofokusem. \\
+        \hline
+    \end{tabularx}
+    \zrodlo{Opracowanie własne.}
+\end{table}
+
+\clearpage
+
+% ==============================================================================
+\section{Reguły biznesowe}
+\label{sec:reguly_biznesowe}
+
+Reguły biznesowe definiują ograniczenia dziedzinowe i~zasady logiczne, które determinują poprawne funkcjonowanie systemu niezależnie od warunków technicznych. Zestawienie reguł zamieszczono w~tabeli~\ref{tab:reguly_biznesowe}.
+
+\begin{table}[H]
+    \centering
+    \caption{Zestawienie reguł biznesowych}
+    \label{tab:reguly_biznesowe}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}p{1.4cm}|X|}
+        \hline
+        \rowcolor{tableheader}
+        \textbf{ID} & \multicolumn{1}{c|}{\textbf{Reguła biznesowa}} \\
+        \hline
+        \hypertarget{rb:RB-01}{RB-01} & Wartość przebiegu w~nowym wpisie tankowania dla danego pojazdu musi być większa niż przebieg w~poprzednim wpisie. \\
+        \hline
+        \hypertarget{rb:RB-02}{RB-02} & Obliczenie średniego spalania wykonuje się wyłącznie pomiędzy tankowaniami oznaczonymi jako tankowanie do pełna. \\
+        \hline
+        \hypertarget{rb:RB-03}{RB-03} & Dla każdego zdefiniowanego terminu opłaty lub badania technicznego system domyślnie generuje automatyczne przypomnienie 7~dni przed datą zdarzenia, umożliwiając użytkownikowi modyfikację tego terminu oraz dodanie kolejnych powiadomień. \\
+        \hline
+        \hypertarget{rb:RB-04}{RB-04} & Wartości łącznego kosztu, objętości paliwa oraz ceny jednostkowej za litr muszą być wzajemnie spójne arytmetycznie ($\text{koszt} = \text{objętość} \times \text{cena jednostkowa}$). Zmiana kosztu przy stałej objętości powoduje automatyczne przeliczenie ceny jednostkowej, a~wykrycie rozbieżności blokuje zapis i~wyświetla komunikat błędu. \\
+        \hline
+        \hypertarget{rb:RB-05}{RB-05} & Data i~godzina nowego wpisu tankowania nie może być wcześniejsza niż data ostatniego zarejestrowanego tankowania dla danego pojazdu. Próba rejestracji wpisu wstecznego wymaga wyraźnego potwierdzenia w~oknie dialogowym z~ostrzeżeniem o~możliwym zaburzeniu statystyk historycznych i~przyszłych prognoz lub możliwości anulowania operacji. \\
+        \hline
+    \end{tabularx}
+    \zrodlo{Opracowanie własne.}
+\end{table}
+
+
+\subsection{Powiązanie reguł biznesowych z wymaganiami funkcjonalnymi}
+\label{subsec:powiazanie_rb_wf}
+
+Reguły biznesowe wymuszają określone zachowania systemu, co znajduje odzwierciedlenie w~specyfikacji wymagań funkcjonalnych. Zależności te przedstawiono w~tabeli~\ref{tab:powiazania_rb_wf}.
+
+\begin{table}[H]
+    \centering
+    \caption{Powiązanie reguł biznesowych z wymaganiami funkcjonalnymi}
+    \label{tab:powiazania_rb_wf}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}p{4cm}|X|}
+        \hline
+        \rowcolor{tableheader}
+        \textbf{Reguła biznesowa} & \multicolumn{1}{c|}{\textbf{Powiązane wymaganie funkcjonalne}} \\
+        \hline
+        \hyperlink{rb:RB-01}{RB-01} & \hyperlink{wf:WF-02}{WF-02} \\
+        \hline
+        \hyperlink{rb:RB-02}{RB-02} & \hyperlink{wf:WF-03}{WF-03} \\
+        \hline
+        \hyperlink{rb:RB-03}{RB-03} & \hyperlink{wf:WF-06}{WF-06} \\
+        \hline
+        \hyperlink{rb:RB-04}{RB-04} & \hyperlink{wf:WF-02}{WF-02} \\
+        \hline
+        \hyperlink{rb:RB-05}{RB-05} & \hyperlink{wf:WF-02}{WF-02} \\
+        \hline
+    \end{tabularx}
+    \zrodlo{Opracowanie własne.}
+\end{table}

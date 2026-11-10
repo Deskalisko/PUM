@@ -1,0 +1,334 @@
+\chapter{Pierwszy dokument}
+\label{cha:pierwszyDokument}
+
+W rozdziale tym przedstawiono podstawowe informacje dotyczące struktury prostych plików \LaTeX a. Omówiono również metody kompilacji plików z zastosowaniem programów \emph{latex} oraz \emph{pdflatex}.
+
+%---------------------------------------------------------------------------
+
+\section{Struktura dokumentu}
+\label{sec:strukturaDokumentu}
+
+Plik \LaTeX owy jest plikiem tekstowym, który oprócz tekstu zawiera polecenia formatujące ten tekst (analogicznie do języka HTML). Plik składa się z dwóch części:
+\begin{enumerate}%[1)]
+      \item Preambuły -- określającej klasę dokumentu oraz zawierającej m.in. polecenia dołączającej dodatkowe pakiety;
+
+      \item Części głównej -- zawierającej zasadniczą treść dokumentu.
+\end{enumerate}
+
+% ------------------------
+\begin{lstlisting}
+\documentclass[a4paper,12pt]{article}      % preambuła
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+
+\begin{document}                           % część główna
+
+\section{Sztuczne życie}
+
+
+\end{document}
+\end{lstlisting}
+
+Nie ma żadnych przeciwskazań do tworzenia dokumentów w~\LaTeX u w~języku polskim. Plik źródłowy jest zwykłym plikiem tekstowym i~do jego przygotowania można użyć dowolnego edytora tekstów, a~polskie znaki wprowadzać używając prawego klawisza \texttt{Alt}. Jeżeli po kompilacji dokumentu polskie znaki nie są wyświetlane poprawnie, to na 95\% źle określono sposób kodowania znaków (należy zmienić opcje wykorzystywanych pakietów).
+%---------------------------------------------------------------------------
+
+
+% ------------------------
+\section{Kompilacja}
+\label{sec:kompilacja}
+
+
+Załóżmy, że przygotowany przez nas dokument zapisany jest w pliku \texttt{test.tex}. Kolejno wykonane poniższe polecenia (pod warunkiem, że w pierwszym przypadku nie wykryto błędów i kompilacja zakończyła się sukcesem) pozwalają uzyskać nasz dokument w formacie pdf:
+\begin{lstlisting}
+latex test.tex
+dvips test.dvi -o test.ps
+ps2pdf test.ps
+\end{lstlisting}
+%
+lub za pomocą PDF\LaTeX:
+\begin{lstlisting}
+pdflatex test.tex
+\end{lstlisting}
+
+Przy pierwszej kompilacji po zmiane tekstu, dodaniu nowych etykiet itp., \LaTeX~tworzy sobie spis rozdziałów, obrazków, tabel itp., a dopiero przy następnej kompilacji korzysta z tych informacji.
+
+W pierwszym przypadku rysunki powinny być przygotowane w~formacie eps, a~w~drugim w~formacie pdf. Ponadto, jeżeli używamy polecenia \texttt{pdflatex test.tex} można wstawiać grafikę bitową (np. w formacie jpg).
+
+
+
+%---------------------------------------------------------------------------
+\section{Narzędzia}
+\label{sec:narzedzia}
+
+Do tworzenia dokumentów w systemie \LaTeX{} dostępnych jest wiele narzędzi, które wspomagają przygotowanie, edycję, kompilację oraz zarządzanie dokumentami. Wybór odpowiedniego środowiska zależy przede wszystkim od preferowanego sposobu pracy, wymagań projektu oraz doświadczenia użytkownika.
+
+Narzędzia do pracy z systemem \LaTeX{} można podzielić na trzy podstawowe grupy: edytory online, edytory lokalne (offline) oraz programy wspomagające zarządzanie bibliografią. W przypadku pracy lokalnej konieczne jest również zainstalowanie odpowiedniej dystrybucji systemu \LaTeX{}.
+
+\subsection{Edytory online}
+
+Edytory online umożliwiają przygotowywanie i kompilowanie dokumentów bez konieczności instalowania dodatkowego oprogramowania na komputerze. Do pracy wystarczy przeglądarka internetowa oraz dostęp do sieci.
+
+\begin{itemize}
+
+    \item \textbf{Overleaf} -- jedno z najpopularniejszych środowisk do tworzenia dokumentów w systemie \LaTeX{}. Umożliwia edycję i kompilację dokumentów bezpośrednio w przeglądarce internetowej, a także współpracę kilku użytkowników nad jednym projektem. Najważniejsze funkcje:
+    \begin{itemize}
+        \item automatyczna kompilacja dokumentów i podgląd plików PDF,
+        \item obsługa kompilatorów pdfLaTeX, XeLaTeX oraz LuaLaTeX,
+        \item obsługa bibliografii z wykorzystaniem BibTeX i Biber,
+        \item współpraca nad dokumentem w czasie rzeczywistym,
+        \item dostęp do gotowych szablonów prac dyplomowych, artykułów naukowych, prezentacji i innych dokumentów,
+        \item możliwość importowania i eksportowania projektów,
+        \item integracja z systemami kontroli wersji Git i GitHub (w ramach odpowiednich planów płatnych).
+    \end{itemize}
+
+    Overleaf oferuje plan bezpłatny, który jest wystarczający do przygotowania większości podstawowych dokumentów. Bardziej zaawansowane funkcje, w tym rozszerzona współpraca i integracja z GitHub, wymagają odpowiedniej subskrypcji.
+
+    Strona internetowa: \url{https://www.overleaf.com/} \cite{Overleaf}.
+
+
+\item \textbf{OpenAI Prism} -- internetowe środowisko do tworzenia dokumentów w systemie \LaTeX{}, opracowane przez OpenAI. Łączy tradycyjną edycję i kompilację dokumentów z funkcjami sztucznej inteligencji, wspomagającymi przygotowywanie tekstów naukowych, artykułów i prac dyplomowych.
+
+Wśród najważniejszych funkcji można wyróżnić:
+\begin{itemize}
+    \item edycję i kompilację dokumentów \LaTeX{} online,
+    \item współpracę wielu użytkowników w czasie rzeczywistym,
+    \item generowanie i poprawianie kodu \LaTeX{} z pomocą AI,
+    \item wykrywanie i analizowanie błędów kompilacji,
+    \item wspomaganie redagowania i formatowania tekstów naukowych,
+    \item wyszukiwanie literatury i zarządzanie cytowaniami,
+    \item integrację z narzędziem Zotero.
+\end{itemize}
+
+Prism oferuje bezpłatny dostęp do podstawowych funkcji za pośrednictwem konta ChatGPT. Nie wymaga instalowania lokalnej dystrybucji \LaTeX{}. 
+
+Strona internetowa: \url{https://prism.openai.com/} \cite{PrismExample}.
+
+    \item \textbf{Papeeria} -- internetowe środowisko do tworzenia dokumentów w systemie \LaTeX{}, umożliwiające pracę bez instalowania dodatkowego oprogramowania.
+
+    Najważniejsze funkcje:
+    \begin{itemize}
+        \item edycja dokumentów bezpośrednio w przeglądarce,
+        \item automatyczna kompilacja dokumentów,
+        \item współpraca użytkowników nad projektem,
+        \item podpowiadanie składni i poleceń,
+        \item możliwość korzystania z gotowych szablonów,
+        \item obsługa dokumentów wykorzystujących LaTeX i Markdown.
+    \end{itemize}
+
+    Papeeria stanowi alternatywę dla Overleaf i może być wykorzystywana do przygotowywania prostych oraz bardziej rozbudowanych dokumentów.
+
+    Strona internetowa: \url{https://www.papeeria.com/} \cite{PapeeriaExample}.
+
+\end{itemize}
+
+
+\subsection{Edytory lokalne (offline)}
+
+Edytory lokalne umożliwiają tworzenie i edytowanie dokumentów bez konieczności stałego dostępu do Internetu. W przeciwieństwie do środowisk online wymagają zainstalowania odpowiedniego oprogramowania oraz dystrybucji systemu \LaTeX{}, która odpowiada za kompilację dokumentów.
+
+\begin{itemize}
+
+    \item \textbf{Visual Studio Code (VS Code)} -- uniwersalny edytor kodu źródłowego, który dzięki rozszerzeniu \textit{LaTeX Workshop} może pełnić funkcję rozbudowanego środowiska do tworzenia dokumentów w systemie \LaTeX{}. Najważniejsze funkcje:
+    \begin{itemize}
+        \item podświetlanie składni i automatyczne uzupełnianie poleceń,
+        \item kompilacja dokumentów i podgląd plików PDF,
+        \item synchronizacja pomiędzy kodem źródłowym a dokumentem PDF,
+        \item wykrywanie błędów składniowych,
+        \item obsługa bibliografii BibTeX i Biber,
+        \item integracja z systemem kontroli wersji Git,
+        \item obsługa rozbudowanych projektów składających się z wielu plików.
+    \end{itemize}
+
+    Aby rozpocząć pracę z dokumentami \LaTeX{} w Visual Studio Code, należy:
+    \begin{enumerate}
+        \item zainstalować Visual Studio Code,
+        \item zainstalować dystrybucję \LaTeX{}, np. MiKTeX lub TeX Live,
+        \item zainstalować rozszerzenie LaTeX Workshop,
+        \item skonfigurować środowisko kompilacji, jeśli ustawienia domyślne nie działają poprawnie.
+    \end{enumerate}
+
+    Visual Studio Code jest szczególnie polecany osobom, które korzystają już z tego środowiska podczas programowania lub chcą zarządzać dokumentami z wykorzystaniem systemu Git.
+
+    Strona internetowa: \url{https://code.visualstudio.com/}
+
+    Rozszerzenie LaTeX Workshop: \url{https://github.com/James-Yu/LaTeX-Workshop}
+
+    Instrukcja instalacji i konfiguracji rozszerzenia LaTeX Workshop oraz kompilacji dokumentów PDF w środowisku Visual Studio Code (Windows) jest dostępna w materiale wideo: \url{https://www.youtube.com/watch?v=4lyHIQl4VM8} \cite{LatexYT}.
+
+
+    \item \textbf{TeXstudio} -- bezpłatne, wieloplatformowe środowisko przeznaczone bezpośrednio do tworzenia dokumentów w systemie \LaTeX{}.
+
+    Najważniejsze funkcje:
+    \begin{itemize}
+        \item podświetlanie składni i automatyczne uzupełnianie poleceń,
+        \item zintegrowany podgląd dokumentów PDF,
+        \item synchronizacja kodu źródłowego z dokumentem PDF,
+        \item sprawdzanie pisowni, odwołań i składni,
+        \item kreatory tabel, równań matematycznych oraz wstawiania grafik,
+        \item obsługa bibliografii i odwołań,
+        \item możliwość konfigurowania procesu kompilacji dokumentów.
+    \end{itemize}
+
+    TeXstudio jest dobrym rozwiązaniem zarówno dla początkujących, jak i zaawansowanych użytkowników. W przeciwieństwie do Visual Studio Code zostało zaprojektowane specjalnie do pracy z dokumentami \LaTeX{}, dzięki czemu wiele potrzebnych funkcji jest dostępnych bez instalowania dodatkowych rozszerzeń.
+
+    Strona internetowa: \url{https://www.texstudio.org/} \cite{TeXstudioEditor}.
+
+\end{itemize}
+
+
+\subsection{Dystrybucje systemu LaTeX}
+
+W przypadku korzystania z edytorów lokalnych niezbędna jest instalacja odpowiedniej dystrybucji systemu \LaTeX{}. Dystrybucja zawiera kompilatory, pakiety, czcionki oraz narzędzia potrzebne do przekształcania plików źródłowych \texttt{.tex} w gotowe dokumenty, najczęściej w formacie PDF.
+
+Do najpopularniejszych dystrybucji należą:
+
+\begin{itemize}
+
+    \item \textbf{MiKTeX} -- dystrybucja dostępna m.in. dla systemu Windows. Umożliwia instalowanie brakujących pakietów na żądanie, co ułatwia rozpoczęcie pracy z dokumentami \LaTeX{}.
+
+    Strona internetowa: \url{https://miktex.org/} \cite{MiKTeX}.
+
+    \item \textbf{TeX Live} -- rozbudowana, wieloplatformowa dystrybucja systemu \LaTeX{}, dostępna dla systemów Windows, Linux i macOS. Zawiera szeroki zestaw pakietów oraz narzędzi do przygotowywania dokumentów.
+
+    Strona internetowa: \url{https://www.tug.org/texlive/} \cite{Tex}.
+
+    \item \textbf{MacTeX} -- dystrybucja przeznaczona dla systemu macOS, oparta na TeX Live. Zawiera narzędzia potrzebne do kompilacji dokumentów oraz dodatkowe aplikacje wspomagające pracę z systemem \LaTeX{}.
+
+    Strona internetowa: \url{https://www.tug.org/mactex/} \cite{MacTeX}.
+
+\end{itemize}
+
+Należy pamiętać, że edytor dokumentów i dystrybucja systemu \LaTeX{} pełnią różne funkcje. Edytor służy przede wszystkim do przygotowywania kodu źródłowego dokumentu, natomiast dystrybucja dostarcza narzędzi niezbędnych do jego kompilacji.
+
+
+\subsection{Narzędzia do zarządzania bibliografią}
+
+Podczas przygotowywania prac dyplomowych i publikacji naukowych istotnym elementem jest prawidłowe zarządzanie źródłami bibliograficznymi. W systemie \LaTeX{} bibliografia jest często przechowywana w plikach \texttt{.bib}, wykorzystywanych przez BibTeX lub BibLaTeX wraz z programem Biber.
+
+Do popularnych narzędzi wspomagających zarządzanie bibliografią należą:
+
+\begin{itemize}
+
+    \item \textbf{Zotero} -- bezpłatne narzędzie do gromadzenia, organizowania i zarządzania literaturą naukową.
+
+    Najważniejsze funkcje:
+    \begin{itemize}
+        \item importowanie danych bibliograficznych z baz naukowych i stron internetowych,
+        \item organizowanie publikacji w kolekcje,
+        \item przechowywanie i oznaczanie dokumentów PDF,
+        \item eksport bibliografii do formatów BibTeX i BibLaTeX,
+        \item synchronizacja bibliotek pomiędzy urządzeniami,
+        \item możliwość współdzielenia zbiorów bibliograficznych.
+    \end{itemize}
+
+    Integrację Zotero z projektami \LaTeX{} można rozszerzyć za pomocą dodatku \textit{Better BibTeX}, który umożliwia m.in. automatyczną aktualizację eksportowanych plików bibliograficznych.
+
+    Strona internetowa: \url{https://www.zotero.org/}
+
+    Dodatek Better BibTeX:
+    \url{https://retorque.re/zotero-better-bibtex/}
+
+    \item \textbf{JabRef} -- bezpłatne narzędzie typu open source, zaprojektowane z myślą o zarządzaniu bibliografią w formatach BibTeX i BibLaTeX.
+
+    Najważniejsze funkcje:
+    \begin{itemize}
+        \item tworzenie i edycja plików \texttt{.bib},
+        \item organizowanie i wyszukiwanie pozycji bibliograficznych,
+        \item importowanie metadanych publikacji,
+        \item zarządzanie kluczami cytowań,
+        \item wykrywanie duplikatów i uzupełnianie danych bibliograficznych,
+        \item bezpośrednia współpraca z projektami \LaTeX{}.
+    \end{itemize}
+
+    JabRef jest szczególnie przydatny podczas przygotowywania większych dokumentów naukowych, w których bibliografia jest zarządzana bezpośrednio za pomocą plików \texttt{.bib}.
+
+    Strona internetowa: \url{https://www.jabref.org/}
+
+    \item \textbf{Mendeley Reference Manager} -- narzędzie do organizowania publikacji naukowych, przechowywania dokumentów PDF oraz zarządzania cytowaniami.
+
+    Najważniejsze funkcje:
+    \begin{itemize}
+        \item gromadzenie i katalogowanie publikacji naukowych,
+        \item importowanie metadanych bibliograficznych,
+        \item organizowanie dokumentów PDF,
+        \item dodawanie notatek i oznaczeń w publikacjach,
+        \item eksport danych bibliograficznych do formatu BibTeX,
+        \item synchronizacja biblioteki użytkownika.
+    \end{itemize}
+
+    Współpraca Mendeley Reference Manager z systemem \LaTeX{} jest możliwa poprzez eksport danych bibliograficznych do pliku \texttt{.bib}. Eksport ten jest dostępny w aplikacji komputerowej.
+
+    Strona internetowa: \url{https://www.mendeley.com/}
+
+\end{itemize}
+
+
+\subsection{Wybór odpowiedniego środowiska}
+
+Wybór narzędzi do pracy z systemem \LaTeX{} powinien uwzględniać charakter przygotowywanego dokumentu, doświadczenie użytkownika oraz preferowany sposób pracy.
+
+Dla osób rozpoczynających naukę \LaTeX{} rekomendowanym rozwiązaniem jest \textbf{Overleaf}, który nie wymaga instalowania ani konfigurowania lokalnego środowiska. Umożliwia szybkie rozpoczęcie pracy oraz korzystanie z gotowych szablonów dokumentów.
+
+Osobom preferującym pracę lokalną można polecić \textbf{TeXstudio}, które oferuje zintegrowane środowisko edycji i kompilacji dokumentów. Alternatywnym rozwiązaniem jest \textbf{Visual Studio Code z rozszerzeniem LaTeX Workshop}, szczególnie przydatny w przypadku projektów wykorzystujących system kontroli wersji Git.
+
+Do zarządzania bibliografią polecane są przede wszystkim \textbf{Zotero z dodatkiem Better BibTeX} oraz \textbf{JabRef}. Oba rozwiązania umożliwiają wygodne zarządzanie źródłami wykorzystywanymi w pracach dyplomowych i publikacjach naukowych.
+
+Niezależnie od wybranego środowiska należy pamiętać o regularnym zapisywaniu kopii zapasowych projektu, zachowaniu uporządkowanej struktury plików oraz weryfikowaniu poprawności danych bibliograficznych.
+
+%---------------------------------------------------------------------------
+
+\section{Przygotowanie dokumentu}
+\label{sec:przygotowanieDokumentu}
+
+Dokumenty w systemie \LaTeX{} tworzone są na podstawie plików źródłowych z rozszerzeniem \texttt{.tex}, które zawierają zwykły tekst oraz polecenia odpowiedzialne za jego strukturę i formatowanie. W przeciwieństwie do tradycyjnych edytorów tekstu, takich jak Microsoft Word, w systemie \LaTeX{} wygląd dokumentu jest generowany  podczas kompilacji pliku źródłowego.
+
+Podczas przygotowywania dokumentu należy pamiętać o kilku podstawowych zasadach:
+
+\begin{itemize}
+
+    \item \textbf{Spacje pomiędzy wyrazami} -- w kodzie źródłowym można stosować pojedyncze lub wielokrotne spacje. Podczas kompilacji kolejne spacje są zazwyczaj interpretowane jako pojedynczy odstęp.
+
+    Aby zapobiec rozdzieleniu dwóch elementów tekstu pomiędzy wierszami, należy zastosować tzw. \textit{twardą spację}, zapisywaną za pomocą znaku tyldy (\texttt{\textasciitilde}). Rozwiązanie to jest szczególnie przydatne np. przy zapisie odwołań do rysunków, tabel i rozdziałów.
+
+    \item \textbf{Tworzenie akapitów} -- nowy akapit rozpoczyna się poprzez pozostawienie pustej linii w kodzie źródłowym. Pojedyncze przejście do nowej linii nie powoduje utworzenia nowego akapitu. Liczba kolejnych pustych linii nie ma znaczenia dla podziału tekstu na akapity.
+
+    \item \textbf{Automatyczne formatowanie tekstu} -- system \LaTeX{} automatycznie odpowiada za skład dokumentu,
+    w tym rozmieszczenie tekstu, podział na wiersze, wyrównanie akapitów oraz numerację elementów.
+
+    Nie należy ręcznie poprawiać układu tekstu za pomocą dodatkowych spacji lub pustych linii. Wszelkie zmiany formatowania powinny być wprowadzane za pomocą odpowiednich poleceń i mechanizmów systemu \LaTeX{}.
+
+\end{itemize}
+
+\noindent
+\textbf{Przydatne materiały i narzędzia wspomagające pracę z systemem \LaTeX{}:}
+
+\begin{itemize}
+
+    \item \textbf{Overleaf Documentation} --
+    dokumentacja oraz materiały edukacyjne dotyczące składni,
+    formatowania dokumentów, wstawiania grafik, tworzenia tabel
+    i zarządzania bibliografią.
+    Dostęp: \url{https://www.overleaf.com/learn}.
+
+    \item \textbf{CodeCogs Equation Editor} --
+    internetowy edytor równań matematycznych, umożliwiający
+    tworzenie i podgląd wzorów oraz generowanie kodu \LaTeX{},
+    który można wykorzystać w dokumencie.
+    Dostęp: \url{https://editor.codecogs.com/}.
+
+    \item \textbf{Tables Generator} --
+    internetowe narzędzie wspomagające projektowanie tabel.
+    Umożliwia przygotowanie struktury tabeli i wygenerowanie
+    odpowiadającego jej kodu \LaTeX{}, który następnie można
+    umieścić w dokumencie.
+    Dostęp: \url{https://www.tablesgenerator.com/}.
+
+\end{itemize}
+
+Wymienione narzędzia mogą ułatwić przygotowywanie dokumentów,
+szczególnie osobom rozpoczynającym naukę systemu \LaTeX{}.
+Należy jednak pamiętać, że wygenerowany kod powinien zostać
+sprawdzony i w razie potrzeby dostosowany do struktury
+oraz wymagań formatowania przygotowywanego dokumentu.

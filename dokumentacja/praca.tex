@@ -1,0 +1,151 @@
+%==============================================================================
+% Praca dyplomowa (UR) — plik główny
+%==============================================================================
+
+\documentclass{urdpl}
+
+%------------------------------------------------------------------------------
+% JĘZYK / KODOWANIE (pdfLaTeX)
+%------------------------------------------------------------------------------
+\usepackage[main=polish,english]{babel}
+\usepackage[utf8]{inputenc} % tylko pdfLaTeX
+
+%------------------------------------------------------------------------------
+% MATEMATYKA
+%------------------------------------------------------------------------------
+\usepackage{mathtools}
+
+
+%------------------------------------------------------------------------------
+% HYPERLINKI
+%------------------------------------------------------------------------------
+\usepackage[hidelinks]{hyperref}
+
+%------------------------------------------------------------------------------
+% FLOATY (tylko jeśli używasz [H])
+%------------------------------------------------------------------------------
+\usepackage{float}
+
+%------------------------------------------------------------------------------
+% TABELE (wg potrzeby)
+%------------------------------------------------------------------------------
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage[flushleft]{threeparttable}
+\usepackage{colortbl}
+\definecolor{tableheader}{RGB}{198, 217, 241}
+
+%------------------------------------------------------------------------------
+% PODKREŚLANIE + NUMERY LINII (opcjonalnie)
+%------------------------------------------------------------------------------
+\usepackage[normalem]{ulem}
+\usepackage{lineno}
+
+%------------------------------------------------------------------------------
+% CYTOWANIA
+%------------------------------------------------------------------------------
+\usepackage{csquotes}
+
+%------------------------------------------------------------------------------
+% METADANE PRACY (dla urdpl.cls)
+%------------------------------------------------------------------------------
+\author{Dominik Kuraś}
+\shortauthor{D. Kuraś}
+\noAlbum{134939}
+
+\titlePL{Mobilny dziennik tankowań i eksploatacji pojazdów\\\textbf{MotoLog}}
+\titleEN{Mobile log of refueling and vehicle operation\\\textbf{MotoLog}} % Podajemy tytuł w obu językach
+
+\shorttitlePL{MotoLog -- mobilny dziennik pojazdu}
+\shorttitleEN{MotoLog -- Mobile Vehicle Log}
+
+\thesistype{Praca projektowa}
+\thesisDone{Prowadzący zajęcia laboratoryjne: }
+\supervisor{dr inż. Przemysław Pardel}
+
+\degreeprogramme{Informatyka}
+
+\date{2026}
+
+\department{Instytut Informatyki}
+\faculty{Wydział Nauk Ścisłych i Technicznych}
+
+%druga strona mozna cos dopisac
+% \acknowledgements{Serdecznie dziękuję \dots } % dowolnośc mozńa usunąć
+
+%==============================================================================
+\begin{document}
+%==============================================================================
+
+
+%------------------------------------------------------------------------------
+% Strona tytułowa + podziękowania
+%------------------------------------------------------------------------------
+\titlepages
+
+
+%------------------------------------------------------------------------------
+% Streszczenie (PL) – NIE dodajemy do spisu treści
+%------------------------------------------------------------------------------
+ 
+\cleardoublepage
+\selectlanguage{polish}
+\include{chapters/abstract-pl}
+
+%------------------------------------------------------------------------------
+% Abstract (EN) – NIE dodajemy do spisu treści
+%------------------------------------------------------------------------------
+ 
+\cleardoublepage
+\selectlanguage{english}
+\include{chapters/abstract-en}
+
+%------------------------------------------------------------------------------
+% Spis treści
+%------------------------------------------------------------------------------
+\selectlanguage{polish}
+\tableofcontents
+
+\clearpage
+\linenumbers % jeśli nie chcesz numerów linii w całości, usuń lub przenieś
+
+%------------------------------------------------------------------------------
+% Rozdziały
+%------------------------------------------------------------------------------
+\include{chapters/chapter001}
+\include{chapters/chapter002}
+\include{chapters/chapter003}
+%\include{chapters/chapter004}
+
+
+%------------------------------------------------------------------------------
+% Bibliografia (przed spisami)
+%------------------------------------------------------------------------------
+
+\cleardoublepage
+\begingroup
+  \addcontentsline{toc}{chapter}{Bibliografia}
+  \bibliographystyle{plainurl}
+  \bibliography{bibliografia}
+\endgroup
+
+%------------------------------------------------------------------------------
+% Spisy
+%------------------------------------------------------------------------------
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Spis rysunków}
+\listoffigures
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Spis tabel}
+\listoftables
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Spis listingów}
+\lstlistoflistings
+
+
+
+
+\end{document}
