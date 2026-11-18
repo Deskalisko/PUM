@@ -21,60 +21,69 @@ W~ramach projektowanego systemu zdefiniowano dwóch kluczowych aktorów wchodzą
     \item \textbf{System Android} -- aktor pomocniczy (systemowy), reprezentujący środowisko wykonawcze urządzenia mobilnego. Odpowiada za realizację zaplanowanych zadań w~tle i~wyzwalanie lokalnych powiadomień w~wyznaczonych terminach.
 \end{itemize}
 
-\clearpage
-
 \subsection{Zestawienie przypadków użycia}
 \label{subsec:zestawienie_przypadkow_uzycia}
 
-W~wyniku analizy celów aktorów oraz zakresu funkcjonalnego wyodrębniono przypadki użycia projektowanego systemu, które zestawiono w~tabeli~\ref{tab:zestawienie_przypadkow_uzycia}.
+Wyodrębnione przypadki użycia projektowanego systemu (Tabela~\ref{tab:zestawienie_przypadkow_uzycia}) wynikają bezpośrednio z~analizy celów aktorów oraz zakresu funkcjonalnego.
 
-\begin{table}[H]
-    \centering
+\begingroup
+\renewcommand{\arraystretch}{1.3}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{|>{\centering\arraybackslash}m{2.2cm}|m{\dimexpr\linewidth - 7.7cm - 6\tabcolsep - 4\arrayrulewidth\relax}|>{\centering\arraybackslash}m{5.5cm}|}
     \caption{Zestawienie przypadków użycia systemu}
-    \label{tab:zestawienie_przypadkow_uzycia}
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}p{2.2cm}|X|>{\centering\arraybackslash}p{5.5cm}|}
-        \hline
-        \rowcolor{tableheader}
-        \textbf{Identyfikator} & \multicolumn{1}{c|}{\textbf{Nazwa przypadku użycia}} & \textbf{Aktor} \\
-        \hline
-        \hypertarget{uc:UC01}{UC01} & Zarządzanie profilami pojazdów & Użytkownik \\
-        \hline
-        \hypertarget{uc:UC02}{UC02} & Przełączanie aktywnego pojazdu & Użytkownik \\
-        \hline
-        \hypertarget{uc:UC03}{UC03} & Rejestracja wpisu tankowania & Użytkownik \\
-        \hline
-        \hypertarget{uc:UC04}{UC04} & Obliczenie średniego zużycia paliwa/energii & Wykorzystywany przez UC03 \\
-        \hline
-        \hypertarget{uc:UC05}{UC05} & Kalkulacja zasięgu i~symulacja kosztów & Użytkownik \\
-        \hline
-        \hypertarget{uc:UC06}{UC06} & Rejestracja wydatku eksploatacyjnego & Użytkownik \\
-        \hline
-        \hypertarget{uc:UC07}{UC07} & Konfiguracja i~edycja przypomnień & Rozszerzający UC06 \\
-        \hline
-        \hypertarget{uc:UC08}{UC08} & Wyzwalanie lokalnego powiadomienia & System Android \\
-        \hline
-        \hypertarget{uc:UC09}{UC09} & Generowanie analiz i~prognozy budżetowej & Użytkownik \\
-        \hline
-        \hypertarget{uc:UC10}{UC10} & Przeglądanie i~edycja historii eksploatacji & Użytkownik \\
-        \hline
-        \hypertarget{uc:UC11}{UC11} & Rozpoznawanie danych z~paragonu (OCR) & Rozszerzający UC03 \\
-        \hline
-    \end{tabularx}
-    \zrodlo{Opracowanie własne.}
-\end{table}
+    \label{tab:zestawienie_przypadkow_uzycia} \\
+    \hline
+    \rowcolor{tableheader}
+    \textbf{Identyfikator} & \multicolumn{1}{c|}{\textbf{Nazwa przypadku użycia}} & \textbf{Aktor} \\
+    \hline
+    \endfirsthead
 
-\clearpage
+    \multicolumn{3}{c}{\footnotesize\bfseries \tablename\ \thetable{} -- kontynuacja z~poprzedniej strony} \\
+    \hline
+    \rowcolor{tableheader}
+    \textbf{Identyfikator} & \multicolumn{1}{c|}{\textbf{Nazwa przypadku użycia}} & \textbf{Aktor} \\
+    \hline
+    \endhead
+
+    \multicolumn{3}{r}{\footnotesize\emph{Ciąg dalszy na następnej stronie\ldots}} \\
+    \endfoot
+
+    \zrodloLT{3}{Opracowanie własne.}
+    \endlastfoot
+
+    \hypertarget{uc:UC01}{UC01} & Zarządzanie profilami pojazdów & Użytkownik \\
+    \hline
+    \hypertarget{uc:UC02}{UC02} & Przełączanie aktywnego pojazdu & Użytkownik \\
+    \hline
+    \hypertarget{uc:UC03}{UC03} & Rejestracja wpisu tankowania & Użytkownik \\
+    \hline
+    \hypertarget{uc:UC04}{UC04} & Obliczenie średniego zużycia paliwa/energii & Wykorzystywany przez UC03 \\
+    \hline
+    \hypertarget{uc:UC05}{UC05} & Kalkulacja zasięgu i~symulacja kosztów & Użytkownik \\
+    \hline
+    \hypertarget{uc:UC06}{UC06} & Rejestracja wydatku eksploatacyjnego & Użytkownik \\
+    \hline
+    \hypertarget{uc:UC07}{UC07} & Konfiguracja i~edycja przypomnień & Rozszerzający UC06 \\
+    \hline
+    \hypertarget{uc:UC08}{UC08} & Wyzwalanie lokalnego powiadomienia & System Android \\
+    \hline
+    \hypertarget{uc:UC09}{UC09} & Generowanie analiz i~prognozy budżetowej & Użytkownik \\
+    \hline
+    \hypertarget{uc:UC10}{UC10} & Przeglądanie i~edycja historii eksploatacji & Użytkownik \\
+    \hline
+    \hypertarget{uc:UC11}{UC11} & Rozpoznawanie danych z~paragonu (OCR) & Rozszerzający UC03 \\
+    \hline
+\end{longtable}
+\endgroup
 
 \subsection{Diagram przypadków użycia}
 \label{subsec:diagram_uc}
 
-Na rysunku~\ref{fig:diagram_przypadkow_uzycia} przedstawiono diagram przypadków użycia projektowanego systemu.
+\figurename~\ref{fig:diagram_przypadkow_uzycia} przedstawia diagram przypadków użycia projektowanego systemu.
 
 \begin{figure}[H]
     \centering
-    % diagram przypadków użycia z Software Ideas Modeler 
-    \includegraphics[width=0.98\linewidth]{figures/UseCaseDiagram1.eps}
+    \includegraphics[width=1\linewidth]{figures/UseCaseDiagram1.eps}
     \caption{Diagram przypadków użycia}
     \label{fig:diagram_przypadkow_uzycia}
     \zrodlo{Opracowanie własne przy użyciu Software Ideas Modeler.}
@@ -82,316 +91,427 @@ Na rysunku~\ref{fig:diagram_przypadkow_uzycia} przedstawiono diagram przypadków
 
 Na diagramie zastosowano relację «include» między przypadkami UC03 i~UC04 -- wyliczenie średniego zużycia paliwa/energii jest obowiązkowym elementem zapisu pełnego tankowania. Relację «extend» wykorzystano przy przypadkach UC11 (opcjonalne pobranie danych z~paragonu przez moduł OCR) oraz UC07 (opcjonalne zdefiniowanie przypomnienia podczas rejestracji wydatku). Pozostałe linie na diagramie stanowią asocjacje wskazujące udział aktorów w~realizacji poszczególnych operacji.
 
-\clearpage
-
 \subsection{Powiązanie wymagań funkcjonalnych z diagramem}
 \label{subsec:powiazanie_wf_diagram}
 
-Każde wymaganie funkcjonalne zdefiniowane w~rozdziale~\ref{cha:analiza_wymagan} znajduje odzwierciedlenie w~modelu przypadków użycia. Zestawienie powiązań przedstawiono w~tabeli~\ref{tab:powiazanie_wf_diagram}.
+Każde wymaganie funkcjonalne zdefiniowane wcześniej (Rozdział~\ref{cha:analiza_wymagan}) znajduje bezpośrednie odzwierciedlenie w~modelu przypadków użycia (Tabela~\ref{tab:powiazanie_wf_diagram}).
 
-\begin{table}[H]
-    \centering
+\begingroup
+\renewcommand{\arraystretch}{1.3}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{|>{\centering\arraybackslash}m{1.5cm}|m{\dimexpr\linewidth - 6.3cm - 8\tabcolsep - 5\arrayrulewidth\relax}|>{\centering\arraybackslash}m{2.6cm}|>{\centering\arraybackslash}m{2.2cm}|}
     \caption{Powiązanie wymagań funkcjonalnych z~diagramem przypadków użycia}
-    \label{tab:powiazanie_wf_diagram}
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}p{1.5cm}|X|>{\centering\arraybackslash}p{2.6cm}|>{\centering\arraybackslash}p{2.2cm}|}
-        \hline
-        \rowcolor{tableheader}
-        \textbf{ID} & \multicolumn{1}{c|}{\textbf{Wymaganie funkcjonalne}} & \textbf{Aktor} & \textbf{Przypadek użycia} \\
-        \hline
-        \hyperlink{wf:WF-01}{WF-01} & Dodawanie i~edycja profili pojazdów ze zdjęciem. & Użytkownik & \hyperlink{uc:UC01}{UC01} \\
-        \hline
-        \hyperlink{wf:WF-02}{WF-02} & Rejestracja tankowania z~automatycznym przeliczaniem kwot. & Użytkownik & \hyperlink{uc:UC03}{UC03} \\
-        \hline
-        \hyperlink{wf:WF-03}{WF-03} & Automatyczne obliczanie średniego zużycia paliwa/energii. & ------ & \hyperlink{uc:UC04}{UC04} \\
-        \hline
-        \hyperlink{wf:WF-04}{WF-04} & Wyliczanie przewidywanego zasięgu pojazdu. & Użytkownik & \hyperlink{uc:UC05}{UC05} \\
-        \hline
-        \hyperlink{wf:WF-05}{WF-05} & Rejestracja wydatków eksploatacyjnych z~kategoriami. & Użytkownik & \hyperlink{uc:UC06}{UC06} \\
-        \hline
-        \hyperlink{wf:WF-06}{WF-06} & Planowanie przypomnień i~wyzwalanie powiadomień w~tle. & Użytkownik / System Android & \hyperlink{uc:UC07}{UC07}, \hyperlink{uc:UC08}{UC08} \\
-        \hline
-        \hyperlink{wf:WF-07}{WF-07} & Generowanie miesięcznej prognozy wydatków. & Użytkownik & \hyperlink{uc:UC09}{UC09} \\
-        \hline
-        \hyperlink{wf:WF-08}{WF-08} & Przełączanie aktywnego widoku między pojazdami. & Użytkownik & \hyperlink{uc:UC02}{UC02} \\
-        \hline
-        \hyperlink{wf:WF-09}{WF-09} & Przeglądanie i~edycja historii eksploatacji. & Użytkownik & \hyperlink{uc:UC10}{UC10} \\
-        \hline
-        \hyperlink{wf:WF-10}{WF-10} & Zapis i~odczyt danych w~lokalnej bazie offline. & ------ & \hyperlink{uc:UC01}{UC01}, \hyperlink{uc:UC03}{UC03}, \hyperlink{uc:UC06}{UC06}, \hyperlink{uc:UC10}{UC10} \\
-        \hline
-        \hyperlink{wf:WF-11}{WF-11} & Skanowanie paragonu i~odczyt danych przez moduł OCR. & Użytkownik & \hyperlink{uc:UC11}{UC11} \\
-        \hline
-    \end{tabularx}
-    \zrodlo{Opracowanie własne na podstawie analizy wymagań.}
-\end{table}
+    \label{tab:powiazanie_wf_diagram} \\
+    \hline
+    \rowcolor{tableheader}
+    \textbf{ID} & \multicolumn{1}{c|}{\textbf{Wymaganie funkcjonalne}} & \textbf{Aktor} & \textbf{Przypadek użycia} \\
+    \hline
+    \endfirsthead
 
+    \multicolumn{4}{c}{\footnotesize\bfseries \tablename\ \thetable{} -- kontynuacja z~poprzedniej strony} \\
+    \hline
+    \rowcolor{tableheader}
+    \textbf{ID} & \multicolumn{1}{c|}{\textbf{Wymaganie funkcjonalne}} & \textbf{Aktor} & \textbf{Przypadek użycia} \\
+    \hline
+    \endhead
 
-\clearpage
+    \multicolumn{4}{r}{\footnotesize\emph{Ciąg dalszy na następnej stronie\ldots}} \\
+    \endfoot
+
+    \zrodloLT{4}{Opracowanie własne na podstawie analizy wymagań.}
+    \endlastfoot
+
+    \hyperlink{wf:WF-01}{WF-01} & Dodawanie i~edycja profili pojazdów ze zdjęciem. & Użytkownik & \hyperlink{uc:UC01}{UC01} \\
+    \hline
+    \hyperlink{wf:WF-02}{WF-02} & Rejestracja tankowania z~automatycznym przeliczaniem kwot. & Użytkownik & \hyperlink{uc:UC03}{UC03} \\
+    \hline
+    \hyperlink{wf:WF-03}{WF-03} & Automatyczne obliczanie średniego zużycia paliwa/energii. & ------ & \hyperlink{uc:UC04}{UC04} \\
+    \hline
+    \hyperlink{wf:WF-04}{WF-04} & Wyliczanie przewidywanego zasięgu pojazdu. & Użytkownik & \hyperlink{uc:UC05}{UC05} \\
+    \hline
+    \hyperlink{wf:WF-05}{WF-05} & Rejestracja wydatków eksploatacyjnych z~kategoriami. & Użytkownik & \hyperlink{uc:UC06}{UC06} \\
+    \hline
+    \hyperlink{wf:WF-06}{WF-06} & Planowanie przypomnień i~wyzwalanie powiadomień w~tle. & Użytkownik / System Android & \hyperlink{uc:UC07}{UC07}, \hyperlink{uc:UC08}{UC08} \\
+    \hline
+    \hyperlink{wf:WF-07}{WF-07} & Generowanie miesięcznej prognozy wydatków. & Użytkownik & \hyperlink{uc:UC09}{UC09} \\
+    \hline
+    \hyperlink{wf:WF-08}{WF-08} & Przełączanie aktywnego widoku między pojazdami. & Użytkownik & \hyperlink{uc:UC02}{UC02} \\
+    \hline
+    \hyperlink{wf:WF-09}{WF-09} & Przeglądanie i~edycja historii eksploatacji. & Użytkownik & \hyperlink{uc:UC10}{UC10} \\
+    \hline
+    \hyperlink{wf:WF-10}{WF-10} & Zapis i~odczyt danych w~lokalnej bazie offline. & ------ & \hyperlink{uc:UC01}{UC01}, \hyperlink{uc:UC03}{UC03}, \hyperlink{uc:UC06}{UC06}, \hyperlink{uc:UC10}{UC10} \\
+    \hline
+    \hyperlink{wf:WF-11}{WF-11} & Skanowanie paragonu i~odczyt danych przez moduł OCR. & Użytkownik & \hyperlink{uc:UC11}{UC11} \\
+    \hline
+\end{longtable}
+\endgroup
 
 \subsection{Szczegółowe specyfikacje przypadków użycia}
 \label{subsec:scenariusze_przypadkow_uzycia}
 
-W~niniejszej sekcji przedstawiono szczegółowe specyfikacje tabelaryczne dla dwóch wybranych przypadków użycia: przypadku UC03 (wykorzystującego relację «include») oraz przypadku UC06 (wykorzystującego relację «extend»).
+W~wyniku analizy wymagań funkcjonalnych (Rozdział~\ref{cha:analiza_wymagan}) oraz opracowanego modelu funkcjonalnego (\figurename~\ref{fig:diagram_przypadkow_uzycia}) poniżej przedstawiono szczegółowe specyfikacje dwóch kluczowych przypadków użycia: UC03 (wykorzystującego relację «include») oraz UC06 (wykorzystującego relację «extend»).
 
+\noindent\textbf{Przypadek użycia UC03: Rejestracja wpisu tankowania}
 
-\subsubsection{Specyfikacja przypadku użycia UC03: Rejestracja wpisu tankowania}
-\label{subsubsec:specyfikacja_uc1}
+Proces dotyczy ewidencji nowego tankowania lub ładowania pojazdu wraz z~aktualizacją przebiegu i~wyliczeniem średniego zużycia. Poniższe zestawienia definiują jego podstawowe parametry oraz warunki brzegowe (Tabela~\ref{tab:specyfikacja_uc1_parametry}), a~także przebieg główny (Tabela~\ref{tab:przebieg_glowny_uc1}).
 
-Podstawowe parametry przypadku użycia UC03 zestawiono w~tabeli~\ref{tab:specyfikacja_uc1_parametry}.
-
-\begin{table}[H]
-    \centering
+\begingroup
+\renewcommand{\arraystretch}{1.3}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{|>{\bfseries\arraybackslash}m{4.2cm}|m{\dimexpr\linewidth - 4.2cm - 4\tabcolsep - 3\arrayrulewidth\relax}|}
     \caption{Parametry przypadku użycia UC03}
-    \label{tab:specyfikacja_uc1_parametry}
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabularx}{\linewidth}{|>{\bfseries\arraybackslash}p{4.2cm}|X|}
-        \hline
-        \rowcolor{tableheader}
-        \multicolumn{1}{|c|}{\textbf{Element}} & \multicolumn{1}{c|}{\textbf{Opis}} \\
-        \hline
-        Identyfikator & UC03 \\
-        \hline
-        Nazwa & Rejestracja wpisu tankowania \\
-        \hline
-        Aktor główny & Użytkownik \\
-        \hline
-        Cel & Wprowadzenie danych o~zrealizowanym tankowaniu, aktualizacja stanu licznika pojazdu oraz obliczenie średniego zużycia paliwa/energii. \\
-        \hline
-        Warunki początkowe & Aplikacja jest uruchomiona, a~w~systemie istnieje co najmniej jeden aktywny profil pojazdu. \\
-        \hline
-        Powiązania & «include» UC04~--~Obliczenie średniego zużycia paliwa/energii, «extend» UC11~--~Rozpoznawanie danych z~paragonu (OCR) \\
-        \hline
-        Warunki końcowe -- sukces & Nowy wpis tankowania został zapisany w~bazie danych, stan licznika pojazdu zaktualizowany, a~w~przypadku tankowania do pełna wyliczono średnie spalanie. \\
-        \hline
-        Warunki końcowe -- niepowodzenie & Wpis nie został zapisany. System wyświetlił komunikat o~błędzie walidacji i~pozostawił formularz do poprawy. \\
-        \hline
-    \end{tabularx}
-    \zrodlo{Opracowanie własne.}
-\end{table}
+    \label{tab:specyfikacja_uc1_parametry} \\
+    \hline
+    \rowcolor{tableheader}
+    \multicolumn{1}{|c|}{\textbf{Element}} & \multicolumn{1}{c|}{\textbf{Opis}} \\
+    \hline
+    \endfirsthead
 
-\clearpage
+    \multicolumn{2}{c}{\footnotesize\bfseries \tablename\ \thetable{} -- kontynuacja z~poprzedniej strony} \\
+    \hline
+    \rowcolor{tableheader}
+    \multicolumn{1}{|c|}{\textbf{Element}} & \multicolumn{1}{c|}{\textbf{Opis}} \\
+    \hline
+    \endhead
 
-Przebieg główny przypadku użycia przedstawiono w~tabeli~\ref{tab:przebieg_glowny_uc1}.
+    \multicolumn{2}{r}{\footnotesize\emph{Ciąg dalszy na następnej stronie\ldots}} \\
+    \endfoot
 
-\begin{table}[H]
-    \centering
+    \zrodloLT{2}{Opracowanie własne.}
+    \endlastfoot
+
+    Identyfikator & UC03 \\
+    \hline
+    Nazwa & Rejestracja wpisu tankowania \\
+    \hline
+    Aktor główny & Użytkownik \\
+    \hline
+    Cel & Wprowadzenie danych o~zrealizowanym tankowaniu, aktualizacja stanu licznika pojazdu oraz obliczenie średniego zużycia paliwa/energii. \\
+    \hline
+    Warunki początkowe & Aplikacja jest uruchomiona, a~w~systemie istnieje co najmniej jeden aktywny profil pojazdu. \\
+    \hline
+    Powiązania & «include» UC04~--~Obliczenie średniego zużycia paliwa/energii, «extend» UC11~--~Rozpoznawanie danych z~paragonu (OCR) \\
+    \hline
+    Warunki końcowe -- sukces & Nowy wpis tankowania został zapisany w~bazie danych, stan licznika pojazdu zaktualizowany, a~w~przypadku tankowania do pełna wyliczono średnie spalanie. \\
+    \hline
+    Warunki końcowe -- niepowodzenie & Wpis nie został zapisany. System wyświetlił komunikat o~błędzie walidacji i~pozostawił formularz do poprawy. \\
+    \hline
+\end{longtable}
+\endgroup
+
+\begingroup
+\renewcommand{\arraystretch}{1.3}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{|>{\centering\arraybackslash}m{1.2cm}|*{2}{m{\dimexpr(\linewidth - 1.2cm - 6\tabcolsep - 4\arrayrulewidth)/2\relax}|}}
     \caption{Przebieg główny przypadku użycia UC03}
-    \label{tab:przebieg_glowny_uc1}
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}p{1.2cm}|X|X|}
-        \hline
-        \rowcolor{tableheader}
-        \textbf{Krok} & \multicolumn{1}{c|}{\textbf{Działanie aktora}} & \multicolumn{1}{c|}{\textbf{Odpowiedź systemu}} \\
-        \hline
-        1 & Wybiera opcję dodania nowego tankowania. & Wyświetla formularz z~podpowiedzią bieżącej daty i~ostatniego stanu licznika. \\
-        \hline
-        2 & Wprowadza stan licznika, ilość paliwa oraz łączny koszt (ręcznie lub skanując paragon przez \hyperlink{uc:UC11}{UC11}). & Na bieżąco przelicza cenę za litr przy zmianie kwoty (\hyperlink{rb:RB-04}{RB-04}). \\
-        \hline
-        3 & Zatwierdza formularz przyciskiem zapisu. & Sprawdza poprawność przebiegu (\hyperlink{rb:RB-01}{RB-01}) oraz daty (\hyperlink{rb:RB-05}{RB-05}) i~wylicza średnie spalanie (\hyperlink{uc:UC04}{UC04}, \hyperlink{rb:RB-02}{RB-02}). \\
-        \hline
-        4 & --- & Zapisuje wpis w~bazie danych (\hyperlink{wf:WF-10}{WF-10}) i~aktualizuje stan licznika pojazdu. \\
-        \hline
-        5 & --- & Wyświetla potwierdzenie zapisu, prezentuje wyliczone spalanie i~odświeża ekran główny. \\
-        \hline
-    \end{tabularx}
-    \zrodlo{Opracowanie własne.}
-\end{table}
+    \label{tab:przebieg_glowny_uc1} \\
+    \hline
+    \rowcolor{tableheader}
+    \textbf{Krok} & \multicolumn{1}{c|}{\textbf{Działanie aktora}} & \multicolumn{1}{c|}{\textbf{Odpowiedź systemu}} \\
+    \hline
+    \endfirsthead
+
+    \multicolumn{3}{c}{\footnotesize\bfseries \tablename\ \thetable{} -- kontynuacja z~poprzedniej strony} \\
+    \hline
+    \rowcolor{tableheader}
+    \textbf{Krok} & \multicolumn{1}{c|}{\textbf{Działanie aktora}} & \multicolumn{1}{c|}{\textbf{Odpowiedź systemu}} \\
+    \hline
+    \endhead
+
+    \multicolumn{3}{r}{\footnotesize\emph{Ciąg dalszy na następnej stronie\ldots}} \\
+    \endfoot
+
+    \zrodloLT{3}{Opracowanie własne.}
+    \endlastfoot
+
+    \hypertarget{uc03:krok1}{1} & Wybiera opcję dodania nowego tankowania. & Wyświetla formularz z~podpowiedzią bieżącej daty i~ostatniego stanu licznika. \\
+    \hline
+    \hypertarget{uc03:krok2}{2} & Wprowadza stan licznika, ilość paliwa/energii oraz łączny koszt (ręcznie lub skanując paragon przez OCR -\hyperlink{uc:UC11}{UC11}). & Na bieżąco przelicza cenę jednostkową przy zmianie kwoty (\hyperlink{rb:RB-04}{RB-04}). \\
+    \hline
+    \hypertarget{uc03:krok3}{3} & Zatwierdza formularz przyciskiem zapisu. & Sprawdza poprawność przebiegu (\hyperlink{rb:RB-01}{RB-01}) oraz daty (\hyperlink{rb:RB-05}{RB-05}) i~wylicza średnie spalanie (\hyperlink{uc:UC04}{UC04}, \hyperlink{rb:RB-02}{RB-02}). \\
+    \hline
+    \hypertarget{uc03:krok4}{4} & --- & Zapisuje wpis w~bazie danych (\hyperlink{wf:WF-10}{WF-10}) i~aktualizuje stan licznika pojazdu. \\
+    \hline
+    \hypertarget{uc03:krok5}{5} & --- & Wyświetla potwierdzenie zapisu, prezentuje wyliczone spalanie i~odświeża ekran główny. \\
+    \hline
+\end{longtable}
+\endgroup
 
 \clearpage
 
-Warianty alternatywne oraz obsługę wyjątków przedstawiono w~tabeli~\ref{tab:scenariusz_alt_uc1}.
+Ścieżki alternatywne oraz reakcje systemu na błędy walidacji i~odczytu OCR definiuje poniższa specyfikacja (Tabela~\ref{tab:scenariusz_alt_uc1}).
 
-\begin{table}[H]
-    \centering
+\begingroup
+\renewcommand{\arraystretch}{1.3}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{|>{\centering\arraybackslash}m{1.4cm}|*{2}{m{\dimexpr(\linewidth - 1.4cm - 6\tabcolsep - 4\arrayrulewidth)/2\relax}|}}
     \caption{Scenariusze alternatywne i~wyjątkowe dla przypadku użycia UC03}
-    \label{tab:scenariusz_alt_uc1}
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}p{1.4cm}|X|X|}
-        \hline
-        \rowcolor{tableheader}
-        \textbf{Krok} & \multicolumn{1}{c|}{\textbf{Działanie aktora}} & \multicolumn{1}{c|}{\textbf{Odpowiedź systemu}} \\
-        \hline
-        \multicolumn{3}{|l|}{\cellcolor{tableheader!50}\textbf{Wariant A1 -- Stan licznika mniejszy od poprzedniego (\hyperlink{rb:RB-01}{RB-01})}} \\
-        \hline
-        A1.1 & --- & Wykrywa, że wprowadzony stan licznika jest mniejszy lub równy wartości z~poprzedniego wpisu. \\
-        \hline
-        A1.2 & --- & Blokuje zapis, podświetla pole przebiegu i~wyświetla komunikat błędu. \\
-        \hline
-        A1.3 & Poprawia wartość przebiegu. & Weryfikuje nową wartość i~usuwa komunikat błędu. \\
-        \hline
-        A1.4 & Ponownie zatwierdza formularz. & Powraca do weryfikacji w~kroku~3 przebiegu głównego. \\
-        \hline
-        \multicolumn{3}{|l|}{\cellcolor{tableheader!50}\textbf{Wariant A2 -- Rejestracja z~datą wsteczną (\hyperlink{rb:RB-05}{RB-05})}} \\
-        \hline
-        A2.1 & --- & Wykrywa, że data wpisu jest wcześniejsza niż data poprzedniego tankowania. \\
-        \hline
-        A2.2 & --- & Wyświetla okno ostrzegawcze o~możliwym zaburzeniu statystyk z~opcją kontynuacji lub anulowania. \\
-        \hline
-        A2.3 & Wybiera anulowanie zapisu lub potwierdza kontynuację. & Po anulowaniu umożliwia poprawę daty; po potwierdzeniu przechodzi do zapisu w~kroku~4. \\
-        \hline
-        A2.4 & Wprowadza skorygowaną datę i~ponawia zapis. & Powraca do kroku~3 przebiegu głównego. \\
-        \hline
-        \multicolumn{3}{|l|}{\cellcolor{tableheader!50}\textbf{Wariant A3 -- Niepełny odczyt danych z~paragonu (\hyperlink{uc:UC11}{UC11})}} \\
-        \hline
-        A3.1 & --- & Moduł OCR nie jest w~stanie poprawnie odczytać wszystkich pól z~fotografii. \\
-        \hline
-        A3.2 & --- & Wyświetla informację o~częściowym odczycie i~uzupełnia tylko rozpoznane wartości. \\
-        \hline
-        A3.3 & Ręcznie uzupełnia brakujące dane w~formularzu. & Sprawdza poprawność wprowadzonych wartości. \\
-        \hline
-        A3.4 & Zatwierdza uzupełniony formularz przyciskiem zapisu. & Powraca do kroku~3 przebiegu głównego. \\
-        \hline
-    \end{tabularx}
-    \zrodlo{Opracowanie własne.}
-\end{table}
+    \label{tab:scenariusz_alt_uc1} \\
+    \hline
+    \rowcolor{tableheader}
+    \textbf{Krok} & \multicolumn{1}{c|}{\textbf{Działanie aktora}} & \multicolumn{1}{c|}{\textbf{Odpowiedź systemu}} \\
+    \hline
+    \endfirsthead
 
+    \multicolumn{3}{c}{\footnotesize\bfseries \tablename\ \thetable{} -- kontynuacja z~poprzedniej strony} \\
+    \hline
+    \rowcolor{tableheader}
+    \textbf{Krok} & \multicolumn{1}{c|}{\textbf{Działanie aktora}} & \multicolumn{1}{c|}{\textbf{Odpowiedź systemu}} \\
+    \hline
+    \endhead
+
+    \multicolumn{3}{r}{\footnotesize\emph{Ciąg dalszy na następnej stronie\ldots}} \\
+    \endfoot
+
+    \zrodloLT{3}{Opracowanie własne.}
+    \endlastfoot
+
+    \multicolumn{3}{|l|}{\cellcolor{tableheader!50}\textbf{Wariant A1 -- Stan licznika mniejszy lub równy poprzedniemu (\hyperlink{rb:RB-01}{RB-01})}} \\
+    \hline
+    A1.1 & --- & Wykrywa, że wprowadzony stan licznika jest mniejszy lub równy wartości z~poprzedniego wpisu. \\
+    \hline
+    A1.2 & --- & Blokuje zapis, podświetla pole przebiegu i~wyświetla komunikat błędu. \\
+    \hline
+    A1.3 & Poprawia wartość przebiegu w~formularzu. & Aktualizuje dane w~formularzu i~przelicza cenę jednostkową (\hyperlink{rb:RB-04}{RB-04}). \\
+    \hline
+    A1.4 & Ponownie zatwierdza formularz przyciskiem zapisu. & Powraca do weryfikacji w~\hyperlink{uc03:krok3}{kroku~3} przebiegu głównego. \\
+    \hline
+    \multicolumn{3}{|l|}{\cellcolor{tableheader!50}\textbf{Wariant A2 -- Rejestracja z~datą wsteczną (\hyperlink{rb:RB-05}{RB-05})}} \\
+    \hline
+    A2.1 & --- & Wykrywa, że data wpisu jest wcześniejsza niż data poprzedniego tankowania. \\
+    \hline
+    A2.2 & --- & Wyświetla okno ostrzegawcze o~możliwym zaburzeniu statystyk z~opcją kontynuacji lub anulowania. \\
+    \hline
+    A2.3 & Wybiera anulowanie zapisu lub potwierdza kontynuację. & Po anulowaniu cofa do edycji daty w~\hyperlink{uc03:krok2}{kroku~2}; po potwierdzeniu przechodzi do zapisu w~\hyperlink{uc03:krok4}{kroku~4}. \\
+    \hline
+    A2.4 & Wprowadza skorygowaną datę i~ponawia zapis. & Powraca do weryfikacji w~\hyperlink{uc03:krok3}{kroku~3} przebiegu głównego. \\
+    \hline
+    \multicolumn{3}{|l|}{\cellcolor{tableheader!50}\textbf{Wariant A3 -- Niepełny odczyt danych z~paragonu (\hyperlink{uc:UC11}{UC11})}} \\
+    \hline
+    A3.1 & --- & Moduł OCR nie odczytuje wszystkich pól z~fotografii lub rozpoznaje je błędnie. \\
+    \hline
+    A3.2 & --- & Uzupełnia rozpoznane wartości w~formularzu i~umożliwia wybór ponownego wykonania zdjęcia. \\
+    \hline
+    A3.3 & Powtarza wykonanie zdjęcia paragonu; ręcznie uzupełnia i~koryguje pola formularza (\hyperlink{wf:WF-11}{WF-11}). & Ponownie przetwarza nowy obraz; przelicza cenę jednostkową. \\
+    \hline
+    A3.4 & Zatwierdza uzupełniony formularz przyciskiem zapisu. & Powraca do weryfikacji w~\hyperlink{uc03:krok3}{kroku~3} przebiegu głównego. \\
+    \hline
+\end{longtable}
+\endgroup
 
 \clearpage
 
-\subsubsection{Specyfikacja przypadku użycia UC06: Rejestracja wydatku eksploatacyjnego}
-\label{subsubsec:specyfikacja_uc2}
+\noindent\textbf{Przypadek użycia UC06: Rejestracja wydatku eksploatacyjnego}
 
-Podstawowe parametry przypadku użycia UC06 zestawiono w~tabeli~\ref{tab:specyfikacja_uc2_parametry}.
+Proces UC06 dotyczy ewidencji dodatkowych kosztów utrzymania pojazdu oraz planowania przypomnień o~nadchodzących terminach. Poniższe zestawienia tabelaryczne definiują jego podstawowe parametry i~warunki brzegowe (Tabela~\ref{tab:specyfikacja_uc2_parametry}), a~także przebieg główny (Tabela~\ref{tab:przebieg_glowny_uc2}).
 
-\begin{table}[H]
-    \centering
+\begingroup
+\renewcommand{\arraystretch}{1.3}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{|>{\bfseries\arraybackslash}m{4.2cm}|m{\dimexpr\linewidth - 4.2cm - 4\tabcolsep - 3\arrayrulewidth\relax}|}
     \caption{Parametry przypadku użycia UC06}
-    \label{tab:specyfikacja_uc2_parametry}
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabularx}{\linewidth}{|>{\bfseries\arraybackslash}p{4.2cm}|X|}
-        \hline
-        \rowcolor{tableheader}
-        \multicolumn{1}{|c|}{\textbf{Element}} & \multicolumn{1}{c|}{\textbf{Opis}} \\
-        \hline
-        Identyfikator & UC06 \\
-        \hline
-        Nazwa & Rejestracja wydatku eksploatacyjnego \\
-        \hline
-        Aktor główny & Użytkownik \\
-        \hline
-        Cel & Ewidencja kosztu eksploatacyjnego (np. naprawa, ubezpieczenie, badanie techniczne) z~możliwością zaplanowania przypomnienia o~nadchodzącym terminie. \\
-        \hline
-        Warunki początkowe & Aplikacja jest uruchomiona, a~w~systemie istnieje co najmniej jeden aktywny profil pojazdu. \\
-        \hline
-        Powiązania & «extend» UC07~--~Konfiguracja i~edycja przypomnień \\
-        \hline
-        Warunki końcowe -- sukces & Informacja o~wydatku została zapisana w~bazie danych, a~zaplanowane powiadomienia zarejestrowano w~systemie. \\
-        \hline
-        Warunki końcowe -- niepowodzenie & Wydatek nie został zapisany. System wyświetlił komunikat o~brakujących lub błędnych danych formularza. \\
-        \hline
-    \end{tabularx}
-    \zrodlo{Opracowanie własne.}
-\end{table}
+    \label{tab:specyfikacja_uc2_parametry} \\
+    \hline
+    \rowcolor{tableheader}
+    \multicolumn{1}{|c|}{\textbf{Element}} & \multicolumn{1}{c|}{\textbf{Opis}} \\
+    \hline
+    \endfirsthead
 
-Przebieg główny przypadku użycia przedstawiono w~tabeli~\ref{tab:przebieg_glowny_uc2}.
+    \multicolumn{2}{c}{\footnotesize\bfseries \tablename\ \thetable{} -- kontynuacja z~poprzedniej strony} \\
+    \hline
+    \rowcolor{tableheader}
+    \multicolumn{1}{|c|}{\textbf{Element}} & \multicolumn{1}{c|}{\textbf{Opis}} \\
+    \hline
+    \endhead
 
-\begin{table}[H]
-    \centering
+    \multicolumn{2}{r}{\footnotesize\emph{Ciąg dalszy na następnej stronie\ldots}} \\
+    \endfoot
+
+    \zrodloLT{2}{Opracowanie własne.}
+    \endlastfoot
+
+    Identyfikator & UC06 \\
+    \hline
+    Nazwa & Rejestracja wydatku eksploatacyjnego \\
+    \hline
+    Aktor główny & Użytkownik \\
+    \hline
+    Cel & Ewidencja kosztu eksploatacyjnego (np. naprawa, ubezpieczenie, badanie techniczne) z~możliwością zaplanowania przypomnienia o~nadchodzącym terminie. \\
+    \hline
+    Warunki początkowe & Aplikacja jest uruchomiona, a~w~systemie istnieje co najmniej jeden aktywny profil pojazdu. \\
+    \hline
+    Powiązania & «extend» UC07~--~Konfiguracja i~edycja przypomnień \\
+    \hline
+    Warunki końcowe -- sukces & Informacja o~wydatku została zapisana w~bazie danych, a~zaplanowane powiadomienia zarejestrowano w~systemie. \\
+    \hline
+    Warunki końcowe -- niepowodzenie & Wydatek nie został zapisany. System wyświetlił komunikat o~brakujących lub błędnych danych formularza. \\
+    \hline
+\end{longtable}
+\endgroup
+
+\begingroup
+\renewcommand{\arraystretch}{1.3}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{|>{\centering\arraybackslash}m{1.2cm}|*{2}{m{\dimexpr(\linewidth - 1.2cm - 6\tabcolsep - 4\arrayrulewidth)/2\relax}|}}
     \caption{Przebieg główny przypadku użycia UC06}
-    \label{tab:przebieg_glowny_uc2}
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}p{1.2cm}|X|X|}
-        \hline
-        \rowcolor{tableheader}
-        \textbf{Krok} & \multicolumn{1}{c|}{\textbf{Działanie aktora}} & \multicolumn{1}{c|}{\textbf{Odpowiedź systemu}} \\
-        \hline
-        1 & Przechodzi do modułu kosztów i~wybiera dodanie nowego wydatku. & Wyświetla formularz z~wyborem kategorii, kwotą, datą oraz opcją przypomnień. \\
-        \hline
-        2 & Wybiera kategorię okresową (np. ubezpieczenie), podaje kwotę i~datę. & Weryfikuje dane i~proponuje automatyczne przypomnienie 7~dni przed terminem (\hyperlink{rb:RB-03}{RB-03}). \\
-        \hline
-        3 & Przechodzi do konfiguracji przypomnień (\hyperlink{uc:UC07}{UC07}). & Umożliwia modyfikację terminu powiadomienia oraz dodanie kolejnych terminów. \\
-        \hline
-        4 & Zatwierdza formularz przyciskiem zapisu. & Zapisuje wydatek w~bazie danych (\hyperlink{wf:WF-10}{WF-10}) oraz rejestruje zaplanowane powiadomienia. \\
-        \hline
-        5 & --- & Wyświetla potwierdzenie zapisu i~odświeża listę wydatków. \\
-        \hline
-    \end{tabularx}
-    \zrodlo{Opracowanie własne.}
-\end{table}
+    \label{tab:przebieg_glowny_uc2} \\
+    \hline
+    \rowcolor{tableheader}
+    \textbf{Krok} & \multicolumn{1}{c|}{\textbf{Działanie aktora}} & \multicolumn{1}{c|}{\textbf{Odpowiedź systemu}} \\
+    \hline
+    \endfirsthead
+
+    \multicolumn{3}{c}{\footnotesize\bfseries \tablename\ \thetable{} -- kontynuacja z~poprzedniej strony} \\
+    \hline
+    \rowcolor{tableheader}
+    \textbf{Krok} & \multicolumn{1}{c|}{\textbf{Działanie aktora}} & \multicolumn{1}{c|}{\textbf{Odpowiedź systemu}} \\
+    \hline
+    \endhead
+
+    \multicolumn{3}{r}{\footnotesize\emph{Ciąg dalszy na następnej stronie\ldots}} \\
+    \endfoot
+
+    \zrodloLT{3}{Opracowanie własne.}
+    \endlastfoot
+
+    1 & Przechodzi do modułu kosztów i~wybiera dodanie nowego wydatku. & Wyświetla formularz z~wyborem kategorii, kwotą, datą oraz opcją przypomnień. \\
+    \hline
+    2 & Wybiera kategorię okresową (np. ubezpieczenie), podaje kwotę i~datę. & Weryfikuje dane i~proponuje automatyczne przypomnienie 7~dni przed terminem (\hyperlink{rb:RB-03}{RB-03}). \\
+    \hline
+    3 & Przechodzi do konfiguracji przypomnień (\hyperlink{uc:UC07}{UC07}). & Umożliwia modyfikację terminu powiadomienia oraz dodanie kolejnych terminów. \\
+    \hline
+    4 & Zatwierdza formularz przyciskiem zapisu. & Zapisuje wydatek w~bazie danych (\hyperlink{wf:WF-10}{WF-10}) oraz rejestruje zaplanowane powiadomienia. \\
+    \hline
+    5 & --- & Wyświetla potwierdzenie zapisu i~odświeża listę wydatków. \\
+    \hline
+\end{longtable}
+\endgroup
 
 \clearpage
 
-Scenariusz alternatywny A1 dla przypadku UC06 przedstawiono w~tabeli~\ref{tab:scenariusz_alt_uc2}.
+Ścieżkę alternatywną dla rejestracji wydatku bez planowania przypomnień definiuje poniższa specyfikacja (Tabela~\ref{tab:scenariusz_alt_uc2}).
 
-\begin{table}[H]
-    \centering
+\begingroup
+\renewcommand{\arraystretch}{1.3}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{|>{\centering\arraybackslash}m{1.4cm}|*{2}{m{\dimexpr(\linewidth - 1.4cm - 6\tabcolsep - 4\arrayrulewidth)/2\relax}|}}
     \caption{Scenariusz alternatywny A1 dla przypadku użycia UC06}
-    \label{tab:scenariusz_alt_uc2}
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}p{1.4cm}|X|X|}
-        \hline
-        \rowcolor{tableheader}
-        \textbf{Krok} & \multicolumn{1}{c|}{\textbf{Działanie aktora}} & \multicolumn{1}{c|}{\textbf{Odpowiedź systemu}} \\
-        \hline
-        A1.1 & Pozostawia opcję przypomnień wyłączoną (np. wydatek jednorazowy). & Pomija konfigurację powiadomienia (\hyperlink{uc:UC07}{UC07}) i~oczekuje na zatwierdzenie. \\
-        \hline
-        A1.2 & Zatwierdza formularz przyciskiem zapisu. & Zapisuje wydatek w~bazie danych (\hyperlink{wf:WF-10}{WF-10}) bez planowania powiadomień. \\
-        \hline
-        A1.3 & --- & Wyświetla potwierdzenie zapisu i~odświeża listę wydatków. \\
-        \hline
-    \end{tabularx}
-    \zrodlo{Opracowanie własne.}
-\end{table}
+    \label{tab:scenariusz_alt_uc2} \\
+    \hline
+    \rowcolor{tableheader}
+    \textbf{Krok} & \multicolumn{1}{c|}{\textbf{Działanie aktora}} & \multicolumn{1}{c|}{\textbf{Odpowiedź systemu}} \\
+    \hline
+    \endfirsthead
 
+    \multicolumn{3}{c}{\footnotesize\bfseries \tablename\ \thetable{} -- kontynuacja z~poprzedniej strony} \\
+    \hline
+    \rowcolor{tableheader}
+    \textbf{Krok} & \multicolumn{1}{c|}{\textbf{Działanie aktora}} & \multicolumn{1}{c|}{\textbf{Odpowiedź systemu}} \\
+    \hline
+    \endhead
 
-\clearpage
+    \multicolumn{3}{r}{\footnotesize\emph{Ciąg dalszy na następnej stronie\ldots}} \\
+    \endfoot
+
+    \zrodloLT{3}{Opracowanie własne.}
+    \endlastfoot
+
+    A1.1 & Pozostawia opcję przypomnień wyłączoną (np. wydatek jednorazowy). & Pomija konfigurację powiadomienia (\hyperlink{uc:UC07}{UC07}) i~oczekuje na zatwierdzenie. \\
+    \hline
+    A1.2 & Zatwierdza formularz przyciskiem zapisu. & Zapisuje wydatek w~bazie danych (\hyperlink{wf:WF-10}{WF-10}) bez planowania powiadomień. \\
+    \hline
+    A1.3 & --- & Wyświetla potwierdzenie zapisu i~odświeża listę wydatków. \\
+    \hline
+\end{longtable}
+\endgroup
 
 % ==============================================================================
+
 \section{Diagramy aktywności}
 \label{sec:diagramy_aktywnosci}
 
+Poniżej opracowano dwa diagramy aktywności UML obrazujące przepływ czynności, podział ról między partycjami oraz warunki decyzyjne dla przypadków użycia: rejestracji wpisu tankowania (UC03) oraz rejestracji wydatku eksploatacyjnego (UC06).
 
 
-% Diagramy aktywności (\emph{Activity Diagrams}) przedstawiają przepływ sterowania, logikę biznesową oraz sekwencję czynności wykonywanych w~ramach modelowanych procesów z~uwzględnieniem węzłów decyzyjnych oraz rozgałęzień współbieżnych.
+\subsection{Diagram aktywności procesu rejestracji wpisu tankowania (UC03)}
+\label{subsec:diagram_aktywnosci_uc03}
+
+Diagram aktywności (\figurename~\ref{fig:diagram_aktywnosci_uc03}) przedstawia przepływ czynności dla przypadku użycia UC03. Podzielono go na dwie partycje: \textbf{Użytkownik} oraz \textbf{System}. Przebieg procesu obejmuje następujące kroki:
+
+\begin{enumerate}
+    \item Proces rozpoczyna się od stanu początkowego ,,Użytkownik jest na ekranie głównym''.
+    \item Użytkownik wykonuje ,,Dodanie nowego tankowania'', co prowadzi do ,,Wyświetlenia formularza'' przez system.
+    \item Następnie pojawia się decyzja ,,Czy skanować paragon?'' (\hyperlink{uc:UC11}{UC11}):
+    \begin{itemize}
+        \item jeśli tak, użytkownik wykonuje ,,Zdjęcie paragonu'', system realizuje ,,Odczyt danych (OCR)'' oraz ,,Uzupełnienie pól formularza'', po czym użytkownik podejmuje decyzję ,,Czy powtórzyć zdjęcie?'' (\hyperlink{wf:WF-11}{WF-11}): wybór opcji tak cofa do ponownego wykonania zdjęcia, natomiast wybór opcji nie kieruje do ręcznej korekty niepełnych danych (wariant~A3, Tabela~\ref{tab:scenariusz_alt_uc1});
+        \item jeśli nie, użytkownik przechodzi bezpośrednio do ręcznego wprowadzenia danych.
+    \end{itemize}
+    \item Użytkownik realizuje ,,Wprowadzenie danych lub Korekta błędnych danych'', system na bieżąco wykonuje ,,Przeliczenie ceny jednostkowej'' (\hyperlink{rb:RB-04}{RB-04}), po czym następuje ,,Zatwierdzenie formularza''.
+    \item System przeprowadza ,,Walidację stanu licznika'' (\hyperlink{rb:RB-01}{RB-01}) i~sprawdza warunek ,,Czy licznik > poprzedniego?'':
+    \begin{itemize}
+        \item jeśli nie, system wykonuje ,,Wyświetlenie błędnego przebiegu'' (wariant~A1, Tabela~\ref{tab:scenariusz_alt_uc1}), a~przepływ wraca do korekty danych w~formularzu;
+        \item jeśli tak, proces przechodzi do kontroli chronologii daty.
+    \end{itemize}
+    \item System sprawdza decyzję ,,Czy data wpisu >= ostatniego wpisu?'' (\hyperlink{rb:RB-05}{RB-05}):
+    \begin{itemize}
+        \item jeśli nie, system realizuje ,,Ostrzeżenie o~dacie wstecznej'' (wariant~A2, Tabela~\ref{tab:scenariusz_alt_uc1}), a~użytkownik podejmuje decyzję ,,Czy zapisać mimo to?'': wybór opcji nie cofa do edycji formularza, natomiast wybór opcji tak pozwala kontynuować zapis;
+        \item jeśli tak, proces przechodzi bezpośrednio do kontroli rodzaju tankowania.
+    \end{itemize}
+    \item System sprawdza warunek ,,Czy tankowanie do pełna?'' (\hyperlink{rb:RB-02}{RB-02}):
+    \begin{itemize}
+        \item jeśli tak, system wykonuje ,,Obliczenie śr. spalania od ostatniego tankowania do pełna'' (\hyperlink{uc:UC04}{UC04});
+        \item jeśli nie, ten krok zostaje pominięty.
+    \end{itemize}
+    \item Następnie system realizuje ,,Zapis wpisu w~bazie. Aktualizacja stanu licznika'' (\hyperlink{wf:WF-10}{WF-10}) oraz ,,Wyświetlenie potwierdzenia''.
+    \item Proces kończy się stanem ,,Zarejestrowane tankowanie''.
+\end{enumerate}
+
+\clearpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{figures/ActivityDiagram1.eps}
+    \caption{Diagram aktywności procesu rejestracji wpisu tankowania (UC03)}
+    \label{fig:diagram_aktywnosci_uc03}
+    \zrodlo{Opracowanie własne przy użyciu Software Ideas Modeler.}
+\end{figure}
+
+\clearpage
+
+\subsection{Diagram aktywności procesu rejestracji wydatku eksploatacyjnego (UC06)}
+\label{subsec:diagram_aktywnosci_uc06}
+
+Kolejny diagram aktywności (\figurename~\ref{fig:diagram_aktywnosci_uc06}) obejmuje partycje \textbf{Użytkownik} oraz \textbf{System} i~realizuje następujące kroki:
+\begin{enumerate}
+    \item Proces rozpoczyna się od stanu początkowego ,,Użytkownik w~module kosztów''.
+    \item Użytkownik wykonuje ,,Wybór dodania nowego wydatku'', co prowadzi do ,,Wyświetlenia formularza wydatku'' przez system.
+    \item Użytkownik uzupełnia formularz (,,Wybór kategorii, podanie kwoty i~daty'').
+    \item Następnie pojawia się decyzja ,,Czy włączono opcję przypomnień?'':
+    \begin{itemize}
+        \item jeśli tak, system realizuje ,,Zaproponowanie przypomnienia 7~dni przed terminem'' (\hyperlink{rb:RB-03}{RB-03}), a~użytkownik wykonuje ,,Konfigurację terminów powiadomień'' (\hyperlink{uc:UC07}{UC07});
+        \item jeśli nie, proces pomija konfigurację powiadomień (wariant~A1, Tabela~\ref{tab:scenariusz_alt_uc2}).
+    \end{itemize}
+    \item Użytkownik wykonuje ,,Zatwierdzenie formularza''.
+    \item System przeprowadza ,,Walidację danych formularza'' i~sprawdza warunek ,,Czy dane poprawne?'':
+    \begin{itemize}
+        \item jeśli nie, system realizuje ,,Wyświetlenie komunikatu o~błędzie'', a~przepływ wraca do poprawy formularza przez użytkownika;
+        \item jeśli tak, system wykonuje ,,Zapis wydatku w~lokalnej bazie'' (\hyperlink{wf:WF-10}{WF-10}) oraz rejestruje zaplanowane powiadomienia.
+    \end{itemize}
+    \item Następnie system realizuje ,,Wyświetlenie potwierdzenia i~odświeżenie listy''.
+    \item Proces kończy się stanem ,,Zarejestrowany wydatek''.
+\end{enumerate}
+
+\clearpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{figures/ActivityDiagram2.eps}
+    \caption{Diagram aktywności procesu rejestracji wydatku eksploatacyjnego (UC06)}
+    \label{fig:diagram_aktywnosci_uc06}
+    \zrodlo{Opracowanie własne przy użyciu Software Ideas Modeler.}
+\end{figure}
 
 
-% \subsection{Diagram aktywności 1: [Nazwa pierwszego procesu, np. Proces rejestracji tankowania i obliczania spalania]}
-% \label{subsec:diagram_aktywnosci_1}
-
-% % TODO: Wprowadzenie do modelowanego procesu, opis jego znaczenia w systemie.
-
-% \begin{figure}[H]
-%     \centering
-%     % Miejsce na diagram aktywności 1
-%     % \includegraphics[width=0.8\linewidth]{figures/fig_act_tankowanie.pdf}
-%     \caption{Diagram aktywności procesu [Nazwa procesu 1]}
-%     \label{fig:diagram_aktywnosci_1}
-%     \zrodlo{Opracowanie własne.}
-% \end{figure}
-
-
-
-
-% TODO: Szczegółowy opis diagramu aktywności 1:
-% - kolejność wykonywanych czynności od stanu początkowego,
-% - warunki decyzyjne (np. walidacja poprawności przebiegu, sprawdzenie flagi "do pełna"),
-% - alternatywne ścieżki i obsługa wyjątków,
-% - osiągnięcie stanu końcowego.
-
-
-
-
-% \subsection{Diagram aktywności 2: [Nazwa drugiego procesu, np. Proces harmonogramowania i wyzwalania powiadomień serwisowych]}
-% \label{subsec:diagram_aktywnosci_2}
-
-% % TODO: Wprowadzenie do drugiego modelowanego procesu.
-
-% \begin{figure}[H]
-%     \centering
-%     % Miejsce na diagram aktywności 2
-%     % \includegraphics[width=0.8\linewidth]{figures/fig_act_powiadomienia.pdf}
-%     \caption{Diagram aktywności procesu [Nazwa procesu 2]}
-%     \label{fig:diagram_aktywnosci_2}
-%     \zrodlo{Opracowanie własne.}
-% \end{figure}
-
-% TODO: Szczegółowy opis diagramu aktywności 2:
-% - sekwencja operacji (tworzenie wpisu z datą przypomnienia, rejestracja zadania w WorkManager),
-% - warunki weryfikacji terminu (np. reguła 7 dni przed terminem - RB-03),
-% - ścieżki alternatywne (edycja terminu, anulowanie zadania, oznaczenie opłaty jako załatwiona),
-% - wygenerowanie powiadomienia w systemie Android i stan końcowy.
-
-% \clearpage
 
 % ==============================================================================
 \section{Diagramy sekwencji}

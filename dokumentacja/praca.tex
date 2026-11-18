@@ -30,6 +30,7 @@
 % TABELE (wg potrzeby)
 %------------------------------------------------------------------------------
 \usepackage{multirow}
+\usepackage{array}
 \usepackage{makecell}
 \usepackage[flushleft]{threeparttable}
 \usepackage{colortbl}
@@ -53,8 +54,8 @@
 \shortauthor{D. Kuraś}
 \noAlbum{134939}
 
-\titlePL{Mobilny dziennik tankowań i eksploatacji pojazdów\\\textbf{MotoLog}}
-\titleEN{Mobile log of refueling and vehicle operation\\\textbf{MotoLog}} % Podajemy tytuł w obu językach
+\titlePL{Mobilny dziennik tankowań i eksploatacji pojazdów\\\textit{MotoLog}}
+\titleEN{Mobile log of refueling and vehicle operation\\\textit{MotoLog}} % Podajemy tytuł w obu językach
 
 \shorttitlePL{MotoLog -- mobilny dziennik pojazdu}
 \shorttitleEN{MotoLog -- Mobile Vehicle Log}
@@ -65,13 +66,20 @@
 
 \degreeprogramme{Informatyka}
 
-\date{2026}
+\date{2027}
 
 \department{Instytut Informatyki}
 \faculty{Wydział Nauk Ścisłych i Technicznych}
 
 %druga strona mozna cos dopisac
 % \acknowledgements{Serdecznie dziękuję \dots } % dowolnośc mozńa usunąć
+
+%------------------------------------------------------------------------------
+% USTAWIENIA NUMERACJI I SPISU TREŚCI
+%------------------------------------------------------------------------------
+\setcounter{secnumdepth}{1} % numeruje tylko do \section (np. 2.1), wyłącza numerki przy \subsection (2.1.1) i niżej
+\setcounter{tocdepth}{1}    % w spisie treści pokazuje tylko do \section, ukrywa \subsection i niżej
+
 
 %==============================================================================
 \begin{document}

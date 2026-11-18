@@ -3,20 +3,20 @@
 \babel@toc {english}{}\relax 
 \babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces Porównanie istniejących rozwiązań z~projektowanym systemem}}{8}{table.caption.3}%
+\contentsline {table}{\numberline {1.1}{\ignorespaces Porównanie istniejących rozwiązań z~projektowanym systemem}}{12}{table.1.1}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Zidentyfikowane problemy biznesowe}}{10}{table.caption.4}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Specyfikacja wymagań funkcjonalnych}}{12}{table.caption.5}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces Powiązanie wymagań funkcjonalnych z problemami biznesowymi}}{13}{table.caption.6}%
-\contentsline {table}{\numberline {2.4}{\ignorespaces Specyfikacja wymagań niefunkcjonalnych}}{13}{table.caption.7}%
-\contentsline {table}{\numberline {2.5}{\ignorespaces Zestawienie reguł biznesowych}}{14}{table.caption.8}%
-\contentsline {table}{\numberline {2.6}{\ignorespaces Powiązanie reguł biznesowych z wymaganiami funkcjonalnymi}}{14}{table.caption.9}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Zidentyfikowane problemy biznesowe}}{14}{table.2.1}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Specyfikacja wymagań funkcjonalnych}}{16}{table.2.2}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Powiązanie wymagań funkcjonalnych z problemami biznesowymi}}{17}{table.2.3}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Specyfikacja wymagań niefunkcjonalnych}}{18}{table.2.4}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces Zestawienie reguł biznesowych}}{18}{table.2.5}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces Powiązanie reguł biznesowych z wymaganiami funkcjonalnymi}}{19}{table.2.6}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Zestawienie przypadków użycia systemu}}{16}{table.caption.10}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Powiązanie wymagań funkcjonalnych z~diagramem przypadków użycia}}{18}{table.caption.12}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Parametry przypadku użycia UC03}}{19}{table.caption.13}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Przebieg główny przypadku użycia UC03}}{20}{table.caption.14}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces Scenariusze alternatywne i~wyjątkowe dla przypadku użycia UC03}}{21}{table.caption.15}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces Parametry przypadku użycia UC06}}{22}{table.caption.16}%
-\contentsline {table}{\numberline {3.7}{\ignorespaces Przebieg główny przypadku użycia UC06}}{22}{table.caption.17}%
-\contentsline {table}{\numberline {3.8}{\ignorespaces Scenariusz alternatywny A1 dla przypadku użycia UC06}}{23}{table.caption.18}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Zestawienie przypadków użycia systemu}}{20}{table.3.1}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Powiązanie wymagań funkcjonalnych z~diagramem przypadków użycia}}{22}{table.3.2}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Parametry przypadku użycia UC03}}{22}{table.3.3}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Przebieg główny przypadku użycia UC03}}{23}{table.3.4}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Scenariusze alternatywne i~wyjątkowe dla przypadku użycia UC03}}{24}{table.3.5}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Parametry przypadku użycia UC06}}{25}{table.3.6}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces Przebieg główny przypadku użycia UC06}}{25}{table.3.7}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces Scenariusz alternatywny A1 dla przypadku użycia UC06}}{26}{table.3.8}%
