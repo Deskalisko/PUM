@@ -7,404 +7,312 @@ Utrzymanie samochodu to nie tylko regularne tankowanie czy ładowanie, ale też 
 \section{Uzasadnienie potrzeby opracowania rozwiązania}
 \label{sec:uzasadnienie_rozwiazania}
 
-Dostępne na rynku aplikacje do kontroli wydatków na auto nie zawsze sprawdzają się w~codziennym użyciu. Wiele z~nich wymaga założenia konta i~stałego dostępu do Internetu, co utrudnia szybki zapis danych na stacji paliw ze słabym zasięgiem albo w~garażu podziemnym. Część darmowych narzędzi blokuje obsługę kilku pojazdów i~skanowanie paragonów za płatną subskrypcją lub zasypuje ekran reklamami.
+Dostępne na rynku aplikacje do kontroli wydatków na auto nie zawsze sprawdzają się w~codziennym użyciu. Wiele z~nich wymaga założenia konta i~stałego dostępu do Internetu, co utrudnia szybki zapis danych na stacji paliw ze słabym zasięgiem albo w~garażu podziemnym. Część darmowych narzędzi blokuje podgląd szczegółowych statystyk, skanowanie paragonów czy tworzenie kopii zapasowych za płatną subskrypcją lub zasypuje ekran reklamami.
 
-Projektowana aplikacja \textbf{MotoLog} rozwiązuje te problemy, przenosząc zapis i~przetwarzanie danych bezpośrednio na telefon użytkownika. Dzięki temu system działa szybko, bez konieczności rejestracji i~niezależnie od połączenia z~siecią.
+Projektowana aplikacja \textbf{MotoLog} rozwiązuje te problemy, przenosząc zapis i~przetwarzanie danych bezpośrednio na telefon użytkownika. Dzięki temu system działa szybko, bez konieczności rejestracji i~niezależnie od połączenia z~siecią, a~przenoszenie historii między urządzeniami zapewnia darmowy eksport do pliku.
 
 \subsection{Główne cele projektowanego systemu}
 \label{subsec:glowne_cele}
 
-Głównym celem jest uproszczenie zapisu tankowań i~ładowań dzięki odczytowi paragonów (OCR) oraz automatycznemu wyliczaniu średniego zużycia paliwa lub energii i~zasięgu auta. Aplikacja ma też porządkować wydatki poprzez podział na kategorie, historię wpisów oraz prognozę miesięcznego budżetu. Ważnym założeniem jest obsługa kilku pojazdów o~różnych napędach oraz wysyłanie lokalnych powiadomień, które chronią przed przegapieniem terminów opłat i~przeglądów.
+Głównym celem jest uproszczenie zapisu tankowań i~ładowań dzięki odczytowi paragonów (OCR) oraz automatycznemu wyliczaniu średniego zużycia paliwa lub energii i~zasięgu auta. Aplikacja ma też porządkować wydatki poprzez podział na kategorie, historię wpisów oraz prognozę miesięcznego budżetu. Ważnym założeniem jest obsługa kilku pojazdów o~różnych napędach, w~tym aut dwupaliwowych i~hybrydowych, eksport danych do pliku oraz wysyłanie lokalnych powiadomień, które chronią przed przegapieniem terminów opłat i~przeglądów.
 
 Szczegółową analizę problemów biznesowych, zakres projektu oraz pełną listę wymagań i~reguł działania systemu opisano w~Rozdziale~\ref{cha:analiza_wymagan}.
-
-
-% % ==============================================================================
-% \section{Przegląd istniejących rozwiązań}
-% \label{sec:przeglad_rozwiazan}
-
-% \subsection{Analiza wybranych aplikacji}
-% \label{subsec:analiza_aplikacji}
-
-% \subsubsection{Rozwiązanie 1 (np. https://spalanie.formuly.pl/)}
-% \label{subsubsec:rozwiazanie_1}
-% % TODO: Opis, funkcjonalności, zalety oraz ograniczenia pierwszego rozwiązania.
-
-% \subsubsection{Rozwiązanie 2 (np. Drivvo)}
-% \label{subsubsec:rozwiazanie_2}
-% % TODO: Opis, funkcjonalności, zalety oraz ograniczenia drugiego rozwiązania.
-
-% \subsubsection{Rozwiązanie 3 (np. Yanosik)}
-% \label{subsubsec:rozwiazanie_3}
-% % TODO: Opis, funkcjonalności, zalety oraz ograniczenia trzeciego rozwiązania.
-
-
-% \subsection{Porównanie analizowanych systemów}
-% \label{subsec:porownanie_rozwiazan}
-
-% Zestawienie porównawcze przeanalizowanych rozwiązań przedstawiono w~tabeli~\ref{tab:porownanie_rozwiazan}.
-
-% \begingroup
-% \renewcommand{\arraystretch}{1.3}
-% \setlength{\LTcapwidth}{\linewidth}
-% \begin{longtable}{|>{\centering\arraybackslash}m{2.8cm}|*{3}{m{\dimexpr(\linewidth - 2.8cm - 10\tabcolsep - 6\arrayrulewidth)/4\relax}|}>{\bfseries}m{\dimexpr(\linewidth - 2.8cm - 10\tabcolsep - 6\arrayrulewidth)/4\relax}|}
-%     \caption{Porównanie istniejących rozwiązań z~projektowanym systemem}
-%     \label{tab:porownanie_rozwiazan} \\
-%     \hline
-%     \rowcolor{tableheader}
-%     \textbf{Cecha / Kryterium} & \multicolumn{1}{c|}{\textbf{Rozwiązanie A}} & \multicolumn{1}{c|}{\textbf{Rozwiązanie B}} & \multicolumn{1}{c|}{\textbf{Rozwiązanie C}} & \multicolumn{1}{c|}{\textbf{MotoLog (Projekt)}} \\
-%     \hline
-%     \endfirsthead
-
-%     \multicolumn{5}{c}{\footnotesize\bfseries \tablename\ \thetable{} -- kontynuacja z~poprzedniej strony} \\
-%     \hline
-%     \rowcolor{tableheader}
-%     \textbf{Cecha / Kryterium} & \multicolumn{1}{c|}{\textbf{Rozwiązanie A}} & \multicolumn{1}{c|}{\textbf{Rozwiązanie B}} & \multicolumn{1}{c|}{\textbf{Rozwiązanie C}} & \multicolumn{1}{c|}{\textbf{MotoLog (Projekt)}} \\
-%     \hline
-%     \endhead
-
-%     \multicolumn{5}{r}{\footnotesize\emph{Ciąg dalszy na następnej stronie\ldots}} \\
-%     \endfoot
-
-%     \zrodloLT{5}{Opracowanie własne.}
-%     \endlastfoot
-
-%     \textbf{Główne funkcjonalności} & 
-%     & 
-%     & 
-%     & \\
-%     \hline
-%     \textbf{Zalety} & 
-%     & 
-%     & 
-%     & \\
-%     \hline
-%     \textbf{Ograniczenia} & 
-%     & 
-%     & 
-%     & \\
-%     \hline
-%     \textbf{Działanie offline} & 
-%     & 
-%     & 
-%     & \\
-%     \hline
-% \end{longtable}
-% \endgroup
-
-% % ==============================================================================
-% \section{Wyróżniki projektowanego systemu}
-% \label{sec:wyrozniki_systemu}
-
-% % TODO: Elementy wyróżniające projektowany system na tle istniejących rozwiązań
-% \begin{itemize}
-%     \item \textbf{Element 1} -- % opis...
-%     \item \textbf{Element 2} -- % opis...
-%     \item \textbf{Element 3} -- % opis...
-% \end{itemize}
-
-
-
 
 
 % ==============================================================================
 \section{Przegląd istniejących rozwiązań}
 \label{sec:przeglad_rozwiazan}
 
-W~niniejszym podrozdziale przeanalizowano pięć istniejących narzędzi wspierających kierowców w~kontroli zużycia paliwa oraz kosztów utrzymania pojazdu: kalkulator przeglądarkowy \textbf{spalanie.formuly.pl}, aplikacje mobilne \textbf{Drivvo} i~\textbf{Yanosik} oraz platformy webowo-mobilne \textbf{Fuelly} i~\textbf{Spritmonitor}.
+Przeanalizowano cztery istniejące narzędzia wspierające kierowców w~kontroli spalania i~kosztów eksploatacji pojazdu: kalkulator przeglądarkowy \href{https://spalanie.formuly.pl}{\textbf{spalanie.formuly.pl}}, aplikacje mobilne \textbf{Drivvo} oraz \textbf{Yanosik}, a~także platformę webowo-mobilną \textbf{Spritmonitor}. Poniżej przedstawiono \textbf{analizę czterech wybranych aplikacji} o~zbliżonym przeznaczeniu.
 
-\subsection{Analiza wybranych aplikacji}
-\label{subsec:analiza_aplikacji}
-
-% ------------------------------------------------------------------------------
-\subsubsection{Rozwiązanie 1: spalanie.formuly.pl}
-\label{subsubsec:rozwiazanie_1}
-
-\textbf{Charakterystyka i~dostępność.} Serwis \textbf{spalanie.formuly.pl} to prosty kalkulator internetowy dostępny wyłącznie przez przeglądarkę WWW na komputerach i~urządzeniach mobilnych. Narzędzie nie posiada dedykowanych aplikacji natywnych w~sklepach Google Play i~App Store ani modułu rejestracji konta. Korzystanie ze strony jest bezpłatne, a~w~interfejsie mogą pojawiać się standardowe banery reklamowe.
-
-\textbf{Zakres funkcji i~obsługa procesu.} Aplikacja działa w~modelu bezstanowym i~nie przechowuje historii wpisów ani profili pojazdów. Użytkownik wpisuje w~pojedynczym formularzu ilość zatankowanego paliwa, przejechany dystans oraz cenę za litr, a~system oblicza średnie spalanie na 100~km oraz koszt przejazdu. Serwis nie obsługuje wielu pojazdów, ewidencji wydatków serwisowych i~ubezpieczeniowych, wykresów trendów, przypomnień o~terminach, eksportu danych ani integracji z~innymi usługami.
-
-\textbf{Ocena użyteczności i~prywatności.} Interfejs ogranicza się do jednego formularza, dzięki czemu obsługa jest natychmiastowa i~nie wymaga podawania żadnych danych osobowych. Brak lokalnej bazy wymusza jednak stały dostęp do Internetu przy każdym użyciu. Rozwiązanie sprawdza się wyłącznie jako doraźny kalkulator dla jednego przejazdu i~nie nadaje się do długoterminowej kontroli budżetu ani prowadzenia kilku aut.
-
-\begin{figure}[H]
-    \centering
-    % \includegraphics[width=0.85\linewidth]{figures/spalanie_formuly_glowny.png}
-    \caption{Widok główny kalkulatora w~serwisie spalanie.formuly.pl}
-    \label{fig:spalanie_formuly_glowny}
-    \zrodlo{Opracowanie własne na podstawie widoku aplikacji WWW (brak oddzielnych ekranów pojazdów, raportów, wydatków i~przypomnień ze względu na bezstanowy charakter narzędzia).}
-\end{figure}
+\clearpage
 
 % ------------------------------------------------------------------------------
-\subsubsection{Rozwiązanie 2: Drivvo}
-\label{subsubsec:rozwiazanie_2}
+\subsection{Rozwiązanie 1: spalanie.formuly.pl}
+\label{subsec:rozwiazanie_1}
 
-\textbf{Charakterystyka i~dostępność.} \textbf{Drivvo} to rozbudowany dziennik eksploatacji pojazdu dostępny jako aplikacja mobilna na systemy Android i~iOS oraz poprzez panel przeglądarkowy WWW. Korzystanie z~systemu w~podstawowym zakresie jest darmowe po utworzeniu konta użytkownika (za pomocą adresu e-mail lub logowania społecznościowego), przy czym w~wersji bezpłatnej wyświetlane są reklamy. Producent udostępnia również płatny wariant rozszerzony, który usuwa reklamy oraz odblokowuje zaawansowane raportowanie, kopie zapasowe i~eksport danych.
+Serwis \href{https://spalanie.formuly.pl}{\textbf{spalanie.formuly.pl}} to darmowy kalkulator internetowy dostępny wyłącznie przez przeglądarkę WWW, bez aplikacji mobilnych i~rejestracji konta. Udostępnia dwa proste formularze działające bezstanowo: kalkulator średniego spalania wraz z~kosztem przejechania 100~km oraz kalkulator kosztu planowanej trasy, uzupełnione o~wzory obliczeniowe i~porady (\figurename~\ref{fig:spalanie_formuly}).
 
-\textbf{Zakres funkcji i~obsługa procesu.} Dodanie pojazdu wymaga określenia jego typu, marki, modelu, rodzaju paliwa oraz początkowego stanu licznika. System obsługuje wiele pojazdów w~ramach jednego profilu i~pozwala rejestrować tankowania z~automatycznym wyliczeniem średniego zużycia paliwa. Ewidencja kosztów obejmuje szeroką listę kategorii, w~tym naprawy serwisowe, wymianę oleju i~opon, ubezpieczenia, podatki, myjnię, parkingi oraz opłaty drogowe. Aplikacja generuje wykresy wydatków i~spalania w~czasie, wysyła przypomnienia powiązane z~datą lub przebiegiem oraz umożliwia eksport zestawień do plików CSV i~arkuszy kalkulacyjnych.
-
-\textbf{Ocena użyteczności i~prywatności.} Bogaty zestaw funkcji analitycznych sprawia, że interfejs wymaga chwili na opanowanie struktury menu i~kategorii. Dane użytkowników są synchronizowane z~chmurą producenta, co ułatwia przeniesienie historii na nowe urządzenie, ale wiąże się z~przechowywaniem informacji poza telefonem. Dla zwykłego kierowcy wersja darmowa bywa uciążliwa z~powodu reklam, natomiast dla osób zarządzających kilkoma autami aplikacja oferuje bardzo szerokie możliwości ewidencyjne.
+\begin{itemize}
+    \item \textbf{Zalety:} natychmiastowe działanie bez logowania, czytelne przeliczanie wyniku w~czasie rzeczywistym, brak przekazywania danych osobowych.
+    \item \textbf{Ograniczenia:} brak zapisu historii i~profili pojazdów, brak ewidencji kosztów pozapaliwowych, wykresów oraz przypomnień, konieczność stałego dostępu do Internetu.
+\end{itemize}
 
 \begin{figure}[H]
     \centering
-    % \includegraphics[width=0.45\linewidth]{figures/drivvo_glowny.png}
-    % \includegraphics[width=0.45\linewidth]{figures/drivvo_pojazd.png}
-    \caption{Aplikacja Drivvo: ekran główny oraz formularz dodawania pojazdu}
-    \label{fig:drivvo_1}
-    \zrodlo{Zrzuty ekranu z~aplikacji Drivvo.}
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=0.90\linewidth]{figures/inne_rozw/formula_5.eps}
+        \subcaption{Kalkulator średniego spalania}
+        \label{fig:formula_a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.49\linewidth}
+        \centering
+        \includegraphics[width=0.951\linewidth]{figures/inne_rozw/formula_4.eps}
+        \subcaption{Kalkulator kosztu trasy}
+        \label{fig:formula_b}
+    \end{subfigure}
+
+    \caption{Widoki kalkulatorów w~serwisie \href{https://spalanie.formuly.pl}{spalanie.formuly.pl}: \subref{fig:formula_a} zużycie na 100~km, \subref{fig:formula_b} koszt przejazdu.}
+    \label{fig:spalanie_formuly}
+    \zrodlo{Opracowanie własne na podstawie zrzutów ekranu z~serwisu WWW.}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    % \includegraphics[width=0.45\linewidth]{figures/drivvo_tankowanie.png}
-    % \includegraphics[width=0.45\linewidth]{figures/drivvo_raporty.png}
-    \caption{Aplikacja Drivvo: rejestracja tankowania oraz widok raportów i~statystyk}
-    \label{fig:drivvo_2}
-    \zrodlo{Zrzuty ekranu z~aplikacji Drivvo.}
-\end{figure}
+\clearpage
+
+% ------------------------------------------------------------------------------
+\subsection{Rozwiązanie 2: Drivvo}
+\label{subsec:rozwiazanie_2}
+
+\textbf{Drivvo} to rozbudowany dziennik eksploatacji pojazdu na systemy Android, iOS oraz WWW. Wymaga założenia konta użytkownika i~synchronizacji danych w~chmurze. Pozwala rejestrować tankowania ze spalaniem, prowadzić wiele pojazdów, kategoryzować wydatki oraz konfigurować przypomnienia czasowe i~przebiegowe (\figurename~\ref{fig:drivvo}).
+
+\begin{itemize}
+    \item \textbf{Zalety:} bogaty katalog kategorii wydatków i~szablonów przypomnień, oś czasu zdarzeń, czytelne podsumowania kosztów oraz obsługa wielu pojazdów.
+    \item \textbf{Ograniczenia:} wymóg rejestracji konta, ukrywanie części statystyk na ekranie głównym oraz blokowanie eksportu danych (CSV/Excel), kopii zapasowych i~braku reklam za płatną subskrypcją PRO.
+\end{itemize}
 
 \begin{figure}[H]
     \centering
-    % \includegraphics[width=0.45\linewidth]{figures/drivvo_wydatki.png}
-    % \includegraphics[width=0.45\linewidth]{figures/drivvo_przypomnienia.png}
-    \caption{Aplikacja Drivvo: ewidencja wydatków oraz konfiguracja przypomnień}
-    \label{fig:drivvo_3}
-    \zrodlo{Zrzuty ekranu z~aplikacji Drivvo.}
+    \begin{subfigure}[t]{0.235\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/inne_rozw/drivvo_8.eps}
+        \subcaption{Ekran główny}
+        \label{fig:drivvo_a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.235\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/inne_rozw/drivvo_9.eps}
+        \subcaption{Szybkie dodawanie wpisów}
+        \label{fig:drivvo_b}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.235\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/inne_rozw/drivvo_10.eps}
+        \subcaption{Szablony przypomnień}
+        \label{fig:drivvo_c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.235\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/inne_rozw/drivvo_12.eps}
+        \subcaption{Zakres płatnego planu PRO}
+        \label{fig:drivvo_d}
+    \end{subfigure}
+
+    \caption{Kluczowe widoki aplikacji Drivvo: \subref{fig:drivvo_a} oś czasu z~blokadą podsumowania, \subref{fig:drivvo_b} wybór zdarzenia, \subref{fig:drivvo_c} przypomnienia, \subref{fig:drivvo_d} funkcje płatne.}
+    \label{fig:drivvo}
+    \zrodlo{Opracowanie własne na podstawie zrzutów ekranu z~aplikacji Drivvo.}
+\end{figure}
+
+\clearpage
+
+% ------------------------------------------------------------------------------
+\subsection{Rozwiązanie 3: Yanosik}
+\label{subsec:rozwiazanie_3}
+
+\textbf{Yanosik} to polska aplikacja mobilna (Android, iOS) łącząca nawigację i~ostrzeganie drogowe z~modułem Garaż (\figurename~\ref{fig:yanosik}). Po utworzeniu konta umożliwia dodanie pojazdów po numerze rejestracyjnym, przechowywanie wzorów dokumentów, ustawianie przypomnień o~polisie OC i~przeglądzie oraz zapisywanie wydatków w~podstawowych kategoriach.
+
+\begin{itemize}
+    \item \textbf{Zalety:} darmowy dostęp do modułu pojazdu, szybkie przyciski wyboru daty (Dzisiaj, Wczoraj), przejrzysty podział kosztów na kategorie i~wzory dokumentów w~Teczce.
+    \item \textbf{Ograniczenia:} brak pola przebiegu w~formularzu paliwa i~brak obliczania spalania, odsyłanie do zewnętrznej aplikacji PanParagon w~celu skanowania paragonów, pełnoekranowe reklamy oraz wymóg konta i~stałego dostępu do sieci.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.235\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/inne_rozw/yanosik_6.eps}
+        \subcaption{Ekran modułu Garaż i~usług}
+        \label{fig:yanosik_a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.235\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/inne_rozw/yanosik_13.eps}
+        \subcaption{Formularz tankowania}
+        \label{fig:yanosik_b}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.235\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/inne_rozw/yanosik_14.eps}
+        \subcaption{Wykres wydatków i~OCR}
+        \label{fig:yanosik_c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.235\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/inne_rozw/yanosik_16.eps}
+        \subcaption{Podsumowanie kosztów}
+        \label{fig:yanosik_d}
+    \end{subfigure}
+
+    \caption{Wybrane widoki aplikacji Yanosik: \subref{fig:yanosik_a} garaż, \subref{fig:yanosik_b} dodawanie paliwa, \subref{fig:yanosik_c}~baner PanParagon, \subref{fig:yanosik_d} zestawienie wydatków.}
+    \label{fig:yanosik}
+    \zrodlo{Opracowanie własne na podstawie zrzutów ekranu z~aplikacji Yanosik.}
+\end{figure}
+
+\clearpage
+
+% ------------------------------------------------------------------------------
+\subsection{Rozwiązanie 4: Spritmonitor}
+\label{subsec:rozwiazanie_4}
+
+\textbf{Spritmonitor} to europejska platforma (portal WWW oraz aplikacje Android i~iOS) do szczegółowej ewidencji zużycia paliwa, energii elektrycznej i~kosztów eksploatacji (\figurename~\ref{fig:spritmonitor}). Pozwala korzystać z~aplikacji lokalnie bez konta lub synchronizować wpisy z~portalem, rozróżnia tankowania pełne i~częściowe, obsługuje wiele pojazdów i~udostępnia darmowy eksport danych do plików CSV.
+
+\begin{itemize}
+    \item \textbf{Zalety:} praca bez wymogu rejestracji, wysoka dokładność obliczeń spalania (w~tym kWh/100~km), darmowy eksport do CSV, przypomnienia według daty i~przebiegu oraz porównywanie wyników z~bazą modeli.
+    \item \textbf{Ograniczenia:} przestarzały, przeładowany formularzami interfejs, błędy domyślnych walut (EUR lub~ARS mimo polskiego języka), domyślne upublicznianie wpisów przy założeniu konta oraz reklamy w~wersji darmowej.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.235\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/inne_rozw/Spritmonitor_1.eps}
+        \subcaption{Ekran logowania}
+        \label{fig:spritmonitor_a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.235\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/inne_rozw/Spritmonitor_7.eps}
+        \subcaption{Formularz tankowania}
+        \label{fig:spritmonitor_b}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.235\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/inne_rozw/Spritmonitor_18.eps}
+        \subcaption{Przypomnienia}
+        \label{fig:spritmonitor_c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.235\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/inne_rozw/Spritmonitor_33.eps}
+        \subcaption{Darmowy eksport danych}
+        \label{fig:spritmonitor_d}
+    \end{subfigure}
+
+    \caption{Kluczowe widoki systemu Spritmonitor: \subref{fig:spritmonitor_a} start bez konta, \subref{fig:spritmonitor_b} formularz wpisu, \subref{fig:spritmonitor_c} alerty serwisowe, \subref{fig:spritmonitor_d} eksport CSV.}
+    \label{fig:spritmonitor}
+    \zrodlo{Opracowanie własne na podstawie zrzutów ekranu z~aplikacji Spritmonitor.}
 \end{figure}
 
 % ------------------------------------------------------------------------------
-\subsubsection{Rozwiązanie 3: Yanosik}
-\label{subsubsec:rozwiazanie_3}
-
-\textbf{Charakterystyka i~dostępność.} \textbf{Yanosik} to polska aplikacja mobilna na platformy Android oraz iOS, łącząca nawigację drogową i~system ostrzegania kierowców z~modułem obsługi pojazdu. Podstawowe funkcje drogowe są darmowe, jednak interfejs zawiera liczne banery reklamowe oraz oferty usług partnerskich. Dostępne są płatne pakiety rozszerzające funkcje asystenta jazdy i~ograniczające reklamy.
-
-\textbf{Zakres funkcji i~obsługa procesu.} Korzystanie z~nawigacji nie wymaga logowania, natomiast zapisanie profilu pojazdu i~obsługa przypomnień wymagają założenia konta. W~sekcji pojazdu kierowca wprowadza numer rejestracyjny, markę, model oraz daty ważności polisy OC i~badania technicznego, z~możliwością dodania kilku samochodów. Aplikacja powiadamia o~zbliżających się terminach ubezpieczenia i~przeglądu oraz pozwala zapisywać podstawowe wydatki, jednak nie oferuje wyspecjalizowanej analityki spalania między pełnymi tankowaniami, skanowania paragonów OCR ani eksportu szczegółowych raportów kosztowych. System integruje się z~urządzeniami pokładowymi producenta oraz interfejsami Android Auto i~Apple CarPlay.
-
-\textbf{Ocena użyteczności i~prywatności.} Ekran główny jest podporządkowany obsłudze w~trakcie jazdy, przez co funkcje typowo księgowe znajdują się głębiej w~menu. Aplikacja wymaga stałego połączenia z~siecią i~dostępu do lokalizacji, przetwarzając dane telemetryczne na serwerach operatora. Z~punktu widzenia zwykłego kierowcy jest to wygodny asystent uniwersalny, ale jako narzędzie do precyzyjnego rozliczania spalania i~kosztów wielu pojazdów wypada słabiej od dedykowanych dzienników.
-
-\begin{figure}[H]
-    \centering
-    % \includegraphics[width=0.45\linewidth]{figures/yanosik_glowny.png}
-    % \includegraphics[width=0.45\linewidth]{figures/yanosik_pojazd.png}
-    \caption{Aplikacja Yanosik: ekran główny oraz moduł dodawania pojazdu}
-    \label{fig:yanosik_1}
-    \zrodlo{Zrzuty ekranu z~aplikacji Yanosik.}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    % \includegraphics[width=0.45\linewidth]{figures/yanosik_tankowanie.png}
-    % \includegraphics[width=0.45\linewidth]{figures/yanosik_raporty.png}
-    \caption{Aplikacja Yanosik: rejestracja kosztów paliwa oraz podsumowanie wydatków}
-    \label{fig:yanosik_2}
-    \zrodlo{Zrzuty ekranu z~aplikacji Yanosik.}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    % \includegraphics[width=0.45\linewidth]{figures/yanosik_wydatki.png}
-    % \includegraphics[width=0.45\linewidth]{figures/yanosik_przypomnienia.png}
-    \caption{Aplikacja Yanosik: lista wydatków oraz przypomnienia o~terminach OC i~przeglądu}
-    \label{fig:yanosik_3}
-    \zrodlo{Zrzuty ekranu z~aplikacji Yanosik.}
-\end{figure}
-
-% ------------------------------------------------------------------------------
-\subsubsection{Rozwiązanie 4: Fuelly}
-\label{subsubsec:rozwiazanie_4}
-
-\textbf{Charakterystyka i~dostępność.} \textbf{Fuelly} to platforma do śledzenia zużycia paliwa i~kosztów serwisowych działająca poprzez serwis WWW oraz aplikacje mobilne na systemy Android i~iOS. Podstawowy zakres funkcji jest darmowy po rejestracji konta i~zawiera reklamy. Wariant płatny usuwa reklamy oraz rozszerza obsługę załączników fotograficznych, odczytu paragonów i~zaawansowanego raportowania.
-
-\textbf{Zakres funkcji i~obsługa procesu.} Rejestracja wymaga utworzenia konta w~serwisie WWW lub aplikacji mobilnej. Profil pojazdu obejmuje rok produkcji, markę, model, wersję silnikową oraz wybrane jednostki miary, z~możliwością przypisania wielu aut do jednego konta. Dodawanie tankowania polega na wpisaniu przebiegu, ilości paliwa, ceny jednostkowej oraz oznaczeniu tankowania do pełna lub częściowego. Użytkownik może rejestrować wydatki eksploatacyjne i~serwisowe, analizować wykresy zużycia paliwa, ustawiać przypomnienia serwisowe oparte na dacie lub przebiegu oraz eksportować dane do plików CSV.
-
-\textbf{Ocena użyteczności i~prywatności.} Interfejs kładzie nacisk na statystyki spalania i~porównywanie wyników z~innymi kierowcami, lecz barierą dla części polskich użytkowników jest anglojęzyczny charakter platformy. Wszystkie wpisy są synchronizowane z~centralną bazą portalu, co wymaga dostępu do sieci i~przekazywania danych na zewnętrzne serwery. System dobrze sprawdza się u~kierowców nastawionych na długoterminową analizę zużycia paliwa.
-
-\begin{figure}[H]
-    \centering
-    % \includegraphics[width=0.45\linewidth]{figures/fuelly_glowny.png}
-    % \includegraphics[width=0.45\linewidth]{figures/fuelly_pojazd.png}
-    \caption{Platforma Fuelly: ekran główny oraz dodawanie pojazdu}
-    \label{fig:fuelly_1}
-    \zrodlo{Zrzuty ekranu z~aplikacji Fuelly.}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    % \includegraphics[width=0.45\linewidth]{figures/fuelly_tankowanie.png}
-    % \includegraphics[width=0.45\linewidth]{figures/fuelly_raporty.png}
-    \caption{Platforma Fuelly: dodawanie tankowania oraz wykresy zużycia paliwa}
-    \label{fig:fuelly_2}
-    \zrodlo{Zrzuty ekranu z~aplikacji Fuelly.}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    % \includegraphics[width=0.45\linewidth]{figures/fuelly_wydatki.png}
-    % \includegraphics[width=0.45\linewidth]{figures/fuelly_przypomnienia.png}
-    \caption{Platforma Fuelly: rejestr wydatków serwisowych oraz przypomnienia}
-    \label{fig:fuelly_3}
-    \zrodlo{Zrzuty ekranu z~aplikacji Fuelly.}
-\end{figure}
-
-% ------------------------------------------------------------------------------
-\subsubsection{Rozwiązanie 5: Spritmonitor}
-\label{subsubsec:rozwiazanie_5}
-
-\textbf{Charakterystyka i~dostępność.} \textbf{Spritmonitor} to europejska platforma do ewidencji zużycia paliwa, energii elektrycznej oraz kosztów eksploatacji pojazdów, dostępna przez portal WWW oraz aplikacje mobilne na systemy Android i~iOS. Podstawowe funkcje są dostępne bezpłatnie po założeniu konta użytkownika i~wspierane reklamami, natomiast płatny pakiet rozszerzony usuwa reklamy oraz dodaje wybrane narzędzia raportowania i~obsługi dokumentów.
-
-\textbf{Zakres funkcji i~obsługa procesu.} Po rejestracji konta użytkownik dodaje profil pojazdu, określając markę, model, typ silnika, rodzaj paliwa lub napędu elektrycznego oraz jednostki rozliczeniowe. Platforma obsługuje wiele pojazdów jednocześnie. Wpisy tankowań i~ładowań uwzględniają pełne i~częściowe uzupełnienia, a~moduł kosztów pozwala rejestrować ubezpieczenia, podatki, naprawy, wymianę opon oraz opłaty drogowe. System udostępnia szczegółowe statystyki spalania, porównanie wyników z~bazą innych użytkowników danego modelu, przypomnienia o~terminach oraz eksport danych do plików CSV.
-
-\textbf{Ocena użyteczności i~prywatności.} Interfejs ma surowy, techniczny charakter, dzięki czemu wprowadzanie danych jest szybkie, choć mniej nowoczesne wizualnie. Dane są przechowywane na serwerach portalu i~mogą zasilać anonimowe zestawienia spalania dla konkretnych modeli aut. Rozwiązanie jest szczególnie wygodne dla kierowców prowadzących szczegółową ewidencję kilku pojazdów, w~tym aut elektrycznych i~hybrydowych.
-
-\begin{figure}[H]
-    \centering
-    % \includegraphics[width=0.45\linewidth]{figures/spritmonitor_glowny.png}
-    % \includegraphics[width=0.45\linewidth]{figures/spritmonitor_pojazd.png}
-    \caption{System Spritmonitor: ekran główny oraz formularz dodawania pojazdu}
-    \label{fig:spritmonitor_1}
-    \zrodlo{Zrzuty ekranu z~aplikacji Spritmonitor.}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    % \includegraphics[width=0.45\linewidth]{figures/spritmonitor_tankowanie.png}
-    % \includegraphics[width=0.45\linewidth]{figures/spritmonitor_raporty.png}
-    \caption{System Spritmonitor: dodawanie tankowania oraz statystyki spalania}
-    \label{fig:spritmonitor_2}
-    \zrodlo{Zrzuty ekranu z~aplikacji Spritmonitor.}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    % \includegraphics[width=0.45\linewidth]{figures/spritmonitor_wydatki.png}
-    % \includegraphics[width=0.45\linewidth]{figures/spritmonitor_przypomnienia.png}
-    \caption{System Spritmonitor: ewidencja kosztów oraz przypomnienia o~terminach}
-    \label{fig:spritmonitor_3}
-    \zrodlo{Zrzuty ekranu z~aplikacji Spritmonitor.}
-\end{figure}
-
-
-% ------------------------------------------------------------------------------
+\begin{landscape}
 \subsection{Porównanie analizowanych systemów}
 \label{subsec:porownanie_rozwiazan}
 
-Zestawienie porównawcze przeanalizowanych rozwiązań z~projektowanym systemem \textbf{MotoLog} przedstawiono w~tabeli~\ref{tab:porownanie_rozwiazan}.
+Zestawienie porównawcze przeanalizowanych rozwiązań z~projektowanym systemem przedstawiono poniżej (Tabela~\ref{tab:porownanie_rozwiazan}).
 
 \begingroup
 \footnotesize
-\renewcommand{\arraystretch}{1.3}
+\renewcommand{\arraystretch}{1.35}
 \setlength{\LTcapwidth}{\linewidth}
-\begin{longtable}{|>{\centering\arraybackslash}m{2.3cm}|*{5}{m{\dimexpr(\linewidth - 2.3cm - 14\tabcolsep - 8\arrayrulewidth)/6\relax}|}>{\bfseries}m{\dimexpr(\linewidth - 2.3cm - 14\tabcolsep - 8\arrayrulewidth)/6\relax}|}
+\begin{longtable}{|>{\centering\arraybackslash}m{2.7cm}|*{5}{>{\raggedright\arraybackslash}m{\dimexpr(\linewidth - 2.7cm - 12\tabcolsep - 7\arrayrulewidth)/5\relax}|}}
     \caption{Porównanie istniejących rozwiązań z~projektowanym systemem}
     \label{tab:porownanie_rozwiazan} \\
     \hline
     \rowcolor{tableheader}
-    \textbf{Kryterium} & \multicolumn{1}{c|}{\textbf{spalanie.formuly.pl}} & \multicolumn{1}{c|}{\textbf{Drivvo}} & \multicolumn{1}{c|}{\textbf{Yanosik}} & \multicolumn{1}{c|}{\textbf{Fuelly}} & \multicolumn{1}{c|}{\textbf{Spritmonitor}} & \multicolumn{1}{c|}{\textbf{MotoLog (Projekt)}} \\
+    \textbf{Kryterium} & \multicolumn{1}{c|}{\href{https://spalanie.formuly.pl}{\textbf{spalanie.formuly.pl}}} & \multicolumn{1}{c|}{\textbf{Drivvo}} & \multicolumn{1}{c|}{\textbf{Yanosik}} & \multicolumn{1}{c|}{\textbf{Spritmonitor}} & \multicolumn{1}{c|}{\textbf{MotoLog (Projekt)}} \\
     \hline
     \endfirsthead
 
-    \multicolumn{7}{c}{\footnotesize\bfseries \tablename\ \thetable{} -- kontynuacja z~poprzedniej strony} \\
+    \multicolumn{6}{c}{\footnotesize\bfseries \tablename\ \thetable{} -- kontynuacja z~poprzedniej strony} \\
     \hline
     \rowcolor{tableheader}
-    \textbf{Kryterium} & \multicolumn{1}{c|}{\textbf{spalanie.formuly.pl}} & \multicolumn{1}{c|}{\textbf{Drivvo}} & \multicolumn{1}{c|}{\textbf{Yanosik}} & \multicolumn{1}{c|}{\textbf{Fuelly}} & \multicolumn{1}{c|}{\textbf{Spritmonitor}} & \multicolumn{1}{c|}{\textbf{MotoLog (Projekt)}} \\
+    \textbf{Kryterium} & \multicolumn{1}{c|}{\href{https://spalanie.formuly.pl}{\textbf{spalanie.formuly.pl}}} & \multicolumn{1}{c|}{\textbf{Drivvo}} & \multicolumn{1}{c|}{\textbf{Yanosik}} & \multicolumn{1}{c|}{\textbf{Spritmonitor}} & \multicolumn{1}{c|}{\textbf{MotoLog (Projekt)}} \\
     \hline
     \endhead
 
-    \multicolumn{7}{r}{\footnotesize\emph{Ciąg dalszy na następnej stronie\ldots}} \\
+    \multicolumn{6}{r}{\footnotesize\emph{Ciąg dalszy na następnej stronie\ldots}} \\
     \endfoot
 
-    \zrodloLT{7}{Opracowanie własne.}
+    \zrodloLT{6}{Opracowanie własne.}
     \endlastfoot
 
-    \textbf{Dostępne platformy} & 
+    \textbf{Platformy} & 
     Przeglądarka WWW & 
     Android, iOS, WWW & 
     Android, iOS & 
     Android, iOS, WWW & 
-    Android, iOS, WWW & 
-    Android (natywna aplikacja mobilna) \\
+    Android \\
     \hline
-    \textbf{Główne przeznaczenie} & 
-    Jednorazowe obliczenie spalania & 
-    Ewidencja wydatków i~serwisu auta & 
-    Nawigacja i~ostrzeganie drogowe & 
-    Dziennik tankowań i~analiza spalania & 
-    Baza spalania, energii i~kosztów & 
-    Lokalny dziennik tankowań, kosztów i~alertów \\
+    \textbf{Główne funkcje} & 
+    Kalkulator spalania i~kosztu trasy, wzory obliczeniowe & 
+    Dziennik tankowań, kosztów, serwisu, tras i~przychodów, wykresy & 
+    Nawigacja, ostrzeganie drogowe, ewidencja wydatków, Teczka dokumentów & 
+    Ewidencja spalania (l i~kWh) oraz kosztów, porównanie z~bazą modeli & 
+    Dziennik tankowań (l i~kWh) i~wydatków, kalkulator zasięgu, prognoza budżetu \\
     \hline
-    \textbf{Konto i~tryb pracy} & 
-    Brak konta, wymaga sieci WWW & 
-    Konto użytkownika, synchronizacja w~chmurze & 
-    Konto dla usług pojazdu, wymaga sieci & 
-    Konto użytkownika, synchronizacja w~chmurze & 
-    Konto użytkownika, synchronizacja w~chmurze & 
-    Brak konta, 100\% lokalna baza offline \\
+    \textbf{Konto i~praca offline} & 
+    Brak konta, wymaga sieci & 
+    Konto i~chmura producenta & 
+    Konto dla usług auta, wymaga sieci & 
+    Opcjonalne konto, możliwy tryb lokalny & 
+    Brak konta, 100\% lokalna praca offline \\
     \hline
-    \textbf{Obsługa wielu pojazdów} & 
+    \textbf{Wiele pojazdów} & 
     Brak zapisu pojazdów & 
-    Wiele pojazdów w~profilu & 
-    Wiele pojazdów w~koncie kierowcy & 
-    Wiele pojazdów w~profilu & 
-    Wiele pojazdów z~osobnymi statystykami & 
-    Nielimitowane lokalne profile pojazdów \\
+    Tak (limit w~wersji darmowej) & 
+    Tak (w~koncie kierowcy) & 
+    Tak (osobne profile i~statystyki) & 
+    Tak (nielimitowane lokalne profile) \\
     \hline
-    \textbf{Ewidencja spalania i~kosztów} & 
-    Wyłącznie kalkulator spalania & 
-    Pełne i~częściowe tankowania oraz szerokie kategorie kosztów & 
-    Podstawowy zapis wydatków bez zaawansowanego spalania & 
-    Szczegółowe spalanie i~wydatki serwisowe & 
-    Spalanie (l i~kWh) oraz koszty eksploatacji & 
-    Spalanie (l i~kWh), koszty z~kategoriami i~prognoza budżetu \\
-    \hline
-    \textbf{Skanowanie paragonów (OCR)} & 
+    \textbf{Skanowanie OCR} & 
     Brak & 
-    Dostępne w~wybranych wariantach & 
-    Brak dedykowanego skanera & 
-    Dostępne w~wariancie płatnym & 
-    Załączanie zdjęć dokumentów & 
+    W~planie płatnym & 
+    Brak (odesłanie do PanParagon) & 
+    Tylko załączniki zdjęć & 
     Wbudowany lokalny OCR z~korektą pól \\
     \hline
-    \textbf{Przypomnienia o~terminach} & 
+    \textbf{Przypomnienia} & 
     Brak & 
-    Powiadomienia według daty i~przebiegu & 
-    Powiadomienia o~polisie OC i~przeglądzie & 
-    Przypomnienia serwisowe po dacie lub przebiegu & 
-    Przypomnienia o~opłatach i~przeglądach & 
-    Lokalne powiadomienia z~domyślnym buforem 7~dni \\
+    Według daty i~przebiegu & 
+    Polisa OC i~badanie techniczne & 
+    Według daty i~przebiegu & 
+    Według daty i~przebiegu \\
+    \hline
+    \textbf{Interfejs (UX)} & 
+    Prosty formularz WWW & 
+    Nowoczesny, lecz przeładowany ekran & 
+    Rozbudowany asystent z~banerami & 
+    Przestarzały, techniczny układ formularzy & 
+    Natywny Material Design 3, tryb ciemny, brak reklam \\
+    \hline
+    \textbf{Model płatności} & 
+    Darmowy & 
+    Freemium (plan PRO odblokowuje statystyki i~eksport) & 
+    Darmowy z~reklamami & 
+    Darmowy z~reklamami (płatne ich usunięcie) & 
+    Całkowicie darmowy, brak subskrypcji i~reklam \\
     \hline
     \textbf{Eksport i~kopia danych} & 
     Brak & 
-    Eksport CSV/arkusze oraz kopia w~chmurze & 
-    Brak eksportu dziennika kosztów & 
-    Eksport do plików CSV & 
-    Eksport do plików CSV & 
-    Lokalny zapis w~bazie urządzenia \\
+    Eksport CSV/Excel i~kopia w~planie PRO & 
+    Brak & 
+    Darmowy eksport do CSV & 
+    Darmowy eksport do CSV \\
     \hline
 \end{longtable}
 \endgroup
-
-\subsection{Wskazanie najlepszych rozwiązań w~kluczowych kategoriach}
-\label{subsec:najlepsze_rozwiazania_kategorie}
-
-Na podstawie analizy funkcjonalnej zestawionych narzędzi wyłoniono rozwiązania najlepiej sprawdzające się w~poszczególnych obszarach zastosowań:
-
-\begin{itemize}
-    \item \textbf{Monitorowanie spalania:} \textbf{Spritmonitor} oraz \textbf{Fuelly} -- oba systemy precyzyjnie rozróżniają tankowania pełne i~częściowe, obsługują różne jednostki zużycia (w~tym energię elektryczną w~Spritmonitor) oraz pozwalają zestawiać własne wyniki ze średnią dla danego modelu pojazdu.
-    \item \textbf{Zarządzanie kosztami pojazdu:} \textbf{Drivvo} -- oferuje najbardziej rozbudowany podział kategorii wydatków eksploatacyjnych, serwisowych i~administracyjnych wraz z~czytelnymi wykresami struktury kosztów.
-    \item \textbf{Flota wielu pojazdów:} \textbf{Spritmonitor} oraz \textbf{Drivvo} -- umożliwiają prowadzenie oddzielnej ewidencji tankowań, kosztów i~harmonogramów serwisowych dla wielu pojazdów w~jednym koncie użytkownika.
-    \item \textbf{Darmowe funkcje:} \textbf{Spritmonitor} (w~zakresie pełnego dziennika spalania, kosztów i~przypomnień dostępnych bezpłatnie po rejestracji) oraz \textbf{spalanie.formuly.pl} (jako najszybsze narzędzie do jednorazowego obliczenia bez zakładania konta i~instalacji aplikacji).
-    \item \textbf{Stosunek funkcji do ceny:} \textbf{Spritmonitor} -- zapewnia kompletny zestaw narzędzi do analizy zużycia paliwa i~energii, obsługi wielu pojazdów, przypomnień oraz eksportu danych CSV już w~wariancie bezpłatnym, bez blokowania podstawowej ewidencji za opłatą.
-\end{itemize}
-
+\end{landscape}
 
 % ==============================================================================
 \section{Wyróżniki projektowanego systemu}
 \label{sec:wyrozniki_systemu}
 
-Na tle przeanalizowanych rozwiązań projektowany system \textbf{MotoLog} wyróżnia się następującymi cechami wynikającymi ze specyfikacji wymagań (Rozdział~\ref{cha:analiza_wymagan}):
+Na tle przeanalizowanych rozwiązań system \textbf{MotoLog} wyróżnia się następującymi cechami (szczegóły w~Rozdziale~\ref{cha:analiza_wymagan}):
 
 \begin{itemize}
-    \item \textbf{Pełna niezależność od sieci i~brak wymogu rejestracji (offline-first)} -- wszystkie operacje zapisu, odczytu i~obliczeń realizowane są w~100\% lokalnie w~bazie danych na urządzeniu mobilnym, bez zakładania konta i~przesyłania danych o~pojazdach na zewnętrzne serwery.
-    \item \textbf{Lokalny moduł OCR paragonów dostępny bez opłat} -- aplikacja umożliwia automatyczne odczytywanie danych tankowania ze zdjęcia paragonu bezpośrednio na telefonie, z~możliwością wielokrotnego powtórzenia zdjęcia oraz ręcznej korekty pól przed zapisem.
-    \item \textbf{Automatyczna walidacja spójności danych} -- system na bieżąco przelicza cenę jednostkową i~koszt całkowity, blokuje wpisanie przebiegu mniejszego od poprzedniego oraz ostrzega przed rejestracją daty wstecznej mogącej zaburzyć statystyki i~prognozy.
-    \item \textbf{Obsługa wielu napędów i~proaktywne przypomnienia} -- jeden interfejs obsługuje pojazdy spalinowe, hybrydowe i~elektryczne (l/100~km oraz kWh/100~km), wylicza przewidywany zasięg, prognozuje miesięczny budżet oraz automatycznie tworzy lokalne powiadomienia na 7~dni przed terminem opłaty lub przeglądu.
+    \item \textbf{Pełna prywatność i~darmowy eksport danych} -- brak konieczności zakładania konta oraz 100\% lokalny zapis na urządzeniu. W~przeciwieństwie do aplikacji blokujących kopiowanie danych za subskrypcją (Drivvo) oraz w~nawiązaniu do darmowego eksportu z~platformy Spritmonitor, system oferuje bezpłatny eksport historii do pliku CSV w~celu zabezpieczenia lub przeniesienia danych między telefonami.
+    \item \textbf{Nowoczesny interfejs Material Design 3} -- lekki, czytelny układ kart i~formularzy pozbawiony reklam, płatnych blokad statystyk oraz nadmiaru technicznych przełączników utrudniających obsługę na stacji paliw.
+    \item \textbf{Wbudowany lokalny moduł OCR} -- odczyt danych z~paragonu bezpośrednio na urządzeniu bez opłat i~bez konieczności instalowania zewnętrznych aplikacji, z~możliwością powtórzenia zdjęcia oraz ręcznej korekty pól.
+    \item \textbf{Automatyczna walidacja spójności wpisów} -- bieżące przeliczanie kwot, blokada wpisania przebiegu mniejszego od poprzedniego oraz ostrzeganie przed datą wsteczną zaburzającą statystyki.
+    \item \textbf{Obsługa wielu napędów i~proaktywne alerty} -- jeden spójny dziennik dla aut spalinowych, hybrydowych i~elektrycznych (l/100~km i~kWh/100~km), kalkulator zasięgu, prognoza budżetu oraz dowolna konfiguracja lokalnych powiadomień (z~domyślnym alertem 7~dni przed terminem i~możliwością dodania wielu własnych przypomnień dla jednego zdarzenia).
 \end{itemize}

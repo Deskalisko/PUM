@@ -3,21 +3,12 @@
 \babel@toc {english}{}\relax 
 \babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Widok główny kalkulatora w~serwisie spalanie.formuly.pl}}{9}{figure.caption.6}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Aplikacja Drivvo: ekran główny oraz formularz dodawania pojazdu}}{9}{figure.caption.8}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Aplikacja Drivvo: rejestracja tankowania oraz widok raportów i~statystyk}}{9}{figure.caption.9}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Aplikacja Drivvo: ewidencja wydatków oraz konfiguracja przypomnień}}{9}{figure.caption.10}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Aplikacja Yanosik: ekran główny oraz moduł dodawania pojazdu}}{10}{figure.caption.12}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Aplikacja Yanosik: rejestracja kosztów paliwa oraz podsumowanie wydatków}}{10}{figure.caption.13}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Aplikacja Yanosik: lista wydatków oraz przypomnienia o~terminach OC i~przeglądu}}{10}{figure.caption.14}%
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Platforma Fuelly: ekran główny oraz dodawanie pojazdu}}{11}{figure.caption.16}%
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Platforma Fuelly: dodawanie tankowania oraz wykresy zużycia paliwa}}{11}{figure.caption.17}%
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Platforma Fuelly: rejestr wydatków serwisowych oraz przypomnienia}}{11}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.11}{\ignorespaces System Spritmonitor: ekran główny oraz formularz dodawania pojazdu}}{11}{figure.caption.20}%
-\contentsline {figure}{\numberline {1.12}{\ignorespaces System Spritmonitor: dodawanie tankowania oraz statystyki spalania}}{11}{figure.caption.21}%
-\contentsline {figure}{\numberline {1.13}{\ignorespaces System Spritmonitor: ewidencja kosztów oraz przypomnienia o~terminach}}{12}{figure.caption.22}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Widoki kalkulatorów w~serwisie \href {https://spalanie.formuly.pl}{spalanie.formuly.pl}: \subref {fig:formula_a} zużycie na 100~km, \subref {fig:formula_b} koszt przejazdu.}}{9}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Kluczowe widoki aplikacji Drivvo: \subref {fig:drivvo_a} oś czasu z~blokadą podsumowania, \subref {fig:drivvo_b} wybór zdarzenia, \subref {fig:drivvo_c} przypomnienia, \subref {fig:drivvo_d} funkcje płatne.}}{10}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Wybrane widoki aplikacji Yanosik: \subref {fig:yanosik_a} garaż, \subref {fig:yanosik_b} dodawanie paliwa, \subref {fig:yanosik_c}~baner PanParagon, \subref {fig:yanosik_d} zestawienie wydatków.}}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Kluczowe widoki systemu Spritmonitor: \subref {fig:spritmonitor_a} start bez konta, \subref {fig:spritmonitor_b} formularz wpisu, \subref {fig:spritmonitor_c} alerty serwisowe, \subref {fig:spritmonitor_d} eksport CSV.}}{12}{figure.caption.11}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram przypadków użycia}}{21}{figure.caption.38}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram aktywności procesu rejestracji wpisu tankowania (UC03)}}{28}{figure.caption.42}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagram aktywności procesu rejestracji wydatku eksploatacyjnego (UC06)}}{30}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram przypadków użycia}}{22}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram aktywności procesu rejestracji wpisu tankowania (UC03)}}{29}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagram aktywności procesu rejestracji wydatku eksploatacyjnego (UC06)}}{31}{figure.caption.32}%

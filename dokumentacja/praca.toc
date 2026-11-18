@@ -6,42 +6,39 @@
 \contentsline {section}{\numberline {1.1}Uzasadnienie potrzeby opracowania rozwiązania}{8}{section.1.1}%
 \contentsline {subsection}{Główne cele projektowanego systemu}{8}{subsection*.3}%
 \contentsline {section}{\numberline {1.2}Przegląd istniejących rozwiązań}{8}{section.1.2}%
-\contentsline {subsection}{Analiza wybranych aplikacji}{8}{subsection*.4}%
-\contentsline {subsubsection}{Rozwiązanie 1: spalanie.formuly.pl}{8}{subsubsection*.5}%
-\contentsline {subsubsection}{Rozwiązanie 2: Drivvo}{9}{subsubsection*.7}%
-\contentsline {subsubsection}{Rozwiązanie 3: Yanosik}{10}{subsubsection*.11}%
-\contentsline {subsubsection}{Rozwiązanie 4: Fuelly}{10}{subsubsection*.15}%
-\contentsline {subsubsection}{Rozwiązanie 5: Spritmonitor}{11}{subsubsection*.19}%
-\contentsline {subsection}{Porównanie analizowanych systemów}{12}{subsection*.23}%
-\contentsline {subsection}{Wskazanie najlepszych rozwiązań w~kluczowych kategoriach}{13}{subsection*.24}%
-\contentsline {section}{\numberline {1.3}Wyróżniki projektowanego systemu}{13}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Opis biznesowy projektowanego systemu}{14}{chapter.2}%
-\contentsline {subsection}{Opis stanu obecnego}{14}{subsection*.25}%
-\contentsline {subsection}{Identyfikacja problemów biznesowych}{14}{subsection*.26}%
-\contentsline {subsection}{Opis stanu docelowego}{15}{subsection*.27}%
-\contentsline {subsection}{Identyfikacja interesariuszy}{15}{subsection*.28}%
-\contentsline {section}{\numberline {2.1}Określenie zakresu projektowanego systemu}{15}{section.2.1}%
-\contentsline {subsection}{Funkcjonalności objęte zakresem projektu}{15}{subsection*.29}%
-\contentsline {subsection}{Funkcjonalności poza zakresem projektu}{16}{subsection*.30}%
-\contentsline {section}{\numberline {2.2}Wymagania systemowe}{16}{section.2.2}%
-\contentsline {subsection}{Wymagania funkcjonalne}{16}{subsection*.31}%
-\contentsline {subsection}{Powiązanie wymagań funkcjonalnych z problemami biznesowymi}{17}{subsection*.32}%
-\contentsline {subsection}{Wymagania niefunkcjonalne}{18}{subsection*.33}%
-\contentsline {section}{\numberline {2.3}Reguły biznesowe}{18}{section.2.3}%
-\contentsline {subsection}{Powiązanie reguł biznesowych z wymaganiami funkcjonalnymi}{19}{subsection*.34}%
-\contentsline {chapter}{\numberline {3}Modelowanie systemu i jego otoczenia}{20}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Diagram przypadków użycia}{20}{section.3.1}%
-\contentsline {subsection}{Identyfikacja aktorów}{20}{subsection*.35}%
-\contentsline {subsection}{Zestawienie przypadków użycia}{20}{subsection*.36}%
-\contentsline {subsection}{Diagram przypadków użycia}{21}{subsection*.37}%
-\contentsline {subsection}{Powiązanie wymagań funkcjonalnych z diagramem}{21}{subsection*.39}%
-\contentsline {subsection}{Szczegółowe specyfikacje przypadków użycia}{22}{subsection*.40}%
-\contentsline {section}{\numberline {3.2}Diagramy aktywności}{26}{section.3.2}%
-\contentsline {subsection}{Diagram aktywności procesu rejestracji wpisu tankowania (UC03)}{26}{subsection*.41}%
-\contentsline {subsection}{Diagram aktywności procesu rejestracji wydatku eksploatacyjnego (UC06)}{29}{subsection*.43}%
-\contentsline {section}{\numberline {3.3}Diagramy sekwencji}{30}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Diagramy stanów}{30}{section.3.4}%
-\contentsline {chapter}{Bibliografia}{31}{section.3.4}%
-\contentsline {chapter}{Spis rysunków}{32}{chapter*.45}%
-\contentsline {chapter}{Spis tabel}{33}{chapter*.45}%
-\contentsline {chapter}{Spis listingów}{34}{chapter*.45}%
+\contentsline {subsection}{Rozwiązanie 1: spalanie.formuly.pl}{9}{subsection*.4}%
+\contentsline {subsection}{Rozwiązanie 2: Drivvo}{10}{subsection*.6}%
+\contentsline {subsection}{Rozwiązanie 3: Yanosik}{11}{subsection*.8}%
+\contentsline {subsection}{Rozwiązanie 4: Spritmonitor}{12}{subsection*.10}%
+\contentsline {subsection}{Porównanie analizowanych systemów}{13}{subsection*.12}%
+\contentsline {section}{\numberline {1.3}Wyróżniki projektowanego systemu}{14}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Opis biznesowy projektowanego systemu}{15}{chapter.2}%
+\contentsline {subsection}{Opis stanu obecnego}{15}{subsection*.13}%
+\contentsline {subsection}{Identyfikacja problemów biznesowych}{15}{subsection*.14}%
+\contentsline {subsection}{Opis stanu docelowego}{16}{subsection*.15}%
+\contentsline {subsection}{Identyfikacja interesariuszy}{16}{subsection*.16}%
+\contentsline {section}{\numberline {2.1}Określenie zakresu projektowanego systemu}{16}{section.2.1}%
+\contentsline {subsection}{Funkcjonalności objęte zakresem projektu}{16}{subsection*.17}%
+\contentsline {subsection}{Funkcjonalności poza zakresem projektu}{17}{subsection*.18}%
+\contentsline {section}{\numberline {2.2}Wymagania systemowe}{17}{section.2.2}%
+\contentsline {subsection}{Wymagania funkcjonalne}{17}{subsection*.19}%
+\contentsline {subsection}{Powiązanie wymagań funkcjonalnych z problemami biznesowymi}{18}{subsection*.20}%
+\contentsline {subsection}{Wymagania niefunkcjonalne}{19}{subsection*.21}%
+\contentsline {section}{\numberline {2.3}Reguły biznesowe}{19}{section.2.3}%
+\contentsline {subsection}{Powiązanie reguł biznesowych z wymaganiami funkcjonalnymi}{20}{subsection*.22}%
+\contentsline {chapter}{\numberline {3}Modelowanie systemu i jego otoczenia}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Diagram przypadków użycia}{21}{section.3.1}%
+\contentsline {subsection}{Identyfikacja aktorów}{21}{subsection*.23}%
+\contentsline {subsection}{Zestawienie przypadków użycia}{21}{subsection*.24}%
+\contentsline {subsection}{Diagram przypadków użycia}{22}{subsection*.25}%
+\contentsline {subsection}{Powiązanie wymagań funkcjonalnych z diagramem}{22}{subsection*.27}%
+\contentsline {subsection}{Szczegółowe specyfikacje przypadków użycia}{23}{subsection*.28}%
+\contentsline {section}{\numberline {3.2}Diagramy aktywności}{27}{section.3.2}%
+\contentsline {subsection}{Diagram aktywności procesu rejestracji wpisu tankowania (UC03)}{27}{subsection*.29}%
+\contentsline {subsection}{Diagram aktywności procesu rejestracji wydatku eksploatacyjnego (UC06)}{30}{subsection*.31}%
+\contentsline {section}{\numberline {3.3}Diagramy sekwencji}{31}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Diagramy stanów}{31}{section.3.4}%
+\contentsline {chapter}{Bibliografia}{32}{section.3.4}%
+\contentsline {chapter}{Spis rysunków}{33}{chapter*.33}%
+\contentsline {chapter}{Spis tabel}{34}{chapter*.33}%
+\contentsline {chapter}{Spis listingów}{35}{chapter*.33}%
