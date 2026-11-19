@@ -15,13 +15,12 @@ W~stanie obecnym proces monitorowania eksploatacji pojazdu przebiega w~sposób m
     \item W~przypadku posiadania kilku pojazdów brak jest jednego miejsca zbiorczego do porównania kosztów ich utrzymania.
 \end{enumerate}
 
-%Taki model prowadzi do utraty kontroli nad realnymi wydatkami, braku wiarygodnych danych dotyczących zużycia paliwa/energii oraz ryzyka przeoczenia kluczowych terminów administracyjno-prawnych.
 W efekcie łatwo stracić kontrolę nad wydatkami na auto, trudno o dokładne dane o spalaniu, a o ważnych przeglądach czy polisach OC przypominamy sobie często w ostatniej chwili.
 
 \subsection{Identyfikacja problemów biznesowych}
 \label{subsec:problemy_biznesowe}
 
-Na podstawie analizy stanu obecnego zidentyfikowano kluczowe problemy biznesowe zestawione poniżej(Tabela~\ref{tab:problemy_biznesowe}).
+Na podstawie analizy stanu obecnego zidentyfikowano kluczowe problemy biznesowe zestawione poniżej (Tabela~\ref{tab:problemy_biznesowe}).
 
 \begingroup
 \renewcommand{\arraystretch}{1.3}
@@ -96,15 +95,16 @@ W~ramach projektowanego systemu zidentyfikowano następujące grupy interesarius
 
 W~ramach projektu przewidziano realizację następujących funkcjonalności:
 \begin{itemize}
-    \item tworzenie, edycja oraz usuwanie profili pojazdów (marka, model, zdjęcie z~pamięci urządzenia, rodzaj zasilania/paliwa, pojemność zbiornika lub baterii),
-    \item rejestrowanie tankowań (stan licznika, ilość paliwa lub energii, koszt łączny) wraz z~automatycznym obliczaniem średniego spalania,
+    \item tworzenie, edycja oraz usuwanie profili pojazdów (marka, model, zdjęcie z~pamięci urządzenia, do dwóch niezależnych źródeł zasilania wraz z~pojemnością zbiornika lub baterii),
+    \item rejestrowanie tankowań (stan licznika, ilość paliwa lub energii, koszt łączny) na jednej wspólnej liście historii wraz z~oddzielnym obliczaniem średniego spalania dla każdego źródła zasilania,
     \item rozpoznawanie tekstu (OCR) z~fotografii paragonu z~możliwością weryfikacji i~ręcznej korekty odczytanych pól,
     \item kalkulator zasięgu pojazdu na podstawie stanu paliwa i~wyliczonego średniego zużycia,
     \item ewidencja kosztów dodatkowych z~podziałem na kategorie (naprawy, polisy OC/AC, raty leasingowe, badania techniczne),
     \item planowanie oraz automatyczne generowanie lokalnych powiadomień systemowych o~nadchodzących terminach opłat i~przeglądów,
     \item generowanie prognozy wydatków na kolejny miesiąc na podstawie agregacji danych historycznych,
     \item działanie w~trybie offline z~lokalnym przechowywaniem danych na urządzeniu,
-    \item przełączanie widoku pomiędzy zdefiniowanymi pojazdami.
+    \item przełączanie widoku pomiędzy zdefiniowanymi pojazdami,
+    \item możliwość eksportu historii wpisów pojazdu do pliku CSV.
 \end{itemize}
 
 
@@ -116,6 +116,7 @@ W~celu zachowania odpowiedniego poziomu złożoności projektu, poza zakresem sy
     \item \textbf{Bezpośrednia komunikacja ze sprzętem pojazdu:} System nie będzie odczytywał parametrów samochodu w~czasie rzeczywistym poprzez interfejsy diagnostyczne (np. adaptery OBD-II lub Bluetooth).
     \item \textbf{Automatyczne pobieranie danych zewnętrznych:} Aplikacja nie będzie połączona z~zewnętrznymi serwisami internetowymi w~celu automatycznego pobierania cen paliw lub kursów walut.
     \item \textbf{Zaawansowane usługi geolokalizacyjne:} Aplikacja nie będzie zawierać modułu nawigacji satelitarnej z~wyznaczaniem trasy i~prowadzeniem krok po kroku.
+    \item \textbf{Synchronizacja w~chmurze i~wsparcie dla iOS:} Aplikacja nie będzie przesyłać danych na zewnętrzne serwery ani posiadać wersji na system iOS.
 \end{itemize}
 
 % ==============================================================================
@@ -151,13 +152,13 @@ Specyfikacja wymagań funkcjonalnych (Tabela~\ref{tab:wymagania_funkcjonalne}) o
     \zrodloLT{2}{Opracowanie własne.}
     \endlastfoot
 
-    \hypertarget{wf:WF-01}{WF-01} & System musi umożliwiać użytkownikowi dodanie profilu pojazdu ze wskazaniem marki, modelu, rodzaju paliwa (Benzyna, Diesel, LPG, Prąd), pojemności zbiornika lub baterii oraz zdjęcia z~pamięci urządzenia. \\
+    \hypertarget{wf:WF-01}{WF-01} & System musi umożliwiać użytkownikowi dodanie profilu pojazdu ze wskazaniem marki, modelu, maksymalnie dwóch niezależnych źródeł zasilania (Benzyna, Diesel, LPG, Prąd), pojemności zbiornika lub baterii oraz zdjęcia z~pamięci urządzenia. \\
     \hline
-    \hypertarget{wf:WF-02}{WF-02} & System musi umożliwiać rejestrowanie wpisu tankowania zawierającego datę, stan licznika, ilość zatankowanego paliwa/energii, cenę jednostkową (za litr lub kWh) oraz łączny koszt, zapewniając automatyczne wzajemne przeliczanie powiązanych wartości kwotowych. \\
+    \hypertarget{wf:WF-02}{WF-02} & System musi umożliwiać rejestrowanie wpisu tankowania lub ładowania zawierającego datę, wybór źródła zasilania, stan licznika, ilość paliwa/energii, cenę jednostkową (za litr lub kWh) oraz łączny koszt, zapewniając automatyczne wzajemne przeliczanie powiązanych wartości kwotowych. \\
     \hline
-    \hypertarget{wf:WF-03}{WF-03} & System musi automatycznie obliczać średnie zużycie paliwa/energii na 100~km pomiędzy pełnymi tankowaniami. \\
+    \hypertarget{wf:WF-03}{WF-03} & System musi automatycznie obliczać średnie zużycie paliwa lub energii na 100~km pomiędzy pełnymi tankowaniami, oddzielnie dla każdego zdefiniowanego źródła zasilania w~pojeździe. \\
     \hline
-    \hypertarget{wf:WF-04}{WF-04} & System musi umożliwiać wyliczanie przewidywanego zasięgu pojazdu na podstawie wprowadzonego budżetu lub ilości paliwa i~średniego spalania. \\
+    \hypertarget{wf:WF-04}{WF-04} & System musi umożliwiać wyliczanie przewidywanego zasięgu pojazdu (na podstawie ilości paliwa/energii lub budżetu i~ceny jednostkowej) oraz zapotrzebowania na paliwo lub energię dla planowanej trasy, z~uwzględnieniem jednoczesnego zużycia obu źródeł zasilania. \\
     \hline
     \hypertarget{wf:WF-05}{WF-05} & System musi umożliwiać rejestrowanie wydatków eksploatacyjnych z~podziałem na kategorie (naprawa, ubezpieczenie, leasing, przegląd). \\
     \hline
@@ -172,6 +173,8 @@ Specyfikacja wymagań funkcjonalnych (Tabela~\ref{tab:wymagania_funkcjonalne}) o
     \hypertarget{wf:WF-10}{WF-10} & System musi wykonywać wszystkie operacje zapisu i~odczytu danych w~lokalnej bazie na urządzeniu bez wymogu połączenia z~siecią internetową. \\
     \hline
     \hypertarget{wf:WF-11}{WF-11} & System musi umożliwiać skanowanie paragonu za pomocą aparatu urządzenia i~automatyczne odczytywanie danych tankowania (OCR) z~możliwością wielokrotnego powtórzenia zdjęcia oraz ręcznej edycji dowolnego błędnie rozpoznanego pola przed zapisem. \\
+    \hline
+    \hypertarget{wf:WF-12}{WF-12} & System musi umożliwiać eksport historii wpisów do pliku CSV dla wybranych pojazdów lub dla całej bazy jednocześnie. \\
     \hline
 \end{longtable}
 \endgroup
@@ -208,11 +211,11 @@ Zestawienie powiązań (Tabela~\ref{tab:powiazania_wf_p}) pokazuje, które wymag
 
     \hyperlink{prob:P-01}{P-01} -- Brak bieżącego wyliczania spalania & \hyperlink{wf:WF-02}{WF-02}, \hyperlink{wf:WF-03}{WF-03}, \hyperlink{wf:WF-04}{WF-04}, \hyperlink{wf:WF-11}{WF-11} \\
     \hline
-    \hyperlink{prob:P-02}{P-02} -- Trudność w~oszacowaniu kosztów & \hyperlink{wf:WF-05}{WF-05}, \hyperlink{wf:WF-07}{WF-07}, \hyperlink{wf:WF-09}{WF-09} \\
+    \hyperlink{prob:P-02}{P-02} -- Trudność w~oszacowaniu kosztów & \hyperlink{wf:WF-05}{WF-05}, \hyperlink{wf:WF-07}{WF-07}, \hyperlink{wf:WF-09}{WF-09}, \hyperlink{wf:WF-12}{WF-12} \\
     \hline
     \hyperlink{prob:P-03}{P-03} -- Ryzyko przeoczenia terminów & \hyperlink{wf:WF-06}{WF-06} \\
     \hline
-    \hyperlink{prob:P-04}{P-04} -- Brak obsługi wielu pojazdów & \hyperlink{wf:WF-01}{WF-01}, \hyperlink{wf:WF-08}{WF-08} \\
+    \hyperlink{prob:P-04}{P-04} -- Brak obsługi wielu pojazdów & \hyperlink{wf:WF-01}{WF-01}, \hyperlink{wf:WF-08}{WF-08}, \hyperlink{wf:WF-12}{WF-12} \\
     \hline
     \hyperlink{prob:P-05}{P-05} -- Utrata możliwości rejestracji danych w~trybie offline & \hyperlink{wf:WF-10}{WF-10} \\
     \hline
@@ -249,13 +252,15 @@ Wymagania niefunkcjonalne określają atrybuty jakościowe, parametry wydajnośc
     \zrodloLT{3}{Opracowanie własne.}
     \endlastfoot
 
-    \hypertarget{wnf:WNF-01}{WNF-01} & Wydajność & Przy lokalnej bazie 1000 wpisów wyliczenie spalania i~odświeżenie wykresu musi trwać poniżej 0,5~s, a~lokalne przetworzenie zdjęcia paragonu przez moduł OCR -- poniżej 3~s. \\
+    \hypertarget{wnf:WNF-01}{WNF-01} & Wydajność & Przy lokalnej bazie 1000 wpisów wyliczenie spalania i~odświeżenie wykresu musi trwać poniżej 0,8~s, a~lokalne przetworzenie zdjęcia paragonu przez moduł OCR oraz eksport danych do pliku CSV -- poniżej 3~s. \\
     \hline
-    \hypertarget{wnf:WNF-02}{WNF-02} & Użyteczność & Formularz tankowania musi wymagać minimum 3 kluczowych pól (licznik, ilość paliwa, koszt) i~maksymalnie 10 łącznie, umożliwiając wprowadzenie wymaganych danych w~czasie poniżej 15~s. \\
+    \hypertarget{wnf:WNF-02}{WNF-02} & Użyteczność & Interfejs musi być spójny ze standardem Material Design 3. Formularz tankowania (z~wyborem źródła zasilania i~domyślnym zaznaczeniem ostatnio tankowanego) musi wymagać uzupełnienia tylko 3 podstawowych pól (licznik, ilość, koszt) i~pozwalać na zapis wpisu w~czasie poniżej 15~s. \\
     \hline
     \hypertarget{wnf:WNF-03}{WNF-03} & Niezawodność & System musi realizować pełny zapis, odczyt oraz analitykę w~100\% lokalnie na urządzeniu, bez połączenia z~siecią Internet. \\
     \hline
-    \hypertarget{wnf:WNF-04}{WNF-04} & Kompatybilność & Aplikacja musi działać na systemie Android od wersji 11.0 (API 30) i~ekranach min. Full HD (1080p), a~do modułu OCR wymagać aparatu o~rozdzielczości min. 8~Mpx z~autofokusem. \\
+    \hypertarget{wnf:WNF-04}{WNF-04} & Kompatybilność & Aplikacja musi działać na systemie Android od wersji 12.0 (API 31), wymagać wolnej pamięci urządzenia na bazę danych, zdjęcia oraz eksportowane pliki CSV, a~do modułu OCR -- aparatu o~rozdzielczości min. 8~Mpx z~autofokusem. \\
+    \hline
+    \hypertarget{wnf:WNF-05}{WNF-05} & Dostępność & Wszystkie funkcje aplikacji (w~tym moduł OCR, pełne statystyki oraz eksport do CSV) muszą być dostępne bez konieczności zakładania konta, wyświetlania reklam oraz opłat subskrypcyjnych. \\
     \hline
 \end{longtable}
 \endgroup
@@ -292,7 +297,7 @@ Zestawienie reguł biznesowych (Tabela~\ref{tab:reguly_biznesowe}) definiuje ogr
 
     \hypertarget{rb:RB-01}{RB-01} & Wartość przebiegu w~nowym wpisie tankowania dla danego pojazdu musi być większa niż przebieg w~poprzednim wpisie. \\
     \hline
-    \hypertarget{rb:RB-02}{RB-02} & Obliczenie średniego spalania wykonuje się wyłącznie pomiędzy tankowaniami oznaczonymi jako tankowanie do pełna. \\
+    \hypertarget{rb:RB-02}{RB-02} & Obliczenie średniego spalania wykonuje się wyłącznie pomiędzy tankowaniami oznaczonymi jako tankowanie do pełna, oddzielnie dla każdego zdefiniowanego źródła zasilania w~pojeździe. \\
     \hline
     \hypertarget{rb:RB-03}{RB-03} & Dla każdego zdefiniowanego terminu opłaty lub badania technicznego system domyślnie generuje automatyczne przypomnienie 7~dni przed datą zdarzenia, umożliwiając użytkownikowi modyfikację tego terminu oraz dodanie kolejnych powiadomień. \\
     \hline

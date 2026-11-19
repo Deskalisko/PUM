@@ -1,18 +1,18 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.11.17)  18 NOV 2026 23:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.11.19)  19 NOV 2026 13:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **"c:/Users/Dominik/OneDrive - Uniwersytet Rzeszowski/Uczelniane pliki/STUDIA/5 SEMESTR/PUM/LABY/Projekt/dokumentacja/praca.tex"
 (c:/Users/Dominik/OneDrive - Uniwersytet Rzeszowski/Uczelniane pliki/STUDIA/5 SEMESTR/PUM/LABY/Projekt/dokumentacja/praca.tex
-LaTeX2e <2026-06-01>
+LaTeX2e <2026-11-01>
 L3 programming layer <2026-09-09>
 (urdpl.cls
 Document Class: urdpl 2026/10/12 v3.1 UR diploma class - refactor
 *** [urdpl.cls] --- (ZG, EZ) v3.1 <12.10.2026> *** (C:\Program Files\MiKTeX\tex/latex/base\report.cls
-Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+Document Class: report 2026-06-04 v1.4n Standard LaTeX document class
 (C:\Program Files\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+File: size10.clo 2026-06-04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count276
 \c@chapter=\count277
@@ -27,11 +27,11 @@ File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen150
 ) (C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+Package: fontenc 2026-07-31 v2.2a Standard LaTeX package
 ) (C:\Program Files\MiKTeX\tex/latex/newtx\newtx.sty
 Package: newtx 2025/01/06 v1.755(Michael Sharpe) latex and unicode latex support for newtxmath and a supported text font family, or for newtxtext and an otf math package
  `newtx'v1.755, 2025/01/06 Integrated loading of newtxmath and a text font  for all latex engines (msharpe) (C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+Package: fontenc 2026-07-31 v2.2a Standard LaTeX package
 ) (C:\Program Files\MiKTeX\tex/latex/fontaxes\fontaxes.sty
 Package: fontaxes 2026-01-02 v2.0.2 Font selection axes (deprecated)
 Applying: [2024-11-01] Use figureversions if present on input line 74.
@@ -40,7 +40,7 @@ Package: figureversions 2025-04-29 v1.0.1 Figure versions
 )
 Already applied: [0000-00-00] Fall back to v1 on input line 76.
 ) (C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+Package: ifthen 2026-06-01 v1.1e Standard LaTeX ifthen package (DPC)
 ) (C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ) (C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
@@ -79,12 +79,12 @@ IV
 (C:\Program Files\MiKTeX\tex/latex/newtx\newtxmath.sty
 Package: newtxmath 2024/09/22 v1.754
  `newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2026/05/19 v2.18d AMS math features
+Package: amsmath 2026-08-26 v2.18e AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
-Package: amstext 2024/11/17 v2.01 AMS text
+Package: amstext 2026/06/26 v2.01 AMS text
  (C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks19
@@ -99,28 +99,28 @@ Package: amsopn 2022/04/08 v2.04 operator names
 LaTeX Info: Redefining \frac on input line 233.
 \uproot@=\count290
 \leftroot@=\count291
-LaTeX Info: Redefining \overline on input line 398.
-LaTeX Info: Redefining \colon on input line 409.
+LaTeX Info: Redefining \overline on input line 370.
+LaTeX Info: Redefining \colon on input line 381.
 \classnum@=\count292
 \DOTSCASE@=\count293
-LaTeX Info: Redefining \ldots on input line 495.
-LaTeX Info: Redefining \dots on input line 498.
-LaTeX Info: Redefining \cdots on input line 619.
+LaTeX Info: Redefining \ldots on input line 467.
+LaTeX Info: Redefining \dots on input line 470.
+LaTeX Info: Redefining \cdots on input line 591.
 \Mathstrutbox@=\box53
 \strutbox@=\box54
-LaTeX Info: Redefining \big on input line 721.
-LaTeX Info: Redefining \Big on input line 722.
-LaTeX Info: Redefining \bigg on input line 723.
-LaTeX Info: Redefining \Bigg on input line 724.
+LaTeX Info: Redefining \big on input line 693.
+LaTeX Info: Redefining \Big on input line 694.
+LaTeX Info: Redefining \bigg on input line 695.
+LaTeX Info: Redefining \Bigg on input line 696.
 \big@size=\dimen167
-LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 714.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 715.
 \macc@depth=\count294
-LaTeX Info: Redefining \bmod on input line 904.
-LaTeX Info: Redefining \pmod on input line 909.
-LaTeX Info: Redefining \smash on input line 939.
-LaTeX Info: Redefining \relbar on input line 969.
-LaTeX Info: Redefining \Relbar on input line 970.
+LaTeX Info: Redefining \bmod on input line 876.
+LaTeX Info: Redefining \pmod on input line 881.
+LaTeX Info: Redefining \smash on input line 911.
+LaTeX Info: Redefining \relbar on input line 941.
+LaTeX Info: Redefining \Relbar on input line 942.
 \c@MaxMatrixCols=\count295
 \dotsspace@=\muskip17
 \c@parentequation=\count296
@@ -140,8 +140,8 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \multlinegap=\skip52
 \multlinetaggap=\skip53
 \mathdisplay@stack=\toks23
-LaTeX Info: Redefining \[ on input line 2965.
-LaTeX Info: Redefining \] on input line 2966.
+LaTeX Info: Redefining \[ on input line 2937.
+LaTeX Info: Redefining \] on input line 2938.
 ) (C:\Program Files\MiKTeX\tex/latex/oberdiek\centernot.sty
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
@@ -290,7 +290,7 @@ LaTeX Font Info:    Setting ntxTOsF sub-encoding to TS1/0 on input line 24.
 \ntx@cnt=\count306
 LaTeX Info: Redefining \oldstylenums on input line 902.
 )) (C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2026-06-26 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
  (C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
  (C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
@@ -303,7 +303,7 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 \Gin@req@height=\dimen174
 \Gin@req@width=\dimen175
 ) (C:\Program Files\MiKTeX\tex/latex/geometry\geometry.sty
-Package: geometry 2026/03/07 v6.0 Page Geometry
+Package: geometry 2026/11/03 v6.1 Page Geometry
  (C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
@@ -320,7 +320,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen183
 \Gm@dimlist=\toks27
  (C:\Program Files\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Program Files\MiKTeX\tex/latex/graphics\dvipsnam.def
-File: dvipsnam.def 2026-05-17 v3.0m Driver-dependent file (DPC,SPQR)
+File: dvipsnam.def 2026-06-26 v3.0m Driver-dependent file (DPC,SPQR)
 ) (C:\Program Files\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@headwidth=\skip54
@@ -353,8 +353,8 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidthlast=\dimen187
 \titlewidthfirst=\dimen188
 ) (C:\Program Files\MiKTeX\tex/latex/tocloft\tocloft.sty
-Package: tocloft 2026-09-12 v3.0c parameterised ToC, etc., typesetting
-Package tocloft Info: The document has chapter divisions on input line 64.
+Package: tocloft 2026-10-30 v3.0d parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 63.
 \cftparskip=\skip70
 \cftbeforetoctitleskip=\skip71
 \cftaftertoctitleskip=\skip72
@@ -413,8 +413,10 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count314
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count315
-) (C:\Program Files\MiKTeX\tex/latex/siunitx\siunitx.sty
-Package: siunitx 2026-10-12 v3.6.4 A comprehensive (SI) units package
+)
+==> First Aid for subcaption.sty applied!
+(C:\Program Files\MiKTeX\tex/latex/siunitx\siunitx.sty
+Package: siunitx 2026-11-06 v3.6.7 A comprehensive (SI) units package
 \l__siunitx_number_uncert_offset_int=\count316
 \l__siunitx_number_exponent_fixed_int=\count317
 \l__siunitx_number_min_decimal_int=\count318
@@ -430,7 +432,7 @@ Package: siunitx 2026-10-12 v3.6.4 A comprehensive (SI) units package
  (C:\Program Files\MiKTeX\tex/latex/translations\translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
  (C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+Package: pdftexcmds 2026-10-28 v0.34 Utility functions of pdfTeX for LuaTeX (HO)
  (C:\Program Files\MiKTeX\tex/generic/infwarerr\infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 ) (C:\Program Files\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
@@ -458,7 +460,7 @@ Include code introduced on 2026-09-12
 \l__siunitx_sexagesimal_marker_box=\box62
 \l__siunitx_sexagesimal_unit_box=\box63
 (C:\Program Files\MiKTeX\tex/latex/tools\array.sty
-Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
+Package: array 2026/06/26 v2.7b Tabular extension package (FMi)
 \col@sep=\dimen258
 \ar@mcellbox=\box64
 \extrarowheight=\dimen259
@@ -467,7 +469,7 @@ Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
 \backup@length=\skip105
 \ar@cellbox=\box65
 )) (C:\Program Files\MiKTeX\tex/latex/tools\enumerate.sty
-Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
+Package: enumerate 2026-06-01 v3.00 enumerate extensions (DPC)
 \@enLab=\toks31
 ) (C:\Program Files\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
@@ -486,7 +488,7 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
  (C:\Program Files\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ))) (C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
-Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+Package: tabularx 2026-06-01 v2.12a `tabularx' package (DPC)
 \TX@col@width=\dimen261
 \TX@old@table=\dimen262
 \TX@old@col=\dimen263
@@ -514,7 +516,7 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count337
 \@thisrulewidth=\dimen278
 ) (C:\Program Files\MiKTeX\tex/latex/tools\longtable.sty
-Package: longtable 2026-01-28 v4.27 Multi-page Table package (DPC)
+Package: longtable 2026-10-05 v4.28 Multi-page Table package (DPC)
 \LTleft=\skip107
 \LTright=\skip108
 \LTpre=\skip109
@@ -566,15 +568,15 @@ Package: listings 2025/11/14 1.11b (Carsten Heinz)
 \descriptiondashgap=\skip111
 \eqwheremargin=\skip112
 ) (C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2026/10/15 v26.14 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+Package: babel 2026/11/10 v26.16 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
 \babel@savecnt=\count351
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2118.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2120.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2122.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2123.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2124.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2126.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2151.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2100.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2102.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2104.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2105.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2106.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2108.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2133.
 \U@D=\dimen284
 \l@unhyphenated=\language79
  (C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
@@ -582,7 +584,7 @@ LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) o
 \bbl@dirlevel=\count352
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
-(babel)             Reported on input line 4366.
+(babel)             Reported on input line 4357.
 
 *************************************
 * Local config file bblopts.cfg used
@@ -591,7 +593,7 @@ Package babel Info: Configuration files are deprecated, as
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
 ) (C:\Program Files\MiKTeX\tex/generic/babel/locale/en\babel-english.tex) (C:\Program Files\MiKTeX\tex/generic/babel/locale/pl\babel-polish.tex)
 Package babel Info: Importing font and identification data for 'english'
-(babel)             from babel-en.ini. Reported on input line 4494.
+(babel)             from babel-en.ini. Reported on input line 4485.
  (C:\Program Files\MiKTeX\tex/latex/babel-english\english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
@@ -602,7 +604,7 @@ Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 108.
 )
 Package babel Info: Importing font and identification data for 'polish'
-(babel)             from babel-pl.ini. Reported on input line 4494.
+(babel)             from babel-pl.ini. Reported on input line 4485.
  (C:\Program Files\MiKTeX\tex/latex/babel-polish\polish.ldf
 Language: polish 2022/03/12 1.3 Babel support for Polish
 Package babel Info: Making " an active character on input line 101.
@@ -611,7 +613,7 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks37
 \inpenc@posthook=\toks38
 ) (C:\Program Files\MiKTeX\tex/latex/mathtools\mathtools.sty
-Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
+Package: mathtools 2026/11/12 v1.32 mathematical typesetting tools
  (C:\Program Files\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
 \calc@Acount=\count353
@@ -639,15 +641,15 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \xmathstrut@box=\box74
 \xmathstrut@dim=\dimen294
 ) (C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2026-10-09 v7.01s Hypertext links for LaTeX
+Package: hyperref 2026-11-03 v7.01t Hypertext links for LaTeX
  (C:\Program Files\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ) (C:\Program Files\MiKTeX\tex/generic/pdfescape\pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 ) (C:\Program Files\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+) (C:\Program Files\MiKTeX\tex/latex/nameref\nameref.sty
+Package: nameref 2026-11-03 v2.60 Cross-referencing by name of section
  (C:\Program Files\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Program Files\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
@@ -661,7 +663,7 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 \Hy@linkcounter=\count358
 \Hy@pagecounter=\count359
  (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2026-10-09 v7.01s Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2026-11-03 v7.01t Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 ) (C:\Program Files\MiKTeX\tex/generic/intcalc\intcalc.sty
@@ -669,7 +671,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count360
  (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2026-10-09 v7.01s Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2026-11-03 v7.01t Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
@@ -704,7 +706,7 @@ Package hyperref Info: PDF/A mode OFF on input line 6121.
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2026-10-09 v7.01s Hyperref driver for pdfTeX
+File: hpdftex.def 2026-11-03 v7.01t Hyperref driver for pdfTeX
 \Fld@listcount=\count366
 \c@bookmark@seq@number=\count367
  (C:\Program Files\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
@@ -1085,10 +1087,10 @@ File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 37.
 Package epstopdf Info: Source file: <figures/inne_rozw/formula_5.eps>
-(epstopdf)                    date: 2026-11-18 22:54:28
+(epstopdf)                    date: 2026-11-19 13:06:33
 (epstopdf)                    size: 2695191 bytes
 (epstopdf)             Output file: <figures/inne_rozw/formula_5-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 22:54:37
+(epstopdf)                    date: 2026-11-19 13:06:39
 (epstopdf)                    size: 27331 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/inne_rozw/formula_5-eps-converted-to.pdf figures/inne_rozw/formula_5.eps>
 (epstopdf)             \includegraphics on input line 45.
@@ -1103,10 +1105,10 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 46.
 Package epstopdf Info: Source file: <figures/inne_rozw/formula_4.eps>
-(epstopdf)                    date: 2026-11-18 22:54:28
+(epstopdf)                    date: 2026-11-19 13:06:33
 (epstopdf)                    size: 2533448 bytes
 (epstopdf)             Output file: <figures/inne_rozw/formula_4-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 22:54:39
+(epstopdf)                    date: 2026-11-19 13:06:41
 (epstopdf)                    size: 24213 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/inne_rozw/formula_4-eps-converted-to.pdf figures/inne_rozw/formula_4.eps>
 (epstopdf)             \includegraphics on input line 52.
@@ -1132,10 +1134,10 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 
 {C:/Program Files/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.enc} <./figures/inne_rozw/formula_5-eps-converted-to.pdf> <./figures/inne_rozw/formula_4-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/inne_rozw/drivvo_8.eps>
-(epstopdf)                    date: 2026-11-18 22:54:28
+(epstopdf)                    date: 2026-11-19 13:06:34
 (epstopdf)                    size: 11450245 bytes
 (epstopdf)             Output file: <figures/inne_rozw/drivvo_8-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 22:54:43
+(epstopdf)                    date: 2026-11-19 13:06:45
 (epstopdf)                    size: 225520 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/inne_rozw/drivvo_8-eps-converted-to.pdf figures/inne_rozw/drivvo_8.eps>
 (epstopdf)             \includegraphics on input line 79.
@@ -1146,10 +1148,10 @@ File: figures/inne_rozw/drivvo_8-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/inne_rozw/drivvo_8-eps-converted-to.pdf  used on input line 79.
 (pdftex.def)             Requested size: 100.29622pt x 223.23972pt.
 Package epstopdf Info: Source file: <figures/inne_rozw/drivvo_9.eps>
-(epstopdf)                    date: 2026-11-18 22:54:28
+(epstopdf)                    date: 2026-11-19 13:06:34
 (epstopdf)                    size: 11450245 bytes
 (epstopdf)             Output file: <figures/inne_rozw/drivvo_9-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 22:54:48
+(epstopdf)                    date: 2026-11-19 13:06:49
 (epstopdf)                    size: 196259 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/inne_rozw/drivvo_9-eps-converted-to.pdf figures/inne_rozw/drivvo_9.eps>
 (epstopdf)             \includegraphics on input line 86.
@@ -1160,10 +1162,10 @@ File: figures/inne_rozw/drivvo_9-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/inne_rozw/drivvo_9-eps-converted-to.pdf  used on input line 86.
 (pdftex.def)             Requested size: 100.29622pt x 223.23972pt.
 Package epstopdf Info: Source file: <figures/inne_rozw/drivvo_10.eps>
-(epstopdf)                    date: 2026-11-18 22:54:28
+(epstopdf)                    date: 2026-11-19 13:06:33
 (epstopdf)                    size: 11450245 bytes
 (epstopdf)             Output file: <figures/inne_rozw/drivvo_10-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 22:54:53
+(epstopdf)                    date: 2026-11-19 13:06:53
 (epstopdf)                    size: 253000 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/inne_rozw/drivvo_10-eps-converted-to.pdf figures/inne_rozw/drivvo_10.eps>
 (epstopdf)             \includegraphics on input line 93.
@@ -1174,10 +1176,10 @@ File: figures/inne_rozw/drivvo_10-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/inne_rozw/drivvo_10-eps-converted-to.pdf  used on input line 93.
 (pdftex.def)             Requested size: 100.29622pt x 223.23972pt.
 Package epstopdf Info: Source file: <figures/inne_rozw/drivvo_12.eps>
-(epstopdf)                    date: 2026-11-18 22:54:28
+(epstopdf)                    date: 2026-11-19 13:06:33
 (epstopdf)                    size: 11450245 bytes
 (epstopdf)             Output file: <figures/inne_rozw/drivvo_12-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 22:54:58
+(epstopdf)                    date: 2026-11-19 13:06:57
 (epstopdf)                    size: 275367 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/inne_rozw/drivvo_12-eps-converted-to.pdf figures/inne_rozw/drivvo_12.eps>
 (epstopdf)             \includegraphics on input line 100.
@@ -1191,10 +1193,10 @@ Package pdftex.def Info: figures/inne_rozw/drivvo_12-eps-converted-to.pdf  used 
 
  <./figures/inne_rozw/drivvo_8-eps-converted-to.pdf> <./figures/inne_rozw/drivvo_9-eps-converted-to.pdf> <./figures/inne_rozw/drivvo_10-eps-converted-to.pdf> <./figures/inne_rozw/drivvo_12-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/inne_rozw/yanosik_6.eps>
-(epstopdf)                    date: 2026-11-18 22:54:30
+(epstopdf)                    date: 2026-11-19 13:06:36
 (epstopdf)                    size: 11437799 bytes
 (epstopdf)             Output file: <figures/inne_rozw/yanosik_6-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 22:55:02
+(epstopdf)                    date: 2026-11-19 13:07:01
 (epstopdf)                    size: 217367 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/inne_rozw/yanosik_6-eps-converted-to.pdf figures/inne_rozw/yanosik_6.eps>
 (epstopdf)             \includegraphics on input line 127.
@@ -1205,10 +1207,10 @@ File: figures/inne_rozw/yanosik_6-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/inne_rozw/yanosik_6-eps-converted-to.pdf  used on input line 127.
 (pdftex.def)             Requested size: 100.29622pt x 223.49066pt.
 Package epstopdf Info: Source file: <figures/inne_rozw/yanosik_13.eps>
-(epstopdf)                    date: 2026-11-18 22:54:29
+(epstopdf)                    date: 2026-11-19 13:06:35
 (epstopdf)                    size: 11450245 bytes
 (epstopdf)             Output file: <figures/inne_rozw/yanosik_13-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 22:55:06
+(epstopdf)                    date: 2026-11-19 13:07:06
 (epstopdf)                    size: 130520 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/inne_rozw/yanosik_13-eps-converted-to.pdf figures/inne_rozw/yanosik_13.eps>
 (epstopdf)             \includegraphics on input line 134.
@@ -1219,10 +1221,10 @@ File: figures/inne_rozw/yanosik_13-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/inne_rozw/yanosik_13-eps-converted-to.pdf  used on input line 134.
 (pdftex.def)             Requested size: 100.29622pt x 223.23972pt.
 Package epstopdf Info: Source file: <figures/inne_rozw/yanosik_14.eps>
-(epstopdf)                    date: 2026-11-18 22:54:30
+(epstopdf)                    date: 2026-11-19 13:06:36
 (epstopdf)                    size: 11450245 bytes
 (epstopdf)             Output file: <figures/inne_rozw/yanosik_14-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 22:55:10
+(epstopdf)                    date: 2026-11-19 13:07:10
 (epstopdf)                    size: 272565 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/inne_rozw/yanosik_14-eps-converted-to.pdf figures/inne_rozw/yanosik_14.eps>
 (epstopdf)             \includegraphics on input line 141.
@@ -1233,10 +1235,10 @@ File: figures/inne_rozw/yanosik_14-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/inne_rozw/yanosik_14-eps-converted-to.pdf  used on input line 141.
 (pdftex.def)             Requested size: 100.29622pt x 223.23972pt.
 Package epstopdf Info: Source file: <figures/inne_rozw/yanosik_16.eps>
-(epstopdf)                    date: 2026-11-18 22:54:30
+(epstopdf)                    date: 2026-11-19 13:06:36
 (epstopdf)                    size: 11450245 bytes
 (epstopdf)             Output file: <figures/inne_rozw/yanosik_16-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 22:55:14
+(epstopdf)                    date: 2026-11-19 13:07:13
 (epstopdf)                    size: 174648 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/inne_rozw/yanosik_16-eps-converted-to.pdf figures/inne_rozw/yanosik_16.eps>
 (epstopdf)             \includegraphics on input line 148.
@@ -1250,10 +1252,10 @@ Package pdftex.def Info: figures/inne_rozw/yanosik_16-eps-converted-to.pdf  used
 
  <./figures/inne_rozw/yanosik_6-eps-converted-to.pdf> <./figures/inne_rozw/yanosik_13-eps-converted-to.pdf> <./figures/inne_rozw/yanosik_14-eps-converted-to.pdf> <./figures/inne_rozw/yanosik_16-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/inne_rozw/Spritmonitor_1.eps>
-(epstopdf)                    date: 2026-11-18 22:54:28
+(epstopdf)                    date: 2026-11-19 13:06:34
 (epstopdf)                    size: 11426630 bytes
 (epstopdf)             Output file: <figures/inne_rozw/Spritmonitor_1-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 22:55:19
+(epstopdf)                    date: 2026-11-19 13:07:17
 (epstopdf)                    size: 149503 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/inne_rozw/Spritmonitor_1-eps-converted-to.pdf figures/inne_rozw/Spritmonitor_1.eps>
 (epstopdf)             \includegraphics on input line 175.
@@ -1264,10 +1266,10 @@ File: figures/inne_rozw/Spritmonitor_1-eps-converted-to.pdf Graphic file (type p
 Package pdftex.def Info: figures/inne_rozw/Spritmonitor_1-eps-converted-to.pdf  used on input line 175.
 (pdftex.def)             Requested size: 100.29622pt x 223.27242pt.
 Package epstopdf Info: Source file: <figures/inne_rozw/Spritmonitor_7.eps>
-(epstopdf)                    date: 2026-11-18 22:54:29
+(epstopdf)                    date: 2026-11-19 13:06:35
 (epstopdf)                    size: 11450245 bytes
 (epstopdf)             Output file: <figures/inne_rozw/Spritmonitor_7-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 22:55:23
+(epstopdf)                    date: 2026-11-19 13:07:21
 (epstopdf)                    size: 175527 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/inne_rozw/Spritmonitor_7-eps-converted-to.pdf figures/inne_rozw/Spritmonitor_7.eps>
 (epstopdf)             \includegraphics on input line 182.
@@ -1278,10 +1280,10 @@ File: figures/inne_rozw/Spritmonitor_7-eps-converted-to.pdf Graphic file (type p
 Package pdftex.def Info: figures/inne_rozw/Spritmonitor_7-eps-converted-to.pdf  used on input line 182.
 (pdftex.def)             Requested size: 100.29622pt x 223.23972pt.
 Package epstopdf Info: Source file: <figures/inne_rozw/Spritmonitor_18.eps>
-(epstopdf)                    date: 2026-11-18 22:54:28
+(epstopdf)                    date: 2026-11-19 13:06:34
 (epstopdf)                    size: 11450245 bytes
 (epstopdf)             Output file: <figures/inne_rozw/Spritmonitor_18-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 22:55:27
+(epstopdf)                    date: 2026-11-19 13:07:24
 (epstopdf)                    size: 149241 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/inne_rozw/Spritmonitor_18-eps-converted-to.pdf figures/inne_rozw/Spritmonitor_18.eps>
 (epstopdf)             \includegraphics on input line 189.
@@ -1292,10 +1294,10 @@ File: figures/inne_rozw/Spritmonitor_18-eps-converted-to.pdf Graphic file (type 
 Package pdftex.def Info: figures/inne_rozw/Spritmonitor_18-eps-converted-to.pdf  used on input line 189.
 (pdftex.def)             Requested size: 100.29622pt x 223.23972pt.
 Package epstopdf Info: Source file: <figures/inne_rozw/Spritmonitor_33.eps>
-(epstopdf)                    date: 2026-11-18 22:54:29
+(epstopdf)                    date: 2026-11-19 13:06:35
 (epstopdf)                    size: 11450245 bytes
 (epstopdf)             Output file: <figures/inne_rozw/Spritmonitor_33-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 22:55:31
+(epstopdf)                    date: 2026-11-19 13:07:28
 (epstopdf)                    size: 248694 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/inne_rozw/Spritmonitor_33-eps-converted-to.pdf figures/inne_rozw/Spritmonitor_33.eps>
 (epstopdf)             \includegraphics on input line 196.
@@ -1325,17 +1327,23 @@ Rozdzia\l  2.
 
 
 ] [16] [17] [18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 299.
+(Font)              scaled to size 7.3pt on input line 304.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 299.
- [19]) [20]
+(Font)              scaled to size 5.5pt on input line 304.
+) [20]
 \openout2 = `chapters/chapter003.aux'.
 
  (chapters/chapter003.tex
 Rozdzia\l  3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 []|\T1/ntxtlf/m/n/10 Obliczenie ±red-niego zu-»y-cia pa-
  []
 
@@ -1346,48 +1354,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--60
 
 ]
 Package epstopdf Info: Source file: <figures/UseCaseDiagram1.eps>
-(epstopdf)                    date: 2026-11-18 10:02:24
-(epstopdf)                    size: 6571957 bytes
+(epstopdf)                    date: 2026-11-19 13:24:11
+(epstopdf)                    size: 6005066 bytes
 (epstopdf)             Output file: <figures/UseCaseDiagram1-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 10:02:30
-(epstopdf)                    size: 142883 bytes
+(epstopdf)                    date: 2026-11-19 13:24:16
+(epstopdf)                    size: 150611 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/UseCaseDiagram1-eps-converted-to.pdf figures/UseCaseDiagram1.eps>
-(epstopdf)             \includegraphics on input line 86.
+(epstopdf)             \includegraphics on input line 84.
 Package epstopdf Info: Output file is already uptodate.
-<figures/UseCaseDiagram1-eps-converted-to.pdf, id=386, 1182.4175pt x 921.4425pt>
+<figures/UseCaseDiagram1-eps-converted-to.pdf, id=390, 1118.1775pt x 890.32625pt>
 File: figures/UseCaseDiagram1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/UseCaseDiagram1-eps-converted-to.pdf>
-Package pdftex.def Info: figures/UseCaseDiagram1-eps-converted-to.pdf  used on input line 86.
-(pdftex.def)             Requested size: 426.79135pt x 332.59077pt.
+Package pdftex.def Info: figures/UseCaseDiagram1-eps-converted-to.pdf  used on input line 84.
+(pdftex.def)             Requested size: 426.79135pt x 339.82187pt.
+
+Underfull \vbox (badness 5374) has occurred while \output is active []
+
+
+Underfull \vbox (badness 5374) has occurred while \output is active []
+
  [22 <./figures/UseCaseDiagram1-eps-converted-to.pdf>]
 Underfull \hbox (badness 1142) in paragraph at lines 193--194
 []|\T1/ntxtlf/m/n/10 ^^Sinclude^^T UC04 -- Ob-li-cze-nie ±red-niego zu-»y-cia pa-liwa/energii,
  []
 
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 229--229
-[]|\T1/ntxtlf/m/n/10 Wprowadza stan licz-nika, ilo±¢ pa-
- []
-
-
-Underfull \hbox (badness 2735) in paragraph at lines 229--229
-\T1/ntxtlf/m/n/10 liwa/energii oraz ª¡czny koszt (r¦cz-nie
- []
-
-[24]
-Underfull \hbox (badness 2376) in paragraph at lines 277--277
+[23] [24]
+Underfull \hbox (badness 2376) in paragraph at lines 275--275
 []|\T1/ntxtlf/m/n/10 Ponownie za-twier-dza for-mu-larz przy-ci-
  []
 
 
-Underfull \hbox (badness 5274) in paragraph at lines 285--286
+Underfull \hbox (badness 5274) in paragraph at lines 283--284
 []|\T1/ntxtlf/m/n/10 Po anu-lo-wa-niu cofa do edy-cji daty
  []
 
-[25
-
-]
-Underfull \hbox (badness 1540) in paragraph at lines 381--381
+[25]
+Underfull \hbox (badness 1540) in paragraph at lines 379--379
 []|\T1/ntxtlf/m/n/10 Przechodzi do kon-fi-gu-ra-cji przy-po-mnie«
  []
 
@@ -1397,18 +1399,18 @@ Underfull \hbox (badness 1540) in paragraph at lines 381--381
 
 ] [28]
 Package epstopdf Info: Source file: <figures/ActivityDiagram1.eps>
-(epstopdf)                    date: 2026-11-18 10:02:24
+(epstopdf)                    date: 2026-11-19 13:24:11
 (epstopdf)                    size: 11416486 bytes
 (epstopdf)             Output file: <figures/ActivityDiagram1-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 10:02:34
+(epstopdf)                    date: 2026-11-19 13:24:21
 (epstopdf)                    size: 133956 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/ActivityDiagram1-eps-converted-to.pdf figures/ActivityDiagram1.eps>
-(epstopdf)             \includegraphics on input line 473.
+(epstopdf)             \includegraphics on input line 471.
 Package epstopdf Info: Output file is already uptodate.
-<figures/ActivityDiagram1-eps-converted-to.pdf, id=519, 1187.43625pt x 1593.955pt>
+<figures/ActivityDiagram1-eps-converted-to.pdf, id=527, 1187.43625pt x 1593.955pt>
 File: figures/ActivityDiagram1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/ActivityDiagram1-eps-converted-to.pdf>
-Package pdftex.def Info: figures/ActivityDiagram1-eps-converted-to.pdf  used on input line 473.
+Package pdftex.def Info: figures/ActivityDiagram1-eps-converted-to.pdf  used on input line 471.
 (pdftex.def)             Requested size: 426.79135pt x 572.89914pt.
  [29
 
@@ -1416,18 +1418,18 @@ Package pdftex.def Info: figures/ActivityDiagram1-eps-converted-to.pdf  used on 
 
 ]
 Package epstopdf Info: Source file: <figures/ActivityDiagram2.eps>
-(epstopdf)                    date: 2026-11-18 10:02:24
+(epstopdf)                    date: 2026-11-19 13:24:11
 (epstopdf)                    size: 5568464 bytes
 (epstopdf)             Output file: <figures/ActivityDiagram2-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-11-18 10:02:36
+(epstopdf)                    date: 2026-11-19 13:24:23
 (epstopdf)                    size: 89169 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=figures/ActivityDiagram2-eps-converted-to.pdf figures/ActivityDiagram2.eps>
-(epstopdf)             \includegraphics on input line 508.
+(epstopdf)             \includegraphics on input line 506.
 Package epstopdf Info: Output file is already uptodate.
-<figures/ActivityDiagram2-eps-converted-to.pdf, id=546, 912.40875pt x 1011.78pt>
+<figures/ActivityDiagram2-eps-converted-to.pdf, id=554, 912.40875pt x 1011.78pt>
 File: figures/ActivityDiagram2-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/ActivityDiagram2-eps-converted-to.pdf>
-Package pdftex.def Info: figures/ActivityDiagram2-eps-converted-to.pdf  used on input line 508.
+Package pdftex.def Info: figures/ActivityDiagram2-eps-converted-to.pdf  used on input line 506.
 (pdftex.def)             Requested size: 426.79135pt x 473.26721pt.
 ) [31
 
@@ -1465,24 +1467,24 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 
 ] (praca.aux (chapters/abstract-pl.aux) (chapters/abstract-en.aux) (chapters/chapter001.aux) (chapters/chapter002.aux) (chapters/chapter003.aux))
  ***********
-LaTeX2e <2026-06-01>
+LaTeX2e <2026-11-01>
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `praca.out' has not changed.
 (rerunfilecheck)             Checksum: 41256FC4552E93A15C009B551E7C317D;3175.
  ) 
 Here is how much of TeX's memory you used:
- 27364 strings out of 467392
- 512464 string characters out of 5415741
- 924840 words of memory out of 5000000
- 56117 multiletter control sequences out of 15000+600000
+ 27430 strings out of 467310
+ 513181 string characters out of 5412916
+ 928575 words of memory out of 5000000
+ 56261 multiletter control sequences out of 15000+600000
  733256 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  104i,12n,131p,736b,1443s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Program Files/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Program Files/MiKTeX/fonts/type1/public/tex-gyre/qhvri.pfb><C:/Program Files/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Program Files/MiKTeX/fonts/type1/public/newtx/txmiaX.pfb><C:/Program Files/MiKTeX/fonts/type1/public/newtx/txsys.pfb><C:/Program Files/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Program Files/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Program Files/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
-Output written on praca.pdf (33 pages, 3225673 bytes).
+Output written on praca.pdf (33 pages, 3234990 bytes).
 PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 164 named destinations out of 1000 (max. 500000)
+ 705 PDF objects out of 1000 (max. 8388607)
+ 167 named destinations out of 1000 (max. 500000)
  227 words of extra memory for PDF output out of 10000 (max. 10000000)
 

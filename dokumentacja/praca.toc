@@ -24,14 +24,14 @@
 \contentsline {subsection}{Wymagania funkcjonalne}{17}{subsection*.19}%
 \contentsline {subsection}{Powiązanie wymagań funkcjonalnych z problemami biznesowymi}{18}{subsection*.20}%
 \contentsline {subsection}{Wymagania niefunkcjonalne}{19}{subsection*.21}%
-\contentsline {section}{\numberline {2.3}Reguły biznesowe}{19}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Reguły biznesowe}{20}{section.2.3}%
 \contentsline {subsection}{Powiązanie reguł biznesowych z wymaganiami funkcjonalnymi}{20}{subsection*.22}%
 \contentsline {chapter}{\numberline {3}Modelowanie systemu i jego otoczenia}{21}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Diagram przypadków użycia}{21}{section.3.1}%
 \contentsline {subsection}{Identyfikacja aktorów}{21}{subsection*.23}%
 \contentsline {subsection}{Zestawienie przypadków użycia}{21}{subsection*.24}%
 \contentsline {subsection}{Diagram przypadków użycia}{22}{subsection*.25}%
-\contentsline {subsection}{Powiązanie wymagań funkcjonalnych z diagramem}{22}{subsection*.27}%
+\contentsline {subsection}{Powiązanie wymagań funkcjonalnych z diagramem}{23}{subsection*.27}%
 \contentsline {subsection}{Szczegółowe specyfikacje przypadków użycia}{23}{subsection*.28}%
 \contentsline {section}{\numberline {3.2}Diagramy aktywności}{27}{section.3.2}%
 \contentsline {subsection}{Diagram aktywności procesu rejestracji wpisu tankowania (UC03)}{27}{subsection*.29}%

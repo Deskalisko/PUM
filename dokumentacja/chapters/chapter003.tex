@@ -1,15 +1,11 @@
 ﻿\chapter{Modelowanie systemu i jego otoczenia}
 \label{cha:modelowanie_systemu}
 
-W~niniejszym rozdziale opracowano modele analityczno-projektowe w~języku UML, przedstawiające funkcjonalności, procesy, interakcje oraz zachowania projektowanego systemu.
-
+W~niniejszym rozdziale opracowano modele analityczno-projektowe systemu \textbf{MotoLog} w~języku UML, obrazujące jego funkcje, przebieg procesów, komunikację między komponentami oraz zmianę stanów obiektów. Modelowanie rozpoczyna diagram przypadków użycia, w~ramach którego zdefiniowano aktorów, wykaz przypadków użycia, ich powiązanie z~wymaganiami funkcjonalnymi oraz szczegółowe scenariusze głównych operacji.
 
 % ==============================================================================
 \section{Diagram przypadków użycia}
 \label{sec:diagram_przypadkow_uzycia}
-
-W~niniejszym podrozdziale przedstawiono model funkcjonalny systemu w~postaci diagramu przypadków użycia UML, obejmujący identyfikację aktorów, wykaz zdefiniowanych przypadków użycia, ich powiązanie z~wymaganiami funkcjonalnymi oraz specyfikacje przebiegu wybranych procesów.
-
 
 \subsection{Identyfikacja aktorów}
 \label{subsec:identyfikacja_aktorow}
@@ -73,6 +69,8 @@ Wyodrębnione przypadki użycia projektowanego systemu (Tabela~\ref{tab:zestawie
     \hline
     \hypertarget{uc:UC11}{UC11} & Rozpoznawanie danych z~paragonu (OCR) & Rozszerzający UC03 \\
     \hline
+    \hypertarget{uc:UC12}{UC12} & Eksport historii wpisów do pliku CSV & Użytkownik \\
+    \hline
 \end{longtable}
 \endgroup
 
@@ -121,13 +119,13 @@ Każde wymaganie funkcjonalne zdefiniowane wcześniej (Rozdział~\ref{cha:analiz
     \zrodloLT{4}{Opracowanie własne na podstawie analizy wymagań.}
     \endlastfoot
 
-    \hyperlink{wf:WF-01}{WF-01} & Dodawanie i~edycja profili pojazdów ze zdjęciem. & Użytkownik & \hyperlink{uc:UC01}{UC01} \\
+    \hyperlink{wf:WF-01}{WF-01} & Dodawanie profili pojazdów (do dwóch źródeł zasilania) ze zdjęciem. & Użytkownik & \hyperlink{uc:UC01}{UC01} \\
     \hline
-    \hyperlink{wf:WF-02}{WF-02} & Rejestracja tankowania z~automatycznym przeliczaniem kwot. & Użytkownik & \hyperlink{uc:UC03}{UC03} \\
+    \hyperlink{wf:WF-02}{WF-02} & Rejestracja tankowania/ładowania z~wyborem paliwa i~przeliczaniem kwot. & Użytkownik & \hyperlink{uc:UC03}{UC03} \\
     \hline
-    \hyperlink{wf:WF-03}{WF-03} & Automatyczne obliczanie średniego zużycia paliwa/energii. & ------ & \hyperlink{uc:UC04}{UC04} \\
+    \hyperlink{wf:WF-03}{WF-03} & Obliczanie średniego zużycia oddzielnie dla każdego źródła zasilania. & ------ & \hyperlink{uc:UC04}{UC04} \\
     \hline
-    \hyperlink{wf:WF-04}{WF-04} & Wyliczanie przewidywanego zasięgu pojazdu. & Użytkownik & \hyperlink{uc:UC05}{UC05} \\
+    \hyperlink{wf:WF-04}{WF-04} & Wyliczanie zasięgu pojazdu i~zapotrzebowania na planowaną trasę. & Użytkownik & \hyperlink{uc:UC05}{UC05} \\
     \hline
     \hyperlink{wf:WF-05}{WF-05} & Rejestracja wydatków eksploatacyjnych z~kategoriami. & Użytkownik & \hyperlink{uc:UC06}{UC06} \\
     \hline
@@ -139,9 +137,11 @@ Każde wymaganie funkcjonalne zdefiniowane wcześniej (Rozdział~\ref{cha:analiz
     \hline
     \hyperlink{wf:WF-09}{WF-09} & Przeglądanie i~edycja historii eksploatacji. & Użytkownik & \hyperlink{uc:UC10}{UC10} \\
     \hline
-    \hyperlink{wf:WF-10}{WF-10} & Zapis i~odczyt danych w~lokalnej bazie offline. & ------ & \hyperlink{uc:UC01}{UC01}, \hyperlink{uc:UC03}{UC03}, \hyperlink{uc:UC06}{UC06}, \hyperlink{uc:UC10}{UC10} \\
+    \hyperlink{wf:WF-10}{WF-10} & Zapis i~odczyt danych w~lokalnej bazie offline. & ------ & \hyperlink{uc:UC01}{UC01}, \hyperlink{uc:UC03}{UC03}, \hyperlink{uc:UC06}{UC06}, \hyperlink{uc:UC10}{UC10}, \hyperlink{uc:UC12}{UC12} \\
     \hline
     \hyperlink{wf:WF-11}{WF-11} & Skanowanie paragonu i~odczyt danych przez moduł OCR. & Użytkownik & \hyperlink{uc:UC11}{UC11} \\
+    \hline
+    \hyperlink{wf:WF-12}{WF-12} & Eksport historii wpisów do pliku CSV. & Użytkownik & \hyperlink{uc:UC12}{UC12} \\
     \hline
 \end{longtable}
 \endgroup
@@ -192,7 +192,7 @@ Proces dotyczy ewidencji nowego tankowania lub ładowania pojazdu wraz z~aktuali
     \hline
     Powiązania & «include» UC04~--~Obliczenie średniego zużycia paliwa/energii, «extend» UC11~--~Rozpoznawanie danych z~paragonu (OCR) \\
     \hline
-    Warunki końcowe -- sukces & Nowy wpis tankowania został zapisany w~bazie danych, stan licznika pojazdu zaktualizowany, a~w~przypadku tankowania do pełna wyliczono średnie spalanie. \\
+    Warunki końcowe -- sukces & Nowy wpis tankowania został zapisany w~bazie danych, stan licznika pojazdu zaktualizowany, a~w~przypadku tankowania do pełna wyliczono średnie spalanie dla wybranego źródła zasilania. \\
     \hline
     Warunki końcowe -- niepowodzenie & Wpis nie został zapisany. System wyświetlił komunikat o~błędzie walidacji i~pozostawił formularz do poprawy. \\
     \hline
@@ -224,11 +224,11 @@ Proces dotyczy ewidencji nowego tankowania lub ładowania pojazdu wraz z~aktuali
     \zrodloLT{3}{Opracowanie własne.}
     \endlastfoot
 
-    \hypertarget{uc03:krok1}{1} & Wybiera opcję dodania nowego tankowania. & Wyświetla formularz z~podpowiedzią bieżącej daty i~ostatniego stanu licznika. \\
+    \hypertarget{uc03:krok1}{1} & Wybiera opcję dodania nowego tankowania. & Wyświetla formularz z~podpowiedzią bieżącej daty, ostatniego stanu licznika oraz domyślnie zaznaczonym ostatnio tankowanym źródłem zasilania. \\
     \hline
-    \hypertarget{uc03:krok2}{2} & Wprowadza stan licznika, ilość paliwa/energii oraz łączny koszt (ręcznie lub skanując paragon przez OCR -\hyperlink{uc:UC11}{UC11}). & Na bieżąco przelicza cenę jednostkową przy zmianie kwoty (\hyperlink{rb:RB-04}{RB-04}). \\
+    \hypertarget{uc03:krok2}{2} & Potwierdza lub zmienia źródło zasilania oraz wprowadza stan licznika, ilość paliwa/energii i~łączny koszt (ręcznie lub skanując paragon przez OCR -- \hyperlink{uc:UC11}{UC11}). & Na bieżąco przelicza cenę jednostkową przy zmianie kwoty (\hyperlink{rb:RB-04}{RB-04}). \\
     \hline
-    \hypertarget{uc03:krok3}{3} & Zatwierdza formularz przyciskiem zapisu. & Sprawdza poprawność przebiegu (\hyperlink{rb:RB-01}{RB-01}) oraz daty (\hyperlink{rb:RB-05}{RB-05}) i~wylicza średnie spalanie (\hyperlink{uc:UC04}{UC04}, \hyperlink{rb:RB-02}{RB-02}). \\
+    \hypertarget{uc03:krok3}{3} & Zatwierdza formularz przyciskiem zapisu. & Sprawdza poprawność przebiegu (\hyperlink{rb:RB-01}{RB-01}) oraz daty (\hyperlink{rb:RB-05}{RB-05}) i~wylicza średnie spalanie dla wybranego źródła zasilania (\hyperlink{uc:UC04}{UC04}, \hyperlink{rb:RB-02}{RB-02}). \\
     \hline
     \hypertarget{uc03:krok4}{4} & --- & Zapisuje wpis w~bazie danych (\hyperlink{wf:WF-10}{WF-10}) i~aktualizuje stan licznika pojazdu. \\
     \hline
@@ -236,8 +236,6 @@ Proces dotyczy ewidencji nowego tankowania lub ładowania pojazdu wraz z~aktuali
     \hline
 \end{longtable}
 \endgroup
-
-\clearpage
 
 Ścieżki alternatywne oraz reakcje systemu na błędy walidacji i~odczytu OCR definiuje poniższa specyfikacja (Tabela~\ref{tab:scenariusz_alt_uc1}).
 
@@ -459,7 +457,7 @@ Diagram aktywności (\figurename~\ref{fig:diagram_aktywnosci_uc03}) przedstawia 
     \end{itemize}
     \item System sprawdza warunek ,,Czy tankowanie do pełna?'' (\hyperlink{rb:RB-02}{RB-02}):
     \begin{itemize}
-        \item jeśli tak, system wykonuje ,,Obliczenie śr. spalania od ostatniego tankowania do pełna'' (\hyperlink{uc:UC04}{UC04});
+        \item jeśli tak, system wykonuje ,,Obliczenie śr. spalania od ostatniego tankowania do pełna dla wybranego źródła zasilania'' (\hyperlink{uc:UC04}{UC04});
         \item jeśli nie, ten krok zostaje pominięty.
     \end{itemize}
     \item Następnie system realizuje ,,Zapis wpisu w~bazie. Aktualizacja stanu licznika'' (\hyperlink{wf:WF-10}{WF-10}) oraz ,,Wyświetlenie potwierdzenia''.
