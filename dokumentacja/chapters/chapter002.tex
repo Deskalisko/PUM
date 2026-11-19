@@ -70,9 +70,9 @@ Dzięki mobilnej aplikacji kontrolowanie auta stanie się znacznie prostsze:
     \item System zapisuje wpis w~bazie danych na urządzeniu, realizując pełną funkcjonalność bez konieczności połączenia z~siecią Internet.
     \item Aplikacja automatycznie przelicza średnie spalanie (l/100~km lub kWh/100~km) oraz szacuje dostępny zasięg pojazdu.
     \item System generuje przejrzyste statystyki wydatków oraz prognozuje budżet na kolejny miesiąc w~oparciu o~dane historyczne.
-    \item Aplikacja wysyła powiadomienie przypominające o~zbliżającym się terminie przeglądu technicznego lub terminie płatności polisy ubezpieczeniowej.
-    \item Użytkownik wygodnie przełącza się pomiędzy zdefiniowanymi profilami swoich pojazdów w~jednym, spójnym interfejsie.
-    \item Użytkownik w~dowolnym momencie wykonuje darmowy eksport historii pojazdu do pliku CSV w~celu zabezpieczenia danych lub przeniesienia ich na inne urządzenie.
+    \item Aplikacja wysyła powiadomienie przypominające o~zbliżającym się terminie przeglądu technicznego, płatności polisy lub osiągnięciu przebiegu kolejnego serwisu.
+    \item Użytkownik wygodnie przełącza się pomiędzy zdefiniowanymi profilami swoich pojazdów w~jednym, spójnym interfejs    ie.
+    \item Użytkownik w~dowolnym momencie wykonuje darmowy eksport oraz przywracanie historii pojazdu z~pliku CSV w~celu zabezpieczenia danych lub przeniesienia ich na inne urządzenie.
 \end{enumerate}
 
 
@@ -95,16 +95,16 @@ W~ramach projektowanego systemu zidentyfikowano następujące grupy interesarius
 
 W~ramach projektu przewidziano realizację następujących funkcjonalności:
 \begin{itemize}
-    \item tworzenie, edycja oraz usuwanie profili pojazdów (marka, model, zdjęcie z~pamięci urządzenia, do dwóch niezależnych źródeł zasilania wraz z~pojemnością zbiornika lub baterii),
-    \item rejestrowanie tankowań (stan licznika, ilość paliwa lub energii, koszt łączny) na jednej wspólnej liście historii wraz z~oddzielnym obliczaniem średniego spalania dla każdego źródła zasilania,
+    \item tworzenie, edycja oraz usuwanie profili pojazdów (marka, model, numer rejestracyjny, rocbieg, zdjęcie z~pamięci urządzenia, do dwóch niezależnych źródeł zasilania wraz z~pojemnością zbiornika lub baterii),
+    \item rejestrowanie tankowań (stan licznika, ilość paliwa lub energii, koszt łączny, opcja oznaczenia pominiętego tankowania) na jednej wspólnej liście historii wraz z~oddzielnym obliczaniem średniego spalania dla każdego źródła zasilania,
     \item rozpoznawanie tekstu (OCR) z~fotografii paragonu z~możliwością weryfikacji i~ręcznej korekty odczytanych pól,
     \item kalkulator zasięgu pojazdu na podstawie stanu paliwa i~wyliczonego średniego zużycia,
-    \item ewidencja kosztów dodatkowych z~podziałem na kategorie (naprawy, polisy OC/AC, raty leasingowe, badania techniczne),
-    \item planowanie oraz automatyczne generowanie lokalnych powiadomień systemowych o~nadchodzących terminach opłat i~przeglądów,
+    \item ewidencja kosztów dodatkowych z~podziałem na kategorie (naprawy, polisy OC/AC, raty leasingowe, badania techniczne, inne),
+    \item planowanie oraz automatyczne generowanie lokalnych powiadomień systemowych o~nadchodzących terminach opłat, przeglądów i~przebiegu kolejnego serwisu (w~tym dla zobowiązań cyklicznych),
     \item generowanie prognozy wydatków na kolejny miesiąc na podstawie agregacji danych historycznych,
     \item działanie w~trybie offline z~lokalnym przechowywaniem danych na urządzeniu,
     \item przełączanie widoku pomiędzy zdefiniowanymi pojazdami,
-    \item możliwość eksportu historii wpisów pojazdu do pliku CSV.
+    \item możliwość eksportu oraz przywracania historii wpisów pojazdu z~pliku CSV.
 \end{itemize}
 
 
@@ -152,17 +152,17 @@ Specyfikacja wymagań funkcjonalnych (Tabela~\ref{tab:wymagania_funkcjonalne}) o
     \zrodloLT{2}{Opracowanie własne.}
     \endlastfoot
 
-    \hypertarget{wf:WF-01}{WF-01} & System musi umożliwiać użytkownikowi dodanie profilu pojazdu ze wskazaniem marki, modelu, maksymalnie dwóch niezależnych źródeł zasilania (Benzyna, Diesel, LPG, Prąd), pojemności zbiornika lub baterii oraz zdjęcia z~pamięci urządzenia. \\
+    \hypertarget{wf:WF-01}{WF-01} & System musi umożliwiać użytkownikowi dodanie profilu pojazdu ze wskazaniem marki, modelu, numeru rejestracyjnego, rocznika, początkowego stanu licznika, maksymalnie dwóch niezależnych źródeł zasilania (Benzyna, Diesel, LPG, Prąd), pojemności zbiornika lub baterii oraz zdjęcia z~pamięci urządzenia. \\
     \hline
-    \hypertarget{wf:WF-02}{WF-02} & System musi umożliwiać rejestrowanie wpisu tankowania lub ładowania zawierającego datę, wybór źródła zasilania, stan licznika, ilość paliwa/energii, cenę jednostkową (za litr lub kWh) oraz łączny koszt, zapewniając automatyczne wzajemne przeliczanie powiązanych wartości kwotowych. \\
+    \hypertarget{wf:WF-02}{WF-02} & System musi umożliwiać rejestrowanie wpisu tankowania lub ładowania zawierającego datę, wybór źródła zasilania, stan licznika, ilość paliwa/energii, cenę jednostkową (za litr lub kWh), łączny koszt oraz opcję oznaczenia pominiętego wcześniejszego tankowania, zapewniając automatyczne przeliczanie trzeciej wartości na podstawie dwóch wpisanych. \\
     \hline
-    \hypertarget{wf:WF-03}{WF-03} & System musi automatycznie obliczać średnie zużycie paliwa lub energii na 100~km pomiędzy pełnymi tankowaniami, oddzielnie dla każdego zdefiniowanego źródła zasilania w~pojeździe. \\
+    \hypertarget{wf:WF-03}{WF-03} & System musi automatycznie obliczać średnie zużycie paliwa lub energii na 100~km pomiędzy pełnymi tankowaniami, oddzielnie dla każdego zdefiniowanego źródła zasilania w~pojeździe, z~wyjątkiem wpisów oznaczonych jako poprzedzone pominięciem tankowania. \\
     \hline
     \hypertarget{wf:WF-04}{WF-04} & System musi umożliwiać wyliczanie przewidywanego zasięgu pojazdu (na podstawie ilości paliwa/energii lub budżetu i~ceny jednostkowej) oraz zapotrzebowania na paliwo lub energię dla planowanej trasy, z~uwzględnieniem jednoczesnego zużycia obu źródeł zasilania. \\
     \hline
-    \hypertarget{wf:WF-05}{WF-05} & System musi umożliwiać rejestrowanie wydatków eksploatacyjnych z~podziałem na kategorie (naprawa, ubezpieczenie, leasing, przegląd). \\
+    \hypertarget{wf:WF-05}{WF-05} & System musi umożliwiać rejestrowanie wydatków eksploatacyjnych z~podziałem na kategorie (naprawa, ubezpieczenie, leasing, przegląd, inne). \\
     \hline
-    \hypertarget{wf:WF-06}{WF-06} & System musi umożliwiać planowanie, edycję i~generowanie lokalnych powiadomień o~terminach opłat i~przeglądów, w~tym automatyczne tworzenie domyślnego przypomnienia 7~dni przed terminem oraz definiowanie wielu własnych terminów powiadomień dla jednego zdarzenia. \\
+    \hypertarget{wf:WF-06}{WF-06} & System musi umożliwiać planowanie, edycję i~generowanie lokalnych powiadomień o~terminach opłat, przeglądów oraz osiągnięciu przebiegu kolejnego serwisu, w~tym automatyczne tworzenie domyślnego przypomnienia 7~dni przed terminem i~definiowanie wielu własnych przypomnień dla jednego zdarzenia. \\
     \hline
     \hypertarget{wf:WF-07}{WF-07} & System musi generować prognozę wydatków na nadchodzący miesiąc na podstawie średnich kosztów z~poprzednich miesięcy. \\
     \hline
@@ -174,7 +174,7 @@ Specyfikacja wymagań funkcjonalnych (Tabela~\ref{tab:wymagania_funkcjonalne}) o
     \hline
     \hypertarget{wf:WF-11}{WF-11} & System musi umożliwiać skanowanie paragonu za pomocą aparatu urządzenia i~automatyczne odczytywanie danych tankowania (OCR) z~możliwością wielokrotnego powtórzenia zdjęcia oraz ręcznej edycji dowolnego błędnie rozpoznanego pola przed zapisem. \\
     \hline
-    \hypertarget{wf:WF-12}{WF-12} & System musi umożliwiać eksport historii wpisów do pliku CSV dla wybranych pojazdów lub dla całej bazy jednocześnie. \\
+    \hypertarget{wf:WF-12}{WF-12} & System musi umożliwiać eksport historii wpisów do pliku CSV (dla wybranych pojazdów lub całej bazy) oraz przywracanie danych z~pliku CSV. \\
     \hline
 \end{longtable}
 \endgroup
@@ -295,18 +295,20 @@ Zestawienie reguł biznesowych (Tabela~\ref{tab:reguly_biznesowe}) definiuje ogr
     \zrodloLT{2}{Opracowanie własne.}
     \endlastfoot
 
-    \hypertarget{rb:RB-01}{RB-01} & Wartość przebiegu w~nowym wpisie tankowania dla danego pojazdu musi być większa niż przebieg w~poprzednim wpisie. \\
+    \hypertarget{rb:RB-01}{RB-01} & Wartość przebiegu w~nowym wpisie tankowania dla danego pojazdu musi być większa niż przebieg w~poprzednim wpisie, a~podczas edycji wpisu w~środku historii musi dodatkowo pozostać mniejsza niż przebieg w~kolejnym wpisie. \\
     \hline
-    \hypertarget{rb:RB-02}{RB-02} & Obliczenie średniego spalania wykonuje się wyłącznie pomiędzy tankowaniami oznaczonymi jako tankowanie do pełna, oddzielnie dla każdego zdefiniowanego źródła zasilania w~pojeździe. \\
+    \hypertarget{rb:RB-02}{RB-02} & Obliczenie średniego spalania wykonuje się wyłącznie pomiędzy tankowaniami oznaczonymi jako tankowanie do pełna, oddzielnie dla każdego zdefiniowanego źródła zasilania w~pojeździe, z~wyjątkiem sytuacji oznaczenia wpisu jako poprzedzonego pominięciem ostatniego tankowania. \\
     \hline
-    \hypertarget{rb:RB-03}{RB-03} & Dla każdego zdefiniowanego terminu opłaty lub badania technicznego system domyślnie generuje automatyczne przypomnienie 7~dni przed datą zdarzenia, umożliwiając użytkownikowi modyfikację tego terminu oraz dodanie kolejnych powiadomień. \\
+    \hypertarget{rb:RB-03}{RB-03} & Dla każdego zdefiniowanego terminu opłaty lub badania technicznego system domyślnie generuje automatyczne przypomnienie 7~dni przed datą zdarzenia, umożliwiając użytkownikowi modyfikację tego terminu, dodanie kolejnych powiadomień oraz ustawienie przypomnienia po osiągnięciu zadanego przebiegu. \\
     \hline
-    \hypertarget{rb:RB-04}{RB-04} & Wartości łącznego kosztu, objętości paliwa oraz ceny jednostkowej za litr muszą być wzajemnie spójne arytmetycznie ($\text{koszt} = \text{objętość} \times \text{cena jednostkowa}$). Zmiana kosztu przy stałej objętości powoduje automatyczne przeliczenie ceny jednostkowej, a~wykrycie rozbieżności blokuje zapis i~wyświetla komunikat błędu. \\
+    \hypertarget{rb:RB-04}{RB-04} & Wartości łącznego kosztu, objętości paliwa oraz ceny jednostkowej za litr muszą być wzajemnie spójne arytmetycznie ($\text{koszt} = \text{objętość} \times \text{cena jednostkowa}$). Wprowadzenie dwóch z~tych wartości powoduje automatyczne przeliczenie trzeciej, a~wykrycie rozbieżności blokuje zapis i~wyświetla komunikat błędu. \\
     \hline
     \hypertarget{rb:RB-05}{RB-05} & Data i~godzina nowego wpisu tankowania nie może być wcześniejsza niż data ostatniego zarejestrowanego tankowania dla danego pojazdu. Próba rejestracji wpisu wstecznego wymaga wyraźnego potwierdzenia w~oknie dialogowym z~ostrzeżeniem o~możliwym zaburzeniu statystyk historycznych i~przyszłych prognoz lub możliwości anulowania operacji. \\
     \hline
 \end{longtable}
 \endgroup
+
+\clearpage
 
 \subsection{Powiązanie reguł biznesowych z wymaganiami funkcjonalnymi}
 \label{subsec:powiazanie_rb_wf}

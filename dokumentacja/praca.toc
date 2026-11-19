@@ -22,23 +22,23 @@
 \contentsline {subsection}{Funkcjonalności poza zakresem projektu}{17}{subsection*.18}%
 \contentsline {section}{\numberline {2.2}Wymagania systemowe}{17}{section.2.2}%
 \contentsline {subsection}{Wymagania funkcjonalne}{17}{subsection*.19}%
-\contentsline {subsection}{Powiązanie wymagań funkcjonalnych z problemami biznesowymi}{18}{subsection*.20}%
+\contentsline {subsection}{Powiązanie wymagań funkcjonalnych z problemami biznesowymi}{19}{subsection*.20}%
 \contentsline {subsection}{Wymagania niefunkcjonalne}{19}{subsection*.21}%
 \contentsline {section}{\numberline {2.3}Reguły biznesowe}{20}{section.2.3}%
-\contentsline {subsection}{Powiązanie reguł biznesowych z wymaganiami funkcjonalnymi}{20}{subsection*.22}%
-\contentsline {chapter}{\numberline {3}Modelowanie systemu i jego otoczenia}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Diagram przypadków użycia}{21}{section.3.1}%
-\contentsline {subsection}{Identyfikacja aktorów}{21}{subsection*.23}%
-\contentsline {subsection}{Zestawienie przypadków użycia}{21}{subsection*.24}%
-\contentsline {subsection}{Diagram przypadków użycia}{22}{subsection*.25}%
-\contentsline {subsection}{Powiązanie wymagań funkcjonalnych z diagramem}{23}{subsection*.27}%
-\contentsline {subsection}{Szczegółowe specyfikacje przypadków użycia}{23}{subsection*.28}%
-\contentsline {section}{\numberline {3.2}Diagramy aktywności}{27}{section.3.2}%
-\contentsline {subsection}{Diagram aktywności procesu rejestracji wpisu tankowania (UC03)}{27}{subsection*.29}%
-\contentsline {subsection}{Diagram aktywności procesu rejestracji wydatku eksploatacyjnego (UC06)}{30}{subsection*.31}%
-\contentsline {section}{\numberline {3.3}Diagramy sekwencji}{31}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Diagramy stanów}{31}{section.3.4}%
-\contentsline {chapter}{Bibliografia}{32}{section.3.4}%
-\contentsline {chapter}{Spis rysunków}{33}{chapter*.33}%
-\contentsline {chapter}{Spis tabel}{34}{chapter*.33}%
-\contentsline {chapter}{Spis listingów}{35}{chapter*.33}%
+\contentsline {subsection}{Powiązanie reguł biznesowych z wymaganiami funkcjonalnymi}{21}{subsection*.22}%
+\contentsline {chapter}{\numberline {3}Modelowanie systemu i jego otoczenia}{22}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Diagram przypadków użycia}{22}{section.3.1}%
+\contentsline {subsection}{Identyfikacja aktorów}{22}{subsection*.23}%
+\contentsline {subsection}{Zestawienie przypadków użycia}{22}{subsection*.24}%
+\contentsline {subsection}{Diagram przypadków użycia}{23}{subsection*.25}%
+\contentsline {subsection}{Powiązanie wymagań funkcjonalnych z diagramem}{24}{subsection*.27}%
+\contentsline {subsection}{Szczegółowe specyfikacje przypadków użycia}{24}{subsection*.28}%
+\contentsline {section}{\numberline {3.2}Diagramy aktywności}{29}{section.3.2}%
+\contentsline {subsection}{Diagram aktywności procesu rejestracji wpisu tankowania (UC03)}{29}{subsection*.29}%
+\contentsline {subsection}{Diagram aktywności procesu rejestracji wydatku eksploatacyjnego (UC06)}{32}{subsection*.31}%
+\contentsline {section}{\numberline {3.3}Diagramy sekwencji}{33}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Diagramy stanów}{33}{section.3.4}%
+\contentsline {chapter}{Bibliografia}{34}{section.3.4}%
+\contentsline {chapter}{Spis rysunków}{35}{chapter*.33}%
+\contentsline {chapter}{Spis tabel}{36}{chapter*.33}%
+\contentsline {chapter}{Spis listingów}{37}{chapter*.33}%

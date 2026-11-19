@@ -14,7 +14,7 @@ Projektowana aplikacja \textbf{MotoLog} rozwiązuje te problemy, przenosząc zap
 \subsection{Główne cele projektowanego systemu}
 \label{subsec:glowne_cele}
 
-Głównym celem jest uproszczenie zapisu tankowań i~ładowań dzięki odczytowi paragonów (OCR) oraz automatycznemu wyliczaniu średniego zużycia paliwa lub energii i~zasięgu auta. Aplikacja ma też porządkować wydatki poprzez podział na kategorie, historię wpisów oraz prognozę miesięcznego budżetu. Ważnym założeniem jest obsługa kilku pojazdów o~różnych napędach, w~tym aut dwupaliwowych i~hybrydowych, eksport danych do pliku oraz wysyłanie lokalnych powiadomień, które chronią przed przegapieniem terminów opłat i~przeglądów.
+Głównym celem jest uproszczenie zapisu tankowań i~ładowań dzięki odczytowi paragonów (OCR) oraz automatycznemu wyliczaniu średniego zużycia paliwa lub energii i~zasięgu auta. Aplikacja ma też porządkować wydatki poprzez podział na kategorie, historię wpisów oraz prognozę miesięcznego budżetu. Ważnym założeniem jest obsługa kilku pojazdów o~różnych napędach, w~tym aut dwupaliwowych i~hybrydowych, eksport i~import danych z~pliku oraz wysyłanie lokalnych powiadomień, które chronią przed przegapieniem terminów opłat i~przeglądów.
 
 Szczegółową analizę problemów biznesowych, zakres projektu oraz pełną listę wymagań i~reguł działania systemu opisano w~Rozdziale~\ref{cha:analiza_wymagan}.
 
@@ -297,7 +297,7 @@ Zestawienie porównawcze przeanalizowanych rozwiązań z~projektowanym systemem 
     Eksport CSV/Excel i~kopia w~planie PRO & 
     Brak & 
     Darmowy eksport do CSV & 
-    Darmowy eksport do CSV \\
+    Darmowy eksport i~import (CSV) \\
     \hline
 \end{longtable}
 \endgroup
@@ -307,12 +307,12 @@ Zestawienie porównawcze przeanalizowanych rozwiązań z~projektowanym systemem 
 \section{Wyróżniki projektowanego systemu}
 \label{sec:wyrozniki_systemu}
 
-Na tle przeanalizowanych rozwiązań system \textbf{MotoLog} wyróżnia się następującymi cechami (szczegóły w~Rozdziale~\ref{cha:analiza_wymagan}):
+Na tle przeanalizowanych rozwiązań projektowany system \textbf{MotoLog} wyróżnia się następującymi cechami:
 
 \begin{itemize}
-    \item \textbf{Pełna prywatność i~darmowy eksport danych} -- brak konieczności zakładania konta oraz 100\% lokalny zapis na urządzeniu. W~przeciwieństwie do aplikacji blokujących kopiowanie danych za subskrypcją (Drivvo) oraz w~nawiązaniu do darmowego eksportu z~platformy Spritmonitor, system oferuje bezpłatny eksport historii do pliku CSV w~celu zabezpieczenia lub przeniesienia danych między telefonami.
+    \item \textbf{Pełna prywatność i~darmowy eksport danych} -- brak konieczności zakładania konta oraz 100\% lokalny zapis na urządzeniu. W~przeciwieństwie do aplikacji blokujących kopiowanie danych za subskrypcją (Drivvo) oraz w~nawiązaniu do darmowego eksportu z~platformy Spritmonitor, system oferuje bezpłatny eksport i~przywracanie historii z~pliku CSV w~celu zabezpieczenia lub przeniesienia danych między telefonami.
     \item \textbf{Nowoczesny interfejs Material Design 3} -- lekki, czytelny układ kart i~formularzy pozbawiony reklam, płatnych blokad statystyk oraz nadmiaru technicznych przełączników utrudniających obsługę na stacji paliw.
     \item \textbf{Wbudowany lokalny moduł OCR} -- odczyt danych z~paragonu bezpośrednio na urządzeniu bez opłat i~bez konieczności instalowania zewnętrznych aplikacji, z~możliwością powtórzenia zdjęcia oraz ręcznej korekty pól.
     \item \textbf{Automatyczna walidacja spójności wpisów} -- bieżące przeliczanie kwot, blokada wpisania przebiegu mniejszego od poprzedniego oraz ostrzeganie przed datą wsteczną zaburzającą statystyki.
-    \item \textbf{Obsługa wielu napędów i~proaktywne alerty} -- jeden spójny dziennik dla aut spalinowych, hybrydowych i~elektrycznych (l/100~km i~kWh/100~km), kalkulator zasięgu, prognoza budżetu oraz dowolna konfiguracja lokalnych powiadomień (z~domyślnym alertem 7~dni przed terminem i~możliwością dodania wielu własnych przypomnień dla jednego zdarzenia).
+    \item \textbf{Obsługa wielu napędów i~proaktywne alerty} -- jeden spójny dziennik dla aut spalinowych, hybrydowych i~elektrycznych (l/100~km i~kWh/100~km), kalkulator zasięgu, prognoza budżetu oraz dowolna konfiguracja lokalnych powiadomień według daty i~przebiegu (z~domyślnym alertem 7~dni przed terminem i~możliwością dodania wielu własnych przypomnień dla jednego zdarzenia).
 \end{itemize}

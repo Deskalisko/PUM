@@ -63,13 +63,13 @@ Wyodrębnione przypadki użycia projektowanego systemu (Tabela~\ref{tab:zestawie
     \hline
     \hypertarget{uc:UC08}{UC08} & Wyzwalanie lokalnego powiadomienia & System Android \\
     \hline
-    \hypertarget{uc:UC09}{UC09} & Generowanie analiz i~prognozy budżetowej & Użytkownik \\
+    \hypertarget{uc:UC09}{UC09} & Przeglądanie analiz i~prognozy budżetowej & Użytkownik \\
     \hline
     \hypertarget{uc:UC10}{UC10} & Przeglądanie i~edycja historii eksploatacji & Użytkownik \\
     \hline
     \hypertarget{uc:UC11}{UC11} & Rozpoznawanie danych z~paragonu (OCR) & Rozszerzający UC03 \\
     \hline
-    \hypertarget{uc:UC12}{UC12} & Eksport historii wpisów do pliku CSV & Użytkownik \\
+    \hypertarget{uc:UC12}{UC12} & Eksport oraz import historii z~pliku CSV & Użytkownik \\
     \hline
 \end{longtable}
 \endgroup
@@ -119,11 +119,11 @@ Każde wymaganie funkcjonalne zdefiniowane wcześniej (Rozdział~\ref{cha:analiz
     \zrodloLT{4}{Opracowanie własne na podstawie analizy wymagań.}
     \endlastfoot
 
-    \hyperlink{wf:WF-01}{WF-01} & Dodawanie profili pojazdów (do dwóch źródeł zasilania) ze zdjęciem. & Użytkownik & \hyperlink{uc:UC01}{UC01} \\
+    \hyperlink{wf:WF-01}{WF-01} & Dodawanie profili pojazdów. & Użytkownik & \hyperlink{uc:UC01}{UC01} \\
     \hline
-    \hyperlink{wf:WF-02}{WF-02} & Rejestracja tankowania/ładowania z~wyborem paliwa i~przeliczaniem kwot. & Użytkownik & \hyperlink{uc:UC03}{UC03} \\
+    \hyperlink{wf:WF-02}{WF-02} & Rejestracja tankowania/ładowania. & Użytkownik & \hyperlink{uc:UC03}{UC03} \\
     \hline
-    \hyperlink{wf:WF-03}{WF-03} & Obliczanie średniego zużycia oddzielnie dla każdego źródła zasilania. & ------ & \hyperlink{uc:UC04}{UC04} \\
+    \hyperlink{wf:WF-03}{WF-03} & Obliczanie średniego zużycia. & ------ & \hyperlink{uc:UC04}{UC04} \\
     \hline
     \hyperlink{wf:WF-04}{WF-04} & Wyliczanie zasięgu pojazdu i~zapotrzebowania na planowaną trasę. & Użytkownik & \hyperlink{uc:UC05}{UC05} \\
     \hline
@@ -141,7 +141,7 @@ Każde wymaganie funkcjonalne zdefiniowane wcześniej (Rozdział~\ref{cha:analiz
     \hline
     \hyperlink{wf:WF-11}{WF-11} & Skanowanie paragonu i~odczyt danych przez moduł OCR. & Użytkownik & \hyperlink{uc:UC11}{UC11} \\
     \hline
-    \hyperlink{wf:WF-12}{WF-12} & Eksport historii wpisów do pliku CSV. & Użytkownik & \hyperlink{uc:UC12}{UC12} \\
+    \hyperlink{wf:WF-12}{WF-12} & Eksport oraz import historii z~pliku CSV. & Użytkownik & \hyperlink{uc:UC12}{UC12} \\
     \hline
 \end{longtable}
 \endgroup
@@ -192,7 +192,7 @@ Proces dotyczy ewidencji nowego tankowania lub ładowania pojazdu wraz z~aktuali
     \hline
     Powiązania & «include» UC04~--~Obliczenie średniego zużycia paliwa/energii, «extend» UC11~--~Rozpoznawanie danych z~paragonu (OCR) \\
     \hline
-    Warunki końcowe -- sukces & Nowy wpis tankowania został zapisany w~bazie danych, stan licznika pojazdu zaktualizowany, a~w~przypadku tankowania do pełna wyliczono średnie spalanie dla wybranego źródła zasilania. \\
+    Warunki końcowe -- sukces & Nowy wpis tankowania został zapisany w~bazie danych, stan licznika pojazdu zaktualizowany, a~w~przypadku tankowania do pełna (bez pominiętego wcześniejszego wpisu) wyliczono średnie spalanie dla wybranego źródła zasilania. \\
     \hline
     Warunki końcowe -- niepowodzenie & Wpis nie został zapisany. System wyświetlił komunikat o~błędzie walidacji i~pozostawił formularz do poprawy. \\
     \hline
@@ -226,7 +226,7 @@ Proces dotyczy ewidencji nowego tankowania lub ładowania pojazdu wraz z~aktuali
 
     \hypertarget{uc03:krok1}{1} & Wybiera opcję dodania nowego tankowania. & Wyświetla formularz z~podpowiedzią bieżącej daty, ostatniego stanu licznika oraz domyślnie zaznaczonym ostatnio tankowanym źródłem zasilania. \\
     \hline
-    \hypertarget{uc03:krok2}{2} & Potwierdza lub zmienia źródło zasilania oraz wprowadza stan licznika, ilość paliwa/energii i~łączny koszt (ręcznie lub skanując paragon przez OCR -- \hyperlink{uc:UC11}{UC11}). & Na bieżąco przelicza cenę jednostkową przy zmianie kwoty (\hyperlink{rb:RB-04}{RB-04}). \\
+    \hypertarget{uc03:krok2}{2} & Potwierdza lub zmienia źródło zasilania oraz wprowadza stan licznika, ilość paliwa/energii i~łączny koszt (ręcznie lub skanując paragon przez OCR -- \hyperlink{uc:UC11}{UC11}). & Na bieżąco przelicza trzecią wartość na podstawie dwóch wpisanych (\hyperlink{rb:RB-04}{RB-04}). \\
     \hline
     \hypertarget{uc03:krok3}{3} & Zatwierdza formularz przyciskiem zapisu. & Sprawdza poprawność przebiegu (\hyperlink{rb:RB-01}{RB-01}) oraz daty (\hyperlink{rb:RB-05}{RB-05}) i~wylicza średnie spalanie dla wybranego źródła zasilania (\hyperlink{uc:UC04}{UC04}, \hyperlink{rb:RB-02}{RB-02}). \\
     \hline
@@ -270,7 +270,7 @@ Proces dotyczy ewidencji nowego tankowania lub ładowania pojazdu wraz z~aktuali
     \hline
     A1.2 & --- & Blokuje zapis, podświetla pole przebiegu i~wyświetla komunikat błędu. \\
     \hline
-    A1.3 & Poprawia wartość przebiegu w~formularzu. & Aktualizuje dane w~formularzu i~przelicza cenę jednostkową (\hyperlink{rb:RB-04}{RB-04}). \\
+    A1.3 & Poprawia wartość przebiegu w~formularzu. & Aktualizuje dane w~formularzu i~przelicza brakującą wartość kwotową (\hyperlink{rb:RB-04}{RB-04}). \\
     \hline
     A1.4 & Ponownie zatwierdza formularz przyciskiem zapisu. & Powraca do weryfikacji w~\hyperlink{uc03:krok3}{kroku~3} przebiegu głównego. \\
     \hline
@@ -290,18 +290,22 @@ Proces dotyczy ewidencji nowego tankowania lub ładowania pojazdu wraz z~aktuali
     \hline
     A3.2 & --- & Uzupełnia rozpoznane wartości w~formularzu i~umożliwia wybór ponownego wykonania zdjęcia. \\
     \hline
-    A3.3 & Powtarza wykonanie zdjęcia paragonu; ręcznie uzupełnia i~koryguje pola formularza (\hyperlink{wf:WF-11}{WF-11}). & Ponownie przetwarza nowy obraz; przelicza cenę jednostkową. \\
+    A3.3 & Powtarza wykonanie zdjęcia paragonu; ręcznie uzupełnia i~koryguje pola formularza (\hyperlink{wf:WF-11}{WF-11}). & Ponownie przetwarza nowy obraz; przelicza brakującą wartość kwotową (\hyperlink{rb:RB-04}{RB-04}). \\
     \hline
     A3.4 & Zatwierdza uzupełniony formularz przyciskiem zapisu. & Powraca do weryfikacji w~\hyperlink{uc03:krok3}{kroku~3} przebiegu głównego. \\
+    \hline
+    \multicolumn{3}{|l|}{\cellcolor{tableheader!50}\textbf{Wariant A4 -- Oznaczenie pominiętego tankowania (\hyperlink{rb:RB-02}{RB-02})}} \\
+    \hline
+    A4.1 & Zaznacza w~formularzu opcję pominięcia poprzedniego tankowania. & Oznacza wpis jako rozpoczynający nowy cykl pomiaru spalania. \\
+    \hline
+    A4.2 & Zatwierdza formularz przyciskiem zapisu. & Pomija wyliczenie średniego spalania dla bieżącego wpisu (\hyperlink{rb:RB-02}{RB-02}) i~przechodzi do zapisu w~\hyperlink{uc03:krok4}{kroku~4}. \\
     \hline
 \end{longtable}
 \endgroup
 
-\clearpage
-
 \noindent\textbf{Przypadek użycia UC06: Rejestracja wydatku eksploatacyjnego}
 
-Proces UC06 dotyczy ewidencji dodatkowych kosztów utrzymania pojazdu oraz planowania przypomnień o~nadchodzących terminach. Poniższe zestawienia tabelaryczne definiują jego podstawowe parametry i~warunki brzegowe (Tabela~\ref{tab:specyfikacja_uc2_parametry}), a~także przebieg główny (Tabela~\ref{tab:przebieg_glowny_uc2}).
+Proces UC06 dotyczy ewidencji dodatkowych kosztów utrzymania pojazdu oraz planowania przypomnień według daty lub przebiegu. Poniższe zestawienia tabelaryczne definiują jego podstawowe parametry i~warunki brzegowe (Tabela~\ref{tab:specyfikacja_uc2_parametry}), a~także przebieg główny (Tabela~\ref{tab:przebieg_glowny_uc2}).
 
 \begingroup
 \renewcommand{\arraystretch}{1.3}
@@ -334,7 +338,7 @@ Proces UC06 dotyczy ewidencji dodatkowych kosztów utrzymania pojazdu oraz plano
     \hline
     Aktor główny & Użytkownik \\
     \hline
-    Cel & Ewidencja kosztu eksploatacyjnego (np. naprawa, ubezpieczenie, badanie techniczne) z~możliwością zaplanowania przypomnienia o~nadchodzącym terminie. \\
+    Cel & Ewidencja kosztu eksploatacyjnego (np. naprawa, ubezpieczenie, badanie techniczne) z~możliwością zaplanowania przypomnienia według daty lub przebiegu (przed lub po zdarzeniu). \\
     \hline
     Warunki początkowe & Aplikacja jest uruchomiona, a~w~systemie istnieje co najmniej jeden aktywny profil pojazdu. \\
     \hline
@@ -374,7 +378,7 @@ Proces UC06 dotyczy ewidencji dodatkowych kosztów utrzymania pojazdu oraz plano
 
     1 & Przechodzi do modułu kosztów i~wybiera dodanie nowego wydatku. & Wyświetla formularz z~wyborem kategorii, kwotą, datą oraz opcją przypomnień. \\
     \hline
-    2 & Wybiera kategorię okresową (np. ubezpieczenie), podaje kwotę i~datę. & Weryfikuje dane i~proponuje automatyczne przypomnienie 7~dni przed terminem (\hyperlink{rb:RB-03}{RB-03}). \\
+    2 & Wybiera kategorię wydatku (np. ubezpieczenie, naprawa), podaje kwotę i~datę. & Weryfikuje dane i~proponuje automatyczne przypomnienie 7~dni przed terminem (\hyperlink{rb:RB-03}{RB-03}). \\
     \hline
     3 & Przechodzi do konfiguracji przypomnień (\hyperlink{uc:UC07}{UC07}). & Umożliwia modyfikację terminu powiadomienia oraz dodanie kolejnych terminów. \\
     \hline
@@ -385,15 +389,13 @@ Proces UC06 dotyczy ewidencji dodatkowych kosztów utrzymania pojazdu oraz plano
 \end{longtable}
 \endgroup
 
-\clearpage
-
-Ścieżkę alternatywną dla rejestracji wydatku bez planowania przypomnień definiuje poniższa specyfikacja (Tabela~\ref{tab:scenariusz_alt_uc2}).
+Ścieżki alternatywne dla rejestracji wydatku bez planowania przypomnień definiuje poniższa specyfikacja (Tabela~\ref{tab:scenariusz_alt_uc2}).
 
 \begingroup
 \renewcommand{\arraystretch}{1.3}
 \setlength{\LTcapwidth}{\linewidth}
 \begin{longtable}{|>{\centering\arraybackslash}m{1.4cm}|*{2}{m{\dimexpr(\linewidth - 1.4cm - 6\tabcolsep - 4\arrayrulewidth)/2\relax}|}}
-    \caption{Scenariusz alternatywny A1 dla przypadku użycia UC06}
+    \caption{Scenariusze alternatywne i~wyjątkowe dla przypadku użycia UC06}
     \label{tab:scenariusz_alt_uc2} \\
     \hline
     \rowcolor{tableheader}
@@ -414,11 +416,21 @@ Proces UC06 dotyczy ewidencji dodatkowych kosztów utrzymania pojazdu oraz plano
     \zrodloLT{3}{Opracowanie własne.}
     \endlastfoot
 
+    \multicolumn{3}{|l|}{\cellcolor{tableheader!50}\textbf{Wariant A1 -- Rejestracja wydatku bez planowania przypomnień}} \\
+    \hline
     A1.1 & Pozostawia opcję przypomnień wyłączoną (np. wydatek jednorazowy). & Pomija konfigurację powiadomienia (\hyperlink{uc:UC07}{UC07}) i~oczekuje na zatwierdzenie. \\
     \hline
     A1.2 & Zatwierdza formularz przyciskiem zapisu. & Zapisuje wydatek w~bazie danych (\hyperlink{wf:WF-10}{WF-10}) bez planowania powiadomień. \\
     \hline
     A1.3 & --- & Wyświetla potwierdzenie zapisu i~odświeża listę wydatków. \\
+    \hline
+    \multicolumn{3}{|l|}{\cellcolor{tableheader!50}\textbf{Wariant A2 -- Brakujące lub błędne dane formularza}} \\
+    \hline
+    A2.1 & --- & Wykrywa brak wymaganych pól lub niepoprawną kwotę podczas walidacji danych. \\
+    \hline
+    A2.2 & --- & Blokuje przejście dalej i~wyświetla komunikat o~błędzie w~formularzu. \\
+    \hline
+    A2.3 & Uzupełnia brakujące pola i~poprawia błędne wartości. & Ponownie weryfikuje dane i~wraca do kroku~2 przebiegu głównego. \\
     \hline
 \end{longtable}
 \endgroup
