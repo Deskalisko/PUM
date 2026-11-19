@@ -21,3 +21,38 @@
 *.toc
 *.vrb
 *.xdv
+
+# ==========================================
+# Android Studio & Gradle
+# ==========================================
+# Pliki budowania
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+build/
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# Konfiguracja lokalna
+local.properties
+
+#środowiska IntelliJ / Android Studio
+*.iml
+.idea/
+
+# Logi i cache systemowy
+*.log
+.DS_Store
+Thumbs.db
+captures/
+.externalNativeBuild/
+.cxx/
